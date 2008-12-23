@@ -1,0 +1,106 @@
+/*
+Theme Name: New Monkey
+Version: 0.1
+Author: Ian Stevens
+Author URI: http://crazedmonkey.com/
+*/
+
+body {
+    font-family: Georgia, Serif;
+}
+
+#doc3 {
+    margin-left: 0
+}
+
+#hd {
+    height: 100px;
+}
+
+#tweets {
+    background: #FFC;
+    padding: 0.5em 1em;
+}
+
+#tweets h3 {
+    margin-bottom: 1em;
+}
+
+#tweets .post {
+    margin: 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid gray;
+}
+
+p.postmeta {
+    font-size: 90%;
+    position: relative;
+}
+
+p.postmeta a, p.postmeta {
+    color: #666;
+    text-decoration: none;
+}
+
+p.postmeta .comments {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#blog {
+    padding-top: 0.5em;
+}
+
+#posttitle {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+#blog h3 .date {
+    color: #C99;
+}
+
+#blog h3 a, #blog .navigation a {
+    text-decoration: none;
+    color: #630;
+}
+
+#blog .post .entry {
+    margin-bottom: 1.5em;
+    line-height: 1.33em;
+}
+
+#blog h3, h2 {
+    font-size: 1.75em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+#blog .entry, #tweets h3 {
+    font-size: 1.33em;
+    line-height: 1.33em;
+}
+
+#blog .entry .postmeta {
+    margin-top: 1em;
+}
+
+#blog h3 a:hover, .postmeta a:hover, #blog .navigation a:hover {
+    text-decoration: underline;
+}
+
+#blog .navigation {
+    font-size: 1.25em;
+}
+
+#blog .navigation {
+    position: relative;
+}
+
+#blog .navigation .previous {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
