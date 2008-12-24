@@ -6,7 +6,7 @@ Author URI: http://crazedmonkey.com/
 */
 
 body {
-    font-family: Georgia, Serif;
+    font-family: Helvetica, Sans-serif;
 }
 
 #doc3 {
@@ -27,7 +27,7 @@ body {
 }
 
 #tweets .post {
-    margin: 10px 0;
+    margin: 1.5em 0;
     padding-bottom: 5px;
     border-bottom: 1px solid gray;
 }
@@ -68,7 +68,7 @@ p.postmeta .comments {
 }
 
 #blog .post .entry {
-    margin-bottom: 1.5em;
+    margin-bottom: 3em;
     line-height: 1.33em;
 }
 
