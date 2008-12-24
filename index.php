@@ -30,7 +30,7 @@ get_header(); $page = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
     <?php while (have_posts()) : the_post(); ?>
 
         <div <?php post_class($first) ?> id="post-<?php the_ID(); ?>">
-            <h3><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to &ldquo;<?php the_title_attribute(); ?>&rdquo;"><?php the_title(); ?> <span class="date"><?php the_time('M j'); ?></span></a></h3>
+            <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to &ldquo;<?php the_title_attribute(); ?>&rdquo;"><?php the_title(); ?> <span class="date"><?php the_time('M j'); ?></span></a></h2>
 
             <div class="entry">
                 <?php 

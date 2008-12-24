@@ -58,11 +58,11 @@ p.postmeta .comments {
     margin-bottom: 0.5em;
 }
 
-#blog h3 .date {
+#blog h2 .date {
     color: #C99;
 }
 
-#blog h3 a, #blog .navigation a {
+#blog h2 a, #blog .navigation a {
     text-decoration: none;
     color: #630;
 }
@@ -72,7 +72,7 @@ p.postmeta .comments {
     line-height: 1.33em;
 }
 
-#blog h3, h2 {
+h2 {
     font-size: 1.75em;
     font-weight: bold;
     margin-bottom: 1em;
@@ -87,7 +87,7 @@ p.postmeta .comments {
     margin-top: 1em;
 }
 
-#blog h3 a:hover, .postmeta a:hover, #blog .navigation a:hover {
+#blog h2 a:hover, .postmeta a:hover, #blog .navigation a:hover {
     text-decoration: underline;
 }
 
