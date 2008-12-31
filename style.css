@@ -18,7 +18,7 @@ body {
 }
 
 #tweets {
-    background: #FFC;
+    background: #EEC050;
     padding: 0.5em 1em;
 }
 
@@ -29,7 +29,7 @@ body {
 #tweets .post {
     margin: 1.5em 0;
     padding-bottom: 5px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px dotted #776028;
 }
 
 p.postmeta {
@@ -38,7 +38,7 @@ p.postmeta {
 }
 
 p.postmeta a, p.postmeta {
-    color: #666;
+    color: #776028;
     text-decoration: none;
 }
 
@@ -59,12 +59,12 @@ p.postmeta .comments {
 }
 
 #blog h2 .date {
-    color: #C99;
+    color: #776028;
 }
 
 #blog h2 a, #blog .navigation a {
     text-decoration: none;
-    color: #630;
+    color: #3B3014;
 }
 
 #blog .post .entry {
