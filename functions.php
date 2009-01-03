@@ -10,7 +10,7 @@ function custom_trim_excerpt($text) { // Fakes an excerpt if needed
         $text = get_the_content('');
         $text = apply_filters('the_content', $text);
         $text = str_replace(']]>', ']]&gt;', $text);
-        $text = strip_tags($text, '<p>');
+        $text = strip_tags($text, '<p><a>');
         $excerpt_length = 55;
         $words = explode(' ', $text, $excerpt_length + 1);
         if (count($words)> $excerpt_length) {
