@@ -26,9 +26,24 @@ add_filter('get_the_excerpt', 'custom_trim_excerpt');
 
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget' => '</li>',
-        'before_title' => '<h2 class="widgettitle">',
+        'name' => 'left',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>',
+    ));
+    register_sidebar(array(
+        'name' => 'middle',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>',
+    ));
+    register_sidebar(array(
+        'name' => 'right',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h2>',
         'after_title' => '</h2>',
     ));
 
