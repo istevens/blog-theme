@@ -40,9 +40,11 @@ get_header(); $page = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
                 else {
                     the_excerpt();
                     ?>
-                    <p class="postmeta"><a href="<?php the_permalink() ?>" rel="bookmark">Continue reading &ldquo;<?php the_title_attribute(); ?>&rdquo;</a>
-                    (<?php comments_popup_link('0 comments', '1 comment', '% comments') ?>)
-                    <?php
+                    <p class="postmeta">
+                        <a href="<?php the_permalink() ?>" rel="bookmark">Continue reading &ldquo;<?php the_title_attribute(); ?>&rdquo;</a>
+                        (<?php comments_popup_link('0 comments', '1 comment', '% comments') ?>)
+                    </p>
+                <?php
                 }
                 ?>
             </div>
