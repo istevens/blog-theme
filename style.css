@@ -37,7 +37,7 @@ p.postmeta {
     position: relative;
 }
 
-p.postmeta a, p.postmeta {
+p.postmeta a, p.postmeta, #tweets h2 {
     color: #960;
     text-decoration: none;
 }
@@ -63,12 +63,12 @@ p.postmeta .comments {
 }
 
 #blog h2 .date {
-    color: #36f;
+    color: #6cf;
 }
 
 #blog h2 a, #blog .navigation a {
     text-decoration: none;
-    color: #03c;
+    color: #36f;
 }
 
 #blog .post .entry {
