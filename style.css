@@ -37,9 +37,16 @@ p.postmeta {
     position: relative;
 }
 
-p.postmeta a, p.postmeta, #tweets h2 {
-    color: #960;
+p.postmeta a {
     text-decoration: none;
+}
+
+#tweets p.postmeta a, #tweets h2 {
+    color: #960;
+}
+
+#blog p.postmeta a, p.postmeta {
+    color: #6cf;
 }
 
 p.postmeta .comments {
