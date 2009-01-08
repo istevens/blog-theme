@@ -15,12 +15,16 @@ body {
 }
 
 #hd {
-    height: 100px;
+    height: 200px;
 }
 
 #tweets {
     background: #fc3;
-    padding: 0.5em 1em;
+    padding: 1em;
+}
+
+#blog {
+    padding-top: 1em;
 }
 
 #tweets h3 {
@@ -109,9 +113,6 @@ h2 {
 
 #blog .navigation {
     font-size: 1.25em;
-}
-
-#blog .navigation {
     position: relative;
 }
 
