@@ -34,7 +34,6 @@ body {
 }
 
 #tweets .post:last-child {
-    padding-bottom: 0;
     margin-bottom: 0;
     border-bottom: none;
 }
@@ -62,10 +61,6 @@ p.postmeta .comments {
     right: 0;
 }
 
-#blog {
-    padding-top: 0.5em;
-}
-
 #blog .entry p, #sitemeta p {
     margin-bottom: 1em;
 }
@@ -85,8 +80,11 @@ p.postmeta .comments {
     color: #36f;
 }
 
+#blog .post {
+    margin: 0 1em 3em 1em;
+}
+
 #blog .post .entry {
-    margin-bottom: 3em;
     line-height: 1.33em;
 }
 
@@ -124,7 +122,7 @@ h2 {
 }
 
 #sitemeta {
-    padding: 1em 1em;
+    padding: 3em 1em;
     background-color: #fc3;
 }
 
