@@ -10,7 +10,8 @@ body {
 }
 
 #doc3 {
-    margin-left: 0
+    margin-left: 0;
+    margin-bottom: 0;
 }
 
 #hd {
@@ -114,4 +115,13 @@ h2 {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+#sitemeta {
+    padding: 1em 1em;
+    background-color: #fc3;
+}
+
+#sitemeta .recentcomments {
+    padding-bottom: 1em;
 }
