@@ -33,6 +33,12 @@ body {
     border-bottom: 1px dotted #776028;
 }
 
+#tweets .post:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
 p.postmeta {
     font-size: 90%;
     position: relative;
@@ -60,7 +66,7 @@ p.postmeta .comments {
     padding-top: 0.5em;
 }
 
-#blog .entry p {
+#blog .entry p, #sitemeta p {
     margin-bottom: 1em;
 }
 
