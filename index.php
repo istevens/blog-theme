@@ -60,5 +60,6 @@ get_header(); $page = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
     </p>
 
 </div>
+</div>
 
 <?php get_footer(); ?>
