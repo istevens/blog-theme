@@ -16,7 +16,8 @@ body {
 }
 
 .yui-gd {
-    padding-bottom: 50px;
+    padding-bottom: 75px;
+    background: repeat-x bottom left url('images/monkeys-ft.png');
 }
 
 #hd {
