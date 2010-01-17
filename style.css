@@ -10,7 +10,32 @@ body {
     background: white;
 }
 
-#doc3 {
+h1 {
+    font: 800% Helvetica, Sans-serif;
+    font-weight: 900;
+    letter-spacing: -10px;
+    text-transform: capitalize;
+    -webkit-transform: rotate(-2deg); 
+    -moz-transform: rotate(-2deg); 
+    color: #CA9;
+    margin-top: -0.1875em;
+}
+
+h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p.description {
+    font: 200% Helvetica, Sans-serif;
+    font-weight: 100;
+    color: #69F;
+    margin-left: 15em;
+    margin-top: -1em;
+    position: relative;
+}
+
+div#doc3 {
     margin-left: 0;
     margin-bottom: 0;
 }
