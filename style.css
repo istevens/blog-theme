@@ -49,7 +49,7 @@ div#doc3 {
     height: 200px;
 }
 
-#tweets {
+#online {
     padding: 1em;
     margin-bottom: 1em;
     border-right: 1px dotted #960;
@@ -59,17 +59,17 @@ div#doc3 {
     padding: 1em 0 3em 0;
 }
 
-#tweets h3 {
-    margin-bottom: 1em;
+#online h3 {
+    margin-bottom: 0.5em;
 }
 
-#tweets .post {
-    margin: 1.5em 0;
+#online .post {
+    margin: 1em 0;
     padding-bottom: 5px;
     border-bottom: 1px dotted #960;
 }
 
-#tweets .post:last-child {
+#online .post:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
@@ -84,7 +84,11 @@ p.postmeta a {
     text-decoration: none;
 }
 
-#tweets p.postmeta a, #tweets h2 {
+#online p.postmeta {
+    margin-top: 1em;
+}
+
+#online p.postmeta a, #online h2 {
     color: #960;
 }
 
@@ -131,7 +135,7 @@ h2 {
     margin-bottom: 1em;
 }
 
-#blog .entry, #tweets h3 {
+#blog .entry, #online h3 {
     font-size: 1.33em;
     line-height: 1.33em;
 }
