@@ -23,7 +23,7 @@ get_header(); $page = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
                 $verb = "Tweeted";
             } else if (in_category('33')) {
                 $link = get_post_meta($post->ID, 'link', 'true');
-                $title = "<a href=".$link.">".$post->post_title."</a>";
+                $title = "<a href=\"".$link."\">".$post->post_title."</a>";
                 $content = get_the_content();
                 $link_verb = "Go to";
                 $link_text = "";
