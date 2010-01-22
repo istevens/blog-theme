@@ -35,9 +35,8 @@ p.description {
     position: relative;
 }
 
-div#doc3 {
-    margin-left: 0;
-    margin-bottom: 0;
+#doc3 {
+    margin: 0;
 }
 
 .yui-gd {
