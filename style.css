@@ -125,6 +125,12 @@ p.postmeta .comments {
     margin: 0 1em 3em 1em;
 }
 
+#blog .first-post {
+    padding-bottom: 2em;
+    background: url(images/monkey-flourish.png) no-repeat bottom center;
+
+}
+
 #blog .post .entry {
     line-height: 1.33em;
 }
