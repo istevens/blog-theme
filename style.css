@@ -17,7 +17,7 @@ h1 {
     text-transform: capitalize;
     -webkit-transform: rotate(-2deg); 
     -moz-transform: rotate(-2deg); 
-    color: #CA9;
+    color: #963;
     margin-top: -0.1875em;
 }
 
@@ -51,7 +51,7 @@ p.description {
 #online {
     padding: 1em;
     margin-bottom: 1em;
-    border-right: 1px dotted #960;
+    border-right: 1px dotted #963;
 }
 
 #blog {
@@ -65,7 +65,7 @@ p.description {
 #online .post {
     margin: 1em 0;
     padding-bottom: 5px;
-    border-bottom: 1px dotted #960;
+    border-bottom: 1px dotted #963;
 }
 
 #online .post:last-child {
@@ -88,7 +88,7 @@ p.postmeta a {
 }
 
 #online p.postmeta a, #online h2 {
-    color: #960;
+    color: #963;
 }
 
 #blog p.postmeta a, p.postmeta {
