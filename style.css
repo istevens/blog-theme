@@ -7,7 +7,6 @@ Author URI: http://crazedmonkey.com/
 
 body {
     font-family: Helvetica, Sans-serif;
-    background: white url(images/yellow-gradient.png) repeat-x;
 }
 
 h1 {
@@ -46,7 +45,10 @@ p.description {
 
 #hd {
     height: 200px;
-    background: url(images/monkey-white-crop.png) top 45em no-repeat;
+    background-color: #fc3;
+    background-image: url(images/monkey-white-crop.png), url(images/yellow-gradient.png);
+    background-repeat: no-repeat, repeat-x;
+    background-position: top 45em, bottom;
 }
 
 #online {
