@@ -173,6 +173,27 @@ h2 {
     background-color: #fc3;
 }
 
+#sitemeta h2 {
+    font-size: 250%;
+    font-weight: bolder;
+    color: #963;
+}
+
+#sitemeta .yui-u:nth-child(1) h2 {
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+}
+
+#sitemeta .yui-u:nth-child(2) h2 {
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+}
+
+#sitemeta .yui-u:nth-child(3) h2 {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+}
+
 #sitemeta .recentcomments {
     padding-bottom: 1em;
 }
