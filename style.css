@@ -10,14 +10,15 @@ body {
 }
 
 h1 {
-    font: 800% Helvetica, Sans-serif;
+    font-size: 800%;
     font-weight: 900;
-    letter-spacing: -10px;
+    letter-spacing: -0.1em;
     text-transform: capitalize;
     -webkit-transform: rotate(-2deg); 
     -moz-transform: rotate(-2deg); 
     color: #963;
     margin-top: -0.1875em;
+
 }
 
 h1 a {
@@ -26,7 +27,7 @@ h1 a {
 }
 
 p.description {
-    font: 200% Helvetica, Sans-serif;
+    font-size: 200%;
     font-weight: 100;
     color: #69F;
     margin-left: 15em;
@@ -109,7 +110,7 @@ p.postmeta .comments {
 }
 
 #posttitle {
-    font-size: 1.25em;
+    font-size: 125%;
     font-weight: bold;
     margin-bottom: 0.5em;
 }
@@ -138,13 +139,13 @@ p.postmeta .comments {
 }
 
 h2 {
-    font-size: 1.75em;
+    font-size: 175%;
     font-weight: bold;
     margin-bottom: 1em;
 }
 
 #blog .entry, #online h3 {
-    font-size: 1.33em;
+    font-size: 133%;
     line-height: 1.33em;
 }
 
@@ -157,7 +158,7 @@ h2 {
 }
 
 #blog .navigation {
-    font-size: 1.25em;
+    font-size: 125%;
     position: relative;
 }
 
