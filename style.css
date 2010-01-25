@@ -67,7 +67,7 @@ p.description {
 }
 
 #online .post {
-    margin: 1em 0;
+    margin: 1.5em 0;
     padding-bottom: 5px;
     border-bottom: 1px dotted #963;
 }
@@ -88,7 +88,7 @@ p.postmeta a {
 }
 
 #online p.postmeta {
-    margin-top: 1em;
+    margin-top: 1.75em;
 }
 
 #online p.postmeta a, #online h2 {
