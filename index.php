@@ -24,14 +24,17 @@ get_header(); $page = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
             } else if (in_category('33')) {
                 $link = get_post_meta($post->ID, 'link', 'true');
                 $title = "<a href=\"".$link."\">".$post->post_title."</a>";
-                $content = get_the_content();
+                $content = get_the_excerpt();
+                $content = apply_filters('the_content', $content);
+                $content = str_replace(']]>', ']]&gt;', $content);
+                $content = str_replace(' &hellip;', '&nbsp;&hellip;&nbsp;<a href="'.get_permalink($post->ID).'">Read more.</a>', $content);
                 $link_verb = "Go to";
                 $link_text = "";
                 $verb = "Linked";
             } ?>
             <h3><?php echo $title; ?></h3>
             <?php if ($content != "") { 
-                echo "<p>".$content."</p>";
+                echo $content;
             } ?>
             <p class="postmeta">
                 <a href="<?php echo $link ?>" title="<?php echo $link_verb; ?> '<?php the_title_attribute(); echo "'".$link_text."\">".$verb ?> on <?php the_time('Y-m-d \a\t G:i') ?></a>

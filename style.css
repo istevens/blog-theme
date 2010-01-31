@@ -66,6 +66,14 @@ p.description {
     margin-bottom: 0.5em;
 }
 
+#online h3 a {
+    text-decoration: none;
+}
+
+#online h3 a:hover {
+    text-decoration: underline;
+}
+
 #online .post {
     margin: 1.5em 0;
     padding-bottom: 5px;
