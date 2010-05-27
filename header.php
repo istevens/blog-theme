@@ -5,11 +5,10 @@
  */
 ?>
 <!DOCTYPE html> 
-<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?>>
 
-<head profile="http://gmpg.org/xfn/11">
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.6.0/build/reset-fonts-grids/reset-fonts-grids.css"/>
-    <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>" />
 
     <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 
@@ -23,15 +22,12 @@
     <?php wp_head(); ?>
     </head>
 <body>
-<div id="page">
 
-<div id="doc3" class="yui-t7">
-    <div id="hd">
+<header>
     <?php if ( is_singular() ) { ?>
         <h1 class="posttitle"><?php wp_title(''); ?></h1>
     <?php } else { ?>
         <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-        <p class="description"><?php bloginfo('description'); ?></p>
+        <h2 class="description"><?php bloginfo('description'); ?></h2>
     <?php } ?>
-        </div>
-    <div id="bd">
+</header>

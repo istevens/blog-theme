@@ -5,26 +5,21 @@
  */
 ?>
 
-</div>
-
-<div id="ft">
+<footer>
     <?php if ( function_exists('dynamic_sidebar') ) {?>
-    <div id="sitemeta" class="yui-gb">
-        <div class="yui-u first">
-            <?php dynamic_sidebar('left') ?>
-        </div>
-        <div class="yui-u">
-            <?php dynamic_sidebar('middle') ?>
-        </div>
-        <div class="yui-u">
-            <?php dynamic_sidebar('right') ?>
-        </div>
-    </div>
+    <section>
+        <?php dynamic_sidebar('left') ?>
+    </section>
+    <section>
+        <?php dynamic_sidebar('middle') ?>
+    </section>
+    <section>
+        <?php dynamic_sidebar('right') ?>
+    </section>
     <?php } ?>
-</div>
+</footer>
 
-</div>
-		<?php wp_footer(); ?>
-</div>
+<?php wp_footer(); ?>
+
 </body>
 </html>
