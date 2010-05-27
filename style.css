@@ -7,9 +7,18 @@ Author URI: http://crazedmonkey.com/
 
 body {
     font-family: Helvetica, Sans-serif;
+    margin: 0;
 }
 
-h1 {
+header {
+    height: 200px;
+    background-color: #fc3;
+    background-image: url(images/monkey-white-crop.png), url(images/yellow-gradient.png);
+    background-repeat: no-repeat, repeat-x;
+    background-position: top 45em, bottom;
+}
+
+header h1 {
     font-size: 800%;
     font-weight: 900;
     letter-spacing: -0.1em;
@@ -18,15 +27,15 @@ h1 {
     -moz-transform: rotate(-2deg); 
     color: #963;
     margin-top: -0.1875em;
-
+    margin-bottom: 0;
 }
 
-h1 a {
+header h1 a {
     text-decoration: none;
     color: inherit;
 }
 
-p.description {
+header h2 {
     font-size: 200%;
     font-weight: 100;
     color: #69F;
@@ -35,99 +44,101 @@ p.description {
     position: relative;
 }
 
-#doc3 {
-    margin: 0;
+body>footer {
+    width: 100%;
+    margin-top: 0;
+    padding-top: 0;
 }
 
-.yui-gd {
-    padding-bottom: 75px;
+#content {
+    padding: 2em 2em 250px 2em;
+    margin-bottom: 0;
     background: repeat-x bottom left url('images/monkeys-ft.png');
 }
 
-#hd {
-    height: 200px;
-    background-color: #fc3;
-    background-image: url(images/monkey-white-crop.png), url(images/yellow-gradient.png);
-    background-repeat: no-repeat, repeat-x;
-    background-position: top 45em, bottom;
+#online, #blog {
+    margin-top: 0;
+    padding-top: 0;
 }
 
 #online {
-    padding: 1em;
     margin-bottom: 1em;
     border-right: 1px dotted #963;
+    width: 33%;
+    float: left;
 }
 
 #blog {
-    padding: 1em 0 3em 0;
+    padding: 0 0 3em 1em;
+    margin-left: 33%;
 }
 
-#online h3 {
+#content h1 {
     margin-bottom: 0.5em;
 }
 
-#online h3 a {
+#content h1 a {
     text-decoration: none;
 }
 
-#online h3 a:hover {
+#content h1 a:hover {
     text-decoration: underline;
 }
 
-#online .post {
+article p {
+    line-height: 1.33em;
+}
+
+#online article {
     margin: 1.5em 0;
     padding-bottom: 5px;
     border-bottom: 1px dotted #963;
+    margin-right: 2em;
 }
 
-#online .post:last-child {
+#online article:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
 }
 
-p.postmeta {
+article footer {
     font-size: 90%;
     position: relative;
-}
-
-p.postmeta a {
-    text-decoration: none;
-}
-
-#online p.postmeta {
-    margin-top: 1.75em;
-}
-
-#online p.postmeta a, #online h2 {
-    color: #963;
-}
-
-#blog p.postmeta a, p.postmeta {
     color: #6cf;
 }
 
-p.postmeta .comments {
+article footer a {
+    text-decoration: none;
+}
+
+#online footer {
+    margin-top: 1.75em;
+}
+
+#online footer a, #online>h1 {
+    color: #963;
+}
+
+#blog footer a {
+    color: #6cf;
+}
+
+#blog footer .comments {
     position: absolute;
     top: 0;
     right: 0;
 }
 
-#blog .entry p, #sitemeta p {
+#blog article p, footer p {
     margin-bottom: 1em;
 }
 
-#posttitle {
-    font-size: 125%;
-    font-weight: bold;
-    margin-bottom: 0.5em;
-}
-
-#blog h2 .date {
+#blog h1 .date {
     color: #6cf;
 }
 
-#blog h2 a, #blog .navigation a {
+#blog h1 a, #blog .navigation a {
     text-decoration: none;
     color: #36f;
 }
@@ -137,71 +148,74 @@ p.postmeta .comments {
 }
 
 #blog .first-post {
+    margin-top: 0em;
     padding-bottom: 3em;
     background: url(images/monkey-flourish.png) no-repeat bottom center;
-
 }
 
-#blog .post .entry {
+#online>h1, #blog article>h1 {
+    font-size: 175%;
+    font-weight: bold;
+    margin: 0 0 1em 0;
     line-height: 1.33em;
 }
 
-h2 {
-    font-size: 175%;
-    font-weight: bold;
-    margin-bottom: 1em;
-}
-
-#blog .entry, #online h3 {
+#blog p, #online article h1 {
+    font-weight: normal;
     font-size: 133%;
     line-height: 1.33em;
 }
 
-#blog .entry .postmeta {
+#blog article footer {
     margin-top: 1em;
 }
 
-#blog h2 a:hover, .postmeta a:hover, #blog .navigation a:hover {
+#blog h1 a:hover, footer a:hover, #blog nav#pages a:hover {
     text-decoration: underline;
 }
 
-#blog .navigation {
+#blog nav#pages{
     font-size: 125%;
     position: relative;
 }
 
-#blog .navigation .previous {
+#blog nav#pages .previous {
     position: absolute;
     top: 0;
     right: 0;
 }
 
-#sitemeta {
+body>footer {
     padding: 0 1em 3em 1em;
     background-color: #fc3;
 }
 
-#sitemeta h2 {
+footer>section {
+    width: 33%;
+    float: left;
+}
+
+footer h1 {
     font-size: 250%;
     font-weight: bolder;
     color: #963;
 }
 
-#sitemeta .yui-u:nth-child(1) h2 {
+footer section:nth-child(1) h1 {
     -webkit-transform: rotate(-2deg);
     -moz-transform: rotate(-2deg);
 }
 
-#sitemeta .yui-u:nth-child(2) h2 {
+footer section:nth-child(2) h1 {
     -webkit-transform: rotate(1deg);
     -moz-transform: rotate(1deg);
 }
 
-#sitemeta .yui-u:nth-child(3) h2 {
+footer section:nth-child(3) h1 {
     -webkit-transform: rotate(3deg);
     -moz-transform: rotate(3deg);
 }
 
-#sitemeta .recentcomments {
+footer .recentcomments {
     padding-bottom: 1em;
 }

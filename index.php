@@ -6,14 +6,14 @@
 
 get_header(); $page = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
 
-<div class="yui-gd">
+<section id="content">
 
 <?php if(is_home() and !get_query_var('paged')) { ?>
-<div class="side yui-u first"><div id="online">
-    <h2>Latest Online Activity</h2>
+<section id="online">
+    <h1>Latest Online Activity</h1>
     <?php $first = $page == 1 ? 'first-post': ''; query_posts('cat=32,33&showposts=10'); ?>
     <?php while (have_posts()) : the_post(); ?>
-        <div <?php post_class($first . " entry"); $first = ''; ?> >
+        <article <?php post_class($first . " entry"); $first = ''; ?> >
             <?php if (in_category('32')) {
                 $title = get_the_content();
                 $content = "";
@@ -27,60 +27,58 @@ get_header(); $page = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
                 $content = get_the_excerpt();
                 $content = apply_filters('the_content', $content);
                 $content = str_replace(']]>', ']]&gt;', $content);
-                $content = str_replace(' &hellip;', '&nbsp;&hellip;&nbsp;<a href="'.get_permalink($post->ID).'">Read more.</a>', $content);
+                $content = str_replace(' &hellip;', '&#160;&#8230;&#160;<a href="'.get_permalink($post->ID).'">Read more.</a>', $content);
                 $link_verb = "Go to";
                 $link_text = "";
                 $verb = "Linked";
             } ?>
-            <h3><?php echo $title; ?></h3>
+            <h1><?php echo $title; ?></h1>
             <?php if ($content != "") { 
                 echo $content;
             } ?>
-            <p class="postmeta">
+            <footer>
                 <a href="<?php echo $link ?>" title="<?php echo $link_verb; ?> '<?php the_title_attribute(); echo "'".$link_text."\">".$verb ?> on <?php the_time('Y-m-d \a\t G:i') ?></a>
                 <?php comments_popup_link('Comment &#187;', '1 Comment &#187;', '% Comments &#187;', 'comments'); ?>
-            </p>
-        </div>
+            </footer>
+        </article>
     <?php endwhile; ?>
-</div></div>
+</section>
 <?php } ?>
 
-<div id="blog" class="yui-u">
+<section id="blog">
     <?php $first = $page == 1 ? 'first-post': ''; ?>
     <?php query_posts('cat=-32,-33&paged=' . $page); ?>
     <?php while (have_posts()) : the_post(); ?>
 
-        <div <?php post_class($first) ?> id="post-<?php the_ID(); ?>">
-            <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to &ldquo;<?php the_title_attribute(); ?>&rdquo;"><?php the_title(); ?> <span class="date"><?php the_time('M j'); ?></span></a></h2>
+        <article <?php post_class($first) ?> id="post-<?php the_ID(); ?>">
+            <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to &#8220;<?php the_title_attribute(); ?>&#8221;"><?php the_title(); ?> <span class="date"><?php the_time('M j'); ?></span></a></h1>
 
-            <div class="entry">
-                <?php 
-                if($first) {
-                    the_content('Read the rest of this entry &raquo;');
-                }
-                else {
-                    the_excerpt();
-                    ?>
-                    <p class="postmeta">
-                        <a href="<?php the_permalink() ?>" rel="bookmark">Continue reading &ldquo;<?php the_title_attribute(); ?>&rdquo;</a>
-                        (<?php comments_popup_link('0 comments', '1 comment', '% comments') ?>)
-                    </p>
-                <?php
-                }
+            <?php
+            if($first) {
+                the_content('Read the rest of this entry &#xbb;');
+            }
+            else {
+                the_excerpt();
                 ?>
-            </div>
-        </div>
+                <footer>
+                    <a href="<?php the_permalink() ?>" rel="bookmark">Continue reading &ldquo;<?php the_title_attribute(); ?>&rdquo;</a>
+                    (<?php comments_popup_link('0 comments', '1 comment', '% comments') ?>)
+                </footer>
+            <?php
+            }
+            ?>
+        </article>
 
         <?php $first = ''; ?>
 
     <?php endwhile; ?>
 
-    <p class="navigation">
+    <nav>
         <span class="next"><?php next_posts_link('&laquo; Older Entries') ?></span>
         <span class="previous"><?php previous_posts_link('Newer Entries &raquo;') ?></span>
-    </p>
+    </nav>
 
-</div>
-</div>
+</section>
+</section>
 
 <?php get_footer(); ?>
