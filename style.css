@@ -186,13 +186,22 @@ article footer a {
 }
 
 body>footer {
-    padding: 0 1em 3em 1em;
+    padding: 0 0 3em 0;
     background-color: #fc3;
+}
+
+body>footer:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
 
 footer>section {
     width: 33%;
     float: left;
+    margin-left: 1em
 }
 
 footer h1 {
