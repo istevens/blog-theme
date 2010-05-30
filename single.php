@@ -49,9 +49,9 @@ get_header();
 
             <?php } edit_post_link('Edit this entry','','.'); ?>
         </footer>
-    </article>
 
-    <?php comments_template(); ?>
+        <?php comments_template(); ?>
+    </article>
 
 <?php endwhile; else: ?>
 
