@@ -24,10 +24,6 @@
 <body>
 
 <header>
-    <?php if ( is_singular() ) { ?>
-        <h1 class="posttitle"><?php wp_title(''); ?></h1>
-    <?php } else { ?>
-        <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-        <h2 class="description"><?php bloginfo('description'); ?></h2>
-    <?php } ?>
+    <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+    <h2 class="description"><?php bloginfo('description'); ?></h2>
 </header>

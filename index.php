@@ -13,7 +13,7 @@ get_header(); $page = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
     <h1>Latest Online Activity</h1>
     <?php $first = $page == 1 ? 'first-post': ''; query_posts('cat=32,33&showposts=10'); ?>
     <?php while (have_posts()) : the_post(); ?>
-        <article <?php post_class($first . " entry"); $first = ''; ?> >
+        <article <?php post_class($first); $first = ''; ?> >
             <?php if (in_category('32')) {
                 $title = get_the_content();
                 $content = "";
