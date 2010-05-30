@@ -29,22 +29,22 @@ if ( function_exists('register_sidebar') )
         'name' => 'left',
         'before_widget' => '',
         'after_widget' => '',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>',
+        'before_title' => '<h1>',
+        'after_title' => '</h1>',
     ));
     register_sidebar(array(
         'name' => 'middle',
         'before_widget' => '',
         'after_widget' => '',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>',
+        'before_title' => '<h1>',
+        'after_title' => '</h1>',
     ));
     register_sidebar(array(
         'name' => 'right',
         'before_widget' => '',
         'after_widget' => '',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>',
+        'before_title' => '<h1>',
+        'after_title' => '</h1>',
     ));
 
 /** @ignore */
