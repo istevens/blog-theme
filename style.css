@@ -89,6 +89,10 @@ article p {
     line-height: 1.33em;
 }
 
+body>article.category-tweets h1 {
+    font-size: 300%;
+}
+
 #online article {
     margin: 1.5em 0;
     padding-bottom: 5px;
