@@ -50,7 +50,7 @@ body>footer {
     padding-top: 0;
 }
 
-#content {
+#content, body>nav{
     padding: 2em 2em 250px 2em;
     margin-bottom: 0;
     background: repeat-x bottom left url('images/monkeys-ft.png');
