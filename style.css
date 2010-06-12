@@ -57,11 +57,11 @@ body>footer {
 }
 
 #online, #blog {
-    margin-top: 0;
     padding-top: 0;
 }
 
 #online {
+    margin-top: 1em;
     margin-bottom: 1em;
     border-right: 1px dotted #963;
     width: 33%;
@@ -70,6 +70,7 @@ body>footer {
 
 #blog {
     padding: 0 0 3em 1em;
+    margin-top: 0;
     margin-left: 33%;
 }
 
@@ -89,15 +90,28 @@ article p {
     line-height: 1.33em;
 }
 
+article.clicked {
+    background-color: #fc3;
+}
+
+body>article {
+    margin: 0 5em;
+}
+
 body>article.category-tweets h1 {
     font-size: 300%;
+    line-height: 1.5em;
+}
+
+#content article {
+    padding: 1em;
 }
 
 #online article {
-    margin: 1.5em 0;
-    padding-bottom: 5px;
-    border-bottom: 1px dotted #963;
+    margin: 0;
     margin-right: 2em;
+    padding: 1em 1em 5px 1em;
+    border-bottom: 1px dotted #963;
 }
 
 #online article:last-child {
@@ -154,7 +168,9 @@ article footer a {
 #blog .first-post {
     margin-top: 0em;
     padding-bottom: 3em;
-    background: url(images/monkey-flourish.png) no-repeat bottom center;
+    background-image: url(images/monkey-flourish.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
 }
 
 #online>h1, #blog article>h1 {
@@ -162,6 +178,11 @@ article footer a {
     font-weight: bold;
     margin: 0 0 1em 0;
     line-height: 1.33em;
+}
+
+#online>h1 {
+    margin-left: 0.5em;
+    margin-bottom: 0;
 }
 
 #blog p, #online article h1 {
