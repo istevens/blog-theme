@@ -19,6 +19,14 @@
 
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
+    <?php if ( !is_singular() ) { ?>
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+            google.load("jquery", "1.4.2");
+        </script>
+        <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/article.js"></script>
+    <? } ?>
+
     <?php wp_head(); ?>
     </head>
 <body>

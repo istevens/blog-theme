@@ -47,6 +47,11 @@ if ( function_exists('register_sidebar') )
         'after_title' => '</h1>',
     ));
 
+    function add_bookmark_to_comments_popup_link(){
+        return ' rel="bookmark" ';
+    }
+    add_filter( 'comments_popup_link_attributes', 'add_bookmark_to_comments_popup_link' );
+
 /** @ignore */
 function kubrick_head() {
 	$head = "<style type='text/css'>\n<!--";
