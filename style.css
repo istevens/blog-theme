@@ -172,11 +172,12 @@ article footer a {
 
 #blog h1 .date {
     color: #6cf;
+    display: none;
 }
 
 #blog h1 a, #blog .navigation a {
     text-decoration: none;
-    color: #36f;
+    color: black;
 }
 
 #blog .post {
