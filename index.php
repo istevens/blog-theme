@@ -61,8 +61,7 @@ get_header(); $page = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
                 the_excerpt();
                 ?>
                 <footer>
-                    <a href="<?php the_permalink() ?>" rel="bookmark">Continue reading &ldquo;<?php the_title_attribute(); ?>&rdquo;</a>
-                    (<?php comments_popup_link('0 comments', '1 comment', '% comments') ?>)
+                    <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Continue reading &ldquo;<?php the_title_attribute(); ?>&rdquo;">Read more</a>
                 </footer>
             <?php
             }
