@@ -138,8 +138,19 @@ article footer a {
     color: #963;
 }
 
+#blog footer {
+    text-align: right;
+}
+
 #blog footer a {
-    color: #6cf;
+    color: black;
+    font-size: 100%;
+    font-weight: bold;
+    background: url(images/arrow.svg) right 50% no-repeat;
+    background-size: 25%;
+    background-origin: border;
+    padding: 2em;
+    padding-right: 3em;
 }
 
 #blog footer .comments {
@@ -168,14 +179,16 @@ article footer a {
 #blog .first-post {
     margin-top: 0em;
     padding-bottom: 3em;
-    background-image: url(images/monkey-flourish.png);
-    background-position: bottom center;
-    background-repeat: no-repeat;
+    background-size: 15%;
+}
+
+#online>h1, #blog article>h1, #blog footer a {
+    font-weight: 600%;
+    letter-spacing: -0.05em;
 }
 
 #online>h1, #blog article>h1 {
     font-size: 175%;
-    font-weight: bold;
     margin: 0 0 1em 0;
     line-height: 1.33em;
 }
