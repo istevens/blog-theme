@@ -159,6 +159,13 @@ article footer a {
     right: 0;
 }
 
+#blog article {
+    background-image: url(images/monkey-flourish.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 10%;
+}
+
 #blog article p, footer p {
     margin-bottom: 1em;
 }
