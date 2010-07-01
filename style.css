@@ -15,7 +15,7 @@ header {
     background-color: #fc3;
     background-image: url(images/monkey-white-crop.png), url(images/yellow-gradient.png);
     background-repeat: no-repeat, repeat-x;
-    background-position: top 45em, bottom;
+    background-position: 45em top, bottom left;
 }
 
 header h1 {
@@ -161,7 +161,7 @@ article footer a {
     font-weight: bold;
     background: url(images/arrow.svg) right 50% no-repeat;
     background-size: 25%;
-    background-origin: border;
+    background-origin: border-box;
     padding: 2em;
     padding-right: 3em;
 }
@@ -173,9 +173,7 @@ article footer a {
 }
 
 #blog article {
-    background-image: url(images/monkey-flourish.png);
-    background-position: bottom center;
-    background-repeat: no-repeat;
+    background: url(images/monkey-flourish.png) bottom center no-repeat;
     background-size: 10%;
 }
 
@@ -204,7 +202,7 @@ article footer a {
 }
 
 #online>h1, #blog article>h1, #blog footer a {
-    font-weight: 600%;
+    font-weight: 600;
     letter-spacing: -0.05em;
 }
 
