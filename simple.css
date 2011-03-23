@@ -4,10 +4,20 @@ body {
     margin: 0;
 }
 
+body>header, body>footer {
+    background: yellow url(http://www.istockphoto.com/file_thumbview_approve/6959933/2/istockphoto_6959933-golden-textured-background.jpg);
+    padding: 1em 0;
+    border-color: black;
+    border-style: solid;
+    border-width: 0;
+}
+
 body>header {
-    background: black;
-    padding: 0;
-    color: white;
+    border-bottom-width: 0.125em;
+}
+
+body>footer {
+    border-top-width: 0.0675em;
 }
 
 header a {
@@ -20,15 +30,24 @@ article h1 a, header a {
 }
 
 article h1 {
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 header h1 {
     text-align: center;
     margin: 0;
     padding: 0;
-    font: 4em Slackey, inherit;
+    font-size: 4em;
+    background: url(http://www.clker.com/cliparts/4/c/9/7/12589120811502889579gmad_Monkey_head.svg.thumb.png) top center no-repeat;
+    padding-top: 120px;
+}
+
+header h1, footer h1 {
     line-height: 70%;
+    font-family: Slackey, inherit;
+    color: white;
+    -webkit-text-stroke: 0.05em;
+    -webkit-text-stroke-color: black;
 }
 
 header h2, section#online, section#recentcomments {
@@ -39,6 +58,6 @@ section#online {
     display: none
 }
 
-section#content {
-    margin: 0.5em;
+section#content, body>footer {
+    padding: 0.5em;
 }
