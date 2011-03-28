@@ -173,8 +173,7 @@ article footer a {
 }
 
 #blog article {
-    background: url(images/monkey-flourish.png) bottom center no-repeat;
-    background-size: 10%;
+    background: white bottom center url("images/monkey-flourish.png") / 10% auto no-repeat;
 }
 
 #blog article p, footer p {
