@@ -4,42 +4,81 @@ body {
     margin: 0;
 }
 
-body>header, body>footer {
+article>footer, body>header, body>footer {
     background: yellow url(http://www.istockphoto.com/file_thumbview_approve/6959933/2/istockphoto_6959933-golden-textured-background.jpg);
-    padding: 1em 0;
     border-color: black;
     border-style: solid;
     border-width: 0;
 }
 
+body>header, body>footer {
+    padding: 1em 0;
+}
+
 body>header {
     border-bottom-width: 0.125em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 body>footer {
     border-top-width: 0.0675em;
 }
 
-header a {
+header h1 {
     text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 4em;
 }
 
-article h1 a, header a {
+article h1 a, header a, article footer a {
     text-decoration: none;
     color: inherit;
 }
 
 article h1 {
     font-size: 1.25em;
+    text-transform: capitalize;
 }
 
-header h1 {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    font-size: 4em;
-    background: url(http://www.clker.com/cliparts/4/c/9/7/12589120811502889579gmad_Monkey_head.svg.thumb.png) top center no-repeat;
-    padding-top: 120px;
+article h1 a:after {
+    content: "\00a0\00a0\300b";
+    font-size: 75%;
+    float: right;
+    color: #ccc;
+}
+
+article h1 a:hover:after {
+    color: inherit;
+}
+
+
+article {
+    padding-bottom: 3em;
+    margin-bottom: 2em;
+}
+
+article:first-child {
+    background: url(http://www.clker.com/cliparts/4/c/9/7/12589120811502889579gmad_Monkey_head.svg.thumb.png) bottom center no-repeat;
+    background-size: 3em 3em;
+    padding-bottom: 4em;
+}
+
+article footer {
+    float: right;
+    font-weight: bold;
+    font-size: 80%;
+    width: 10em;
+    height: 2em;
+    line-height: 2em;
+    overflow: hidden;
+    border-width: 0.125em;
+    -webkit-border-top-left-radius: 20% 80%;
+    -webkit-border-bottom-left-radius: 20% 80%;
+    padding-left: 1em;
+    text-transform: capitalize;
 }
 
 header h1, footer h1 {
@@ -48,6 +87,8 @@ header h1, footer h1 {
     color: white;
     -webkit-text-stroke: 0.05em;
     -webkit-text-stroke-color: black;
+    text-shadow: #000 0.02em 0.02em 0.05em, rgba(0,0,0,0.25) 0.125em 0.1em 0.075em;
+    -webkit-transform: rotate(-3deg);
 }
 
 header h2, section#online, section#recentcomments {
@@ -60,4 +101,8 @@ section#online {
 
 section#content, body>footer {
     padding: 0.5em;
+}
+
+span.date {
+    display: none
 }
