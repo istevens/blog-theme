@@ -1,10 +1,10 @@
 body {
-    font: 1.1em Helvetica, sans-serif;
+    font: 1.1em Cabin, Helvetica, sans-serif;
     background: white;
     margin: 0;
 }
 
-article>footer, body>header, body>footer {
+body>header, body>footer, nav#pages span {
     background: yellow url(http://www.istockphoto.com/file_thumbview_approve/6959933/2/istockphoto_6959933-golden-textured-background.jpg);
     border-color: black;
     border-style: solid;
@@ -33,7 +33,7 @@ header h1 {
     font-size: 4em;
 }
 
-article h1 a, header a, article footer a {
+article h1 a, header a, article footer a, nav#pages span a {
     text-decoration: none;
     color: inherit;
 }
@@ -43,31 +43,37 @@ article h1 {
     text-transform: capitalize;
 }
 
+article h1 a {
+    display: block;
+}
+
 article h1 a:after {
-    content: "\00a0\00a0\300b";
+    content: "\300b";
     font-size: 75%;
     float: right;
     color: #ccc;
 }
 
-article h1 a:hover:after {
+article h1:hover a:after {
     color: inherit;
 }
 
+article footer {
+    display: none;
+}
 
 article {
-    padding-bottom: 3em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 article:first-child {
     background: url(http://www.clker.com/cliparts/4/c/9/7/12589120811502889579gmad_Monkey_head.svg.thumb.png) bottom center no-repeat;
     background-size: 3em 3em;
-    padding-bottom: 4em;
+    padding-bottom: 3em;
 }
 
-article footer {
-    float: right;
+nav#pages span {
+    display: block;
     font-weight: bold;
     font-size: 80%;
     width: 10em;
@@ -75,15 +81,24 @@ article footer {
     line-height: 2em;
     overflow: hidden;
     border-width: 0.125em;
+    text-transform: capitalize;
+}
+
+nav#pages span.next {
     -webkit-border-top-left-radius: 20% 80%;
     -webkit-border-bottom-left-radius: 20% 80%;
     padding-left: 1em;
-    text-transform: capitalize;
+}
+
+nav#pages span.previous {
+    -webkit-border-top-right-radius: 20% 80%;
+    -webkit-border-bottom-right-radius: 20% 80%;
+    padding-right: 1em;
 }
 
 header h1, footer h1 {
     line-height: 70%;
-    font-family: Slackey, inherit;
+    font-family: Slackey, Impact, sans-serif;
     color: white;
     -webkit-text-stroke: 0.05em;
     -webkit-text-stroke-color: black;
