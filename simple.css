@@ -4,6 +4,10 @@ body {
     margin: 0;
 }
 
+header, footer, article, nav {
+    display: block;
+}
+
 body>header, body>footer, nav#pages span {
     background: yellow url(http://www.istockphoto.com/file_thumbview_approve/6959933/2/istockphoto_6959933-golden-textured-background.jpg);
     border-color: black;
@@ -108,15 +112,15 @@ header h1, footer h1 {
     letter-spacing: -0.1em;
 }
 
-header h2, section#online, section#recentcomments {
+header h2, #online, #recentcomments {
     display: none;
 }
 
-section#online {
+#online {
     display: none
 }
 
-section#content, body>footer {
+#content, body>footer {
     padding: 0.5em;
 }
 
