@@ -28,9 +28,10 @@ body>footer {
 header h1 {
     text-transform: uppercase;
     text-align: center;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 0 0.1em 0 0;
     font-size: 3.5em;
+    max-width: 5em;
 }
 
 article h1 a, header a, article footer a, nav#pages span a {
