@@ -34,36 +34,45 @@ header h1 {
     max-width: 5em;
 }
 
-article h1 a, header a, article footer a, nav#pages span a {
+#blog article h1 a, header a, article footer a, nav#pages span a {
     text-decoration: none;
     color: inherit;
 }
 
-article h1 {
+#blog article h1, #online>h1 {
     font-size: 1.25em;
     text-transform: capitalize;
 }
 
-article h1 a {
+#blog article h1 a {
     display: block;
 }
 
-article h1 a:after {
+#blog article h1 a:after {
     content: "\300b";
     font-size: 75%;
     float: right;
     color: #ccc;
 }
 
-article h1:hover a:after {
+#blog article:hover a:after {
     color: inherit;
 }
 
-article footer {
+#online article h1 {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+#blog article footer {
     display: none;
 }
 
-article {
+#online article footer {
+    font-size: 0.75em;
+}
+
+#blog article {
     margin-bottom: 3em;
 }
 
@@ -97,7 +106,7 @@ nav#pages span.previous {
     padding-right: 1em;
 }
 
-header h1, footer h1 {
+header h1, footer h1, #online>h1 {
     line-height: 0.7em;
     font-family: Slackey, Impact, sans-serif;
     color: white;
@@ -108,12 +117,8 @@ header h1, footer h1 {
     letter-spacing: -0.1em;
 }
 
-header h2, section#online, section#recentcomments {
+header h2, section#recentcomments {
     display: none;
-}
-
-section#online {
-    display: none
 }
 
 section#content, body>footer {
@@ -132,13 +137,52 @@ span.date {
     body>footer, body>#content {
         padding: 1em;
     }
-
-    #content {
-        max-width: 30em;
-    }
 }
 
-@media all and (min-width: 40em) {
+@media all and (min-width: 50em) {
+    header h1 {
+        margin: 0 0 0 0.25em;
+    }
+
+    body>footer, body>#content {
+        padding: 1em 2em;
+    }
+
+    #content:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    #blog {
+        width: 66%;
+        float: left;
+    }
+
+    #online {
+        width: 33%;
+        float: right;
+        border-left: 1px dotted #963;
+    }
+
+    #blog article {
+        padding-right: 1em;
+    }
+
+    #online article {
+        padding-left: 1em;
+    }
+
+    #online>h1 {
+        padding-left: 0.75em;
+        -webkit-transform: rotate(2deg);
+    }
+
+}
+
+@media all and (min-width: 70em) {
     header h1 {
         margin: 0 0 0 1em;
     }
