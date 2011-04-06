@@ -121,11 +121,11 @@ header h1, footer h1, #online>h1 {
     letter-spacing: -0.1em;
 }
 
-header h2, section#recentcomments {
+header h2, #recentcomments {
     display: none;
 }
 
-section#content, body>footer {
+#content, body>footer {
     padding: 0.5em;
 }
 
@@ -196,6 +196,6 @@ span.date {
     }
 
     #content {
-        max-width: 40em;
+        max-width: 70em;
     }
 }
