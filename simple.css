@@ -163,6 +163,7 @@ span.date {
     #blog {
         width: 66%;
         float: left;
+        max-width: 44em;
     }
 
     #online {
@@ -195,7 +196,20 @@ span.date {
         padding: 1em 4em;
     }
 
-    #content {
-        max-width: 70em;
+    #blog article {
+        margin-right: 2em;
     }
+
+    #online {
+        float: left;
+    }
+
+    #online article {
+        padding-left: 3em;
+    }
+
+    #online>h1 {
+        padding-left: 2.25em;
+    }
+
 }
