@@ -141,6 +141,10 @@ span.date {
     body>footer, body>#content {
         padding: 1em;
     }
+
+    #blog article h1 a:after {
+        float: none;
+    }
 }
 
 @media all and (min-width: 50em) {
