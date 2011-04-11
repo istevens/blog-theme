@@ -38,21 +38,21 @@ header h1 {
     max-width: 5em;
 }
 
-#blog article h1 a, header a, article footer a, nav#pages span a {
+#blog h1 a, header a, article footer a, nav#pages span a {
     text-decoration: none;
     color: inherit;
 }
 
-#blog article h1, #online>h1 {
+#blog h1, #online>h1 {
     font-size: 1.25em;
     text-transform: capitalize;
 }
 
-#blog article h1 a {
+#blog h1 a {
     display: block;
 }
 
-#blog article h1 a:after {
+#blog h1 a:after {
     content: "\300b";
     font-size: 75%;
     float: right;
