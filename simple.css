@@ -1,3 +1,5 @@
+@import url("reset.css");
+
 body {
     font-family: Cabin, Helvetica, sans-serif;
     background: white;
@@ -6,6 +8,10 @@ body {
 
 header, footer, article, nav {
     display: block;
+}
+
+p {
+    margin-bottom: 1em;
 }
 
 body>header, body>footer, nav#pages span {
@@ -60,6 +66,10 @@ header h1 {
     font-size: 2.5em;
     margin-bottom: 1em;
 
+}
+
+#blog h1 {
+    margin-bottom: 1em;
 }
 
 #blog h1 a {
