@@ -4,11 +4,49 @@
  * @subpackage New Monkey
  */
 
-get_header(); $page = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
+get_header();
+$page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$home = is_home() and !get_query_var('paged');
+?>
 
 <section id="content">
 
-<?php if(is_home() and !get_query_var('paged')) { ?>
+<section id="blog">
+    <?php $first = $page == 1 ? 'first-post': ''; ?>
+    <?php query_posts('cat=-32,-33&paged=' . $page); ?>
+    <?php while (have_posts()) : the_post(); ?>
+
+        <article <?php post_class($first) ?> id="post-<?php the_ID(); ?>">
+            <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to &#8220;<?php the_title_attribute(); ?>&#8221;"><?php the_title(); ?></a></h1>
+            <p class="date"><time pubdate datetime="<?php the_time('Y-m-d\TH:i:s\Z'); ?>"/><?php the_time('M j, Y'); ?></p>
+
+            <?php
+            if($first) {
+                the_content('Read the rest of this entry &#xbb;');
+            }
+            else {
+                the_excerpt();
+                ?>
+                <footer>
+                    <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Continue reading &ldquo;<?php the_title_attribute(); ?>&rdquo;">Read more</a></p>
+                </footer>
+            <?php
+            }
+            ?>
+        </article>
+
+        <?php $first = ''; ?>
+
+    <?php endwhile; ?>
+
+    <nav>
+        <span class="next"><?php next_posts_link('&laquo; Older Entries') ?></span>
+        <span class="previous"><?php previous_posts_link('Newer Entries &raquo;') ?></span>
+    </nav>
+
+</section>
+
+<?php if($home) { ?>
 <section id="online">
     <h1>Latest Online Activity</h1>
     <?php $first = $page == 1 ? 'first-post': ''; query_posts('cat=32,33&showposts=10'); ?>
@@ -45,39 +83,6 @@ get_header(); $page = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
 </section>
 <?php } ?>
 
-<section id="blog">
-    <?php $first = $page == 1 ? 'first-post': ''; ?>
-    <?php query_posts('cat=-32,-33&paged=' . $page); ?>
-    <?php while (have_posts()) : the_post(); ?>
-
-        <article <?php post_class($first) ?> id="post-<?php the_ID(); ?>">
-            <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to &#8220;<?php the_title_attribute(); ?>&#8221;"><?php the_title(); ?> <span class="date"><?php the_time('M j'); ?></span></a></h1>
-
-            <?php 
-            if($first) {
-                the_content('Read the rest of this entry &#xbb;');
-            }
-            else {
-                the_excerpt();
-                ?>
-                <footer>
-                    <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Continue reading &ldquo;<?php the_title_attribute(); ?>&rdquo;">Read more</a></p>
-                </footer>
-            <?php
-            }
-            ?>
-        </article>
-
-        <?php $first = ''; ?>
-
-    <?php endwhile; ?>
-
-    <nav>
-        <span class="next"><?php next_posts_link('&laquo; Older Entries') ?></span>
-        <span class="previous"><?php previous_posts_link('Newer Entries &raquo;') ?></span>
-    </nav>
-
-</section>
 </section>
 
 <?php get_footer(); ?>
