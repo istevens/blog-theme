@@ -7,6 +7,7 @@
 get_header();
 $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $home = is_home() and !get_query_var('paged');
+$XML_DATE = 'Y-m-d\TH:i:s\Z';
 ?>
 
 <section id="content">
@@ -18,7 +19,7 @@ $home = is_home() and !get_query_var('paged');
 
         <article <?php post_class($first) ?> id="post-<?php the_ID(); ?>">
             <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to &#8220;<?php the_title_attribute(); ?>&#8221;"><?php the_title(); ?></a></h1>
-            <p class="date"><time pubdate datetime="<?php the_time('Y-m-d\TH:i:s\Z'); ?>"/><?php the_time('M j, Y'); ?></p>
+            <p class="date"><time pubdate datetime="<?php the_time($XML_DATE); ?>"><?php the_time('M j, Y'); ?></date></p>
 
             <?php
             if($first) {
@@ -75,8 +76,8 @@ $home = is_home() and !get_query_var('paged');
                 echo $content;
             } ?>
             <footer>
-                <a href="<?php echo $link ?>" title="<?php echo $link_verb; ?> '<?php the_title_attribute(); echo "'".$link_text."\">".$verb ?> on <?php the_time('Y-m-d \a\t G:i') ?></a>
-                <?php comments_popup_link('Comment &#187;', '1 Comment &#187;', '% Comments &#187;', 'comments'); ?>
+                <a href="<?php echo $link ?>" title="<?php echo $link_verb; ?> '<?php the_title_attribute(); echo "'".$link_text."\">".$verb ?> on <date pubdate datetime="<?php the_time($XML_DATE); ?>"><?php the_time('M d \a\t G:i') ?></date></a>
+                <?php comments_popup_link('&#x270e;', '&#x270e; (1)', '&#x270e; (%)', 'comments'); ?>
             </footer>
         </article>
     <?php endwhile; ?>
