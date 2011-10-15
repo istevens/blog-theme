@@ -1,286 +1,258 @@
-/*
-Theme Name: New Monkey
-Version: 0.1
-Author: Ian Stevens
-Author URI: http://crazedmonkey.com/
-*/
+@import url("reset.css");
 
 body {
-    font-family: Helvetica, Sans-serif;
+    font-family: Cabin, Helvetica, sans-serif;
+    background: white;
     margin: 0;
 }
 
-header {
-    height: 200px;
-    background-color: #fc3;
-    background-image: url(images/monkey-white-crop.png), url(images/yellow-gradient.png);
-    background-repeat: no-repeat, repeat-x;
-    background-position: 45em top, bottom left;
+header, footer, article, nav {
+    display: block;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+body>header, body>footer, nav#pages span {
+    background: yellow;
+    border-color: black;
+    border-style: solid;
+    border-width: 0;
+}
+
+body>header, body>footer {
+    padding: 1em 0;
+}
+
+body>header {
+    border-bottom-width: 0.125em;
+    padding-bottom: 0.5em;
+}
+
+body>footer {
+    border-top-width: 0.0675em;
 }
 
 header h1 {
-    font-size: 800%;
-    font-weight: 900;
-    letter-spacing: -0.1em;
-    text-transform: capitalize;
-    -webkit-transform: rotate(-2deg); 
-    -moz-transform: rotate(-2deg); 
-    color: #963;
-    margin-top: -0.1875em;
-    margin-bottom: 0;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0.1em 0 0;
+    font-size: 3.5em;
+    max-width: 5em;
 }
 
-header h1 a {
+#blog, #online {
+    padding-top: 1em;
+}
+
+#online {
+    margin: 2em 0 0 0;
+    border-top: 1px dashed black;
+}
+
+#blog h1 a, header a, article footer a, nav#pages span a {
     text-decoration: none;
     color: inherit;
 }
 
-header h2 {
-    font-size: 200%;
-    font-weight: 100;
-    color: #69F;
-    margin-left: 15em;
-    margin-top: -1em;
-    position: relative;
+#blog h1, #online>h1 {
+    font-size: 1.25em;
+    text-transform: capitalize;
 }
 
-.single header {
-    height: 100px;
-}
-
-.single header h1 {
-    font-size: 400%;
-}
-
-.single header h2 {
-    font-size: 100%;
-}
-
-
-body>footer {
-    width: 100%;
-    margin-top: 0;
-    padding-top: 0;
-}
-
-#content, body>nav{
-    padding: 2em 2em 85px 2em;
-    margin-bottom: 0;
-    background: repeat-x bottom left url('images/monkeys-ft.png');
-}
-
-#online, #blog {
-    padding-top: 0;
-}
-
-#online {
-    margin-top: 1em;
+#online>h1, body>footer h1 {
+    font-size: 2.5em;
     margin-bottom: 1em;
-    border-right: 1px dotted #963;
-    width: 33%;
-    float: left;
+
 }
 
-#blog {
-    padding: 0 0 3em 1em;
-    margin-top: 0;
-    margin-left: 33%;
+#blog h1, #online article h1 {
+    margin-bottom: 1em;
 }
 
-#content h1 {
-    margin-bottom: 0.5em;
+#blog h1 a {
+    display: block;
 }
 
-#content h1 a {
-    text-decoration: none;
+#blog h1 a:after {
+    content: "\300b";
+    font-size: 75%;
+    float: right;
+    color: #ccc;
 }
 
-#content h1 a:hover {
-    text-decoration: underline;
+#blog article:hover a:after {
+    color: inherit;
 }
 
-article p {
-    line-height: 1.33em;
-}
-
-article.clicked {
-    background-color: #fc3;
-}
-
-body>article {
-    margin: 0 5em;
-}
-
-body>article.category-tweets h1 {
-    font-size: 300%;
-    line-height: 1.5em;
-}
-
-#content article {
-    padding: 1em;
-}
-
-#online article {
-    margin: 0;
-    margin-right: 2em;
-    padding: 1em 1em 5px 1em;
-    border-bottom: 1px dotted #963;
-}
-
-#online article:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
+#online article h1 {
+    font-size: 1em;
+    font-weight: normal;
 }
 
 article footer {
-    font-size: 90%;
-    position: relative;
-    color: #6cf;
-}
-
-article footer a {
-    text-decoration: none;
-}
-
-#online footer {
-    margin-top: 1.75em;
-}
-
-#online footer a, #online>h1 {
-    color: #963;
-}
-
-#blog footer {
-    text-align: right;
-}
-
-#blog footer a {
-    color: black;
-    font-size: 100%;
-    font-weight: bold;
-    background: url(images/arrow.svg) right 50% no-repeat;
-    background-size: 25%;
-    background-origin: border-box;
-    padding: 2em;
-    padding-right: 3em;
-}
-
-#blog footer .comments {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-#blog article {
-    background: white bottom center url("images/monkey-flourish.png") / 10% auto no-repeat;
-}
-
-#blog article p, footer p {
-    margin-bottom: 1em;
-}
-
-#blog h1 .date {
-    color: #6cf;
     display: none;
 }
 
-#blog h1 a, #blog .navigation a {
-    text-decoration: none;
-    color: black;
+#online article footer {
+    font-size: 0.75em;
 }
 
-#blog .post {
-    margin: 0 1em 3em 1em;
+#blog article {
+    margin-bottom: 3em;
 }
 
-#blog .first-post {
-    margin-top: 0em;
-    padding-bottom: 3em;
-    background-size: 15%;
+#online article {
+    margin-bottom: 2em;
 }
 
-#online>h1, #blog article>h1, #blog footer a {
-    font-weight: 600;
-    letter-spacing: -0.05em;
-}
-
-#online>h1, #blog article>h1 {
-    font-size: 175%;
-    margin: 0 0 1em 0;
-    line-height: 1.33em;
-}
-
-#online>h1 {
-    margin-left: 0.5em;
-    margin-bottom: 0;
-}
-
-#blog p, #online article h1 {
-    font-weight: normal;
-    font-size: 133%;
-    line-height: 1.33em;
-}
-
-#blog article footer {
-    margin-top: 1em;
-}
-
-#blog h1 a:hover, footer a:hover, #blog nav#pages a:hover {
-    text-decoration: underline;
-}
-
-#blog nav#pages{
-    font-size: 125%;
-    position: relative;
-}
-
-#blog nav#pages .previous {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-body>footer {
-    padding: 0 0 3em 0;
-    background-color: #fc3;
-}
-
-body>footer:after, body>#content:after {
-    content: ".";
+article:first-child:after {
     display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+    padding-bottom: 0.5em;
+    text-align: center;
+    content: "\273C";
+    font-size: 400%;
+    color: #ccc;
 }
 
-footer>section {
-    width: 33%;
-    float: left;
-    margin-left: 1em
+nav#pages span {
+    display: block;
+    font-weight: bold;
+    font-size: 80%;
+    width: 10em;
+    height: 2em;
+    line-height: 2em;
+    overflow: hidden;
+    border-width: 0.125em;
+    text-transform: capitalize;
 }
 
-footer h1 {
-    font-size: 250%;
-    font-weight: bolder;
-    color: #963;
+nav#pages span.next {
+    -webkit-border-top-left-radius: 20% 80%;
+    -webkit-border-bottom-left-radius: 20% 80%;
+    padding-left: 1em;
 }
 
-footer section:nth-child(1) h1 {
-    -webkit-transform: rotate(-2deg);
-    -moz-transform: rotate(-2deg);
+nav#pages span.previous {
+    -webkit-border-top-right-radius: 20% 80%;
+    -webkit-border-bottom-right-radius: 20% 80%;
+    padding-right: 1em;
 }
 
-footer section:nth-child(2) h1 {
-    -webkit-transform: rotate(1deg);
-    -moz-transform: rotate(1deg);
+header h1, footer h1, #online>h1 {
+    line-height: 0.7em;
+    font-family: Slackey, Impact, sans-serif;
+    color: white;
+    -webkit-text-stroke: 0.05em;
+    -webkit-text-stroke-color: black;
+    text-shadow: #000 0.02em 0.02em 0.05em, rgba(0,0,0,0.25) 0.125em 0.1em 0.075em;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    letter-spacing: -0.1em;
 }
 
-footer section:nth-child(3) h1 {
-    -webkit-transform: rotate(3deg);
-    -moz-transform: rotate(3deg);
+header h2, #recentcomments {
+    display: none;
 }
 
-footer .recentcomments {
-    padding-bottom: 1em;
+#content, body>footer {
+    padding: 0 0.5em;
+}
+
+span.date {
+    display: none
+}
+
+@media all and (min-width: 30em) {
+    header h1 {
+        margin: 0 0 0 0.125em;
+    }
+    
+    body>footer, #content {
+        padding: 0 1.33em;
+    }
+
+    #blog article h1 a:after {
+        float: none;
+    }
+}
+
+@media all and (min-width: 50em) {
+    header h1 {
+        margin: 0 0 0 0.25em;
+    }
+
+    body>footer, #content {
+        padding: 0 2em;
+    }
+
+    #content:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    #blog, #online {
+        padding-top: 2em;
+    }
+
+    #blog {
+        width: 66%;
+        float: left;
+        max-width: 44em;
+    }
+
+    #online {
+        width: 33%;
+        float: right;
+        border-left: 1px dashed #963;
+        border-top: none;
+        margin-top: 0;
+    }
+
+    #blog article {
+        padding-right: 1em;
+    }
+
+    #online article {
+        padding-left: 1em;
+    }
+
+    #online>h1 {
+        padding-left: 0.5em;
+        -webkit-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+    }
+
+}
+
+@media all and (min-width: 70em) {
+    header h1 {
+        margin: 0 0 0 1em;
+    }
+    
+    body>footer, #content {
+        padding: 0 4.33em;
+    }
+
+    #blog article {
+        margin-right: 2em;
+    }
+
+    #online {
+        float: left;
+    }
+
+    #online article {
+        padding-left: 3em;
+    }
+
+    #online>h1 {
+        padding-left: 1.25em;
+    }
+
 }
