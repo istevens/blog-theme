@@ -64,8 +64,8 @@ get_header();
 <?php endif; ?>
 
 <nav>
-    <div class="alignleft"><?php previous_post_link('&laquo; %link', '%title', FALSE, '32') ?></div>
-    <div class="alignright"><?php next_post_link('%link &raquo;', '%title', FALSE, '32') ?></div>
+    <?php previous_post_link('&laquo; %link', '%title', FALSE, '32') ?>
+    <?php next_post_link('%link &raquo;', '%title', FALSE, '32') ?>
 </nav>
 
 <?php get_footer(); ?>
