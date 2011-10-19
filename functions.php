@@ -5,21 +5,28 @@
  */
 
 function custom_trim_excerpt($text) { // Fakes an excerpt if needed
-    global $post;
-    if ( '' == $text ) {
-        $text = get_the_content('');
-        $text = apply_filters('the_content', $text);
-        $text = str_replace(']]>', ']]&gt;', $text);
-        $text = strip_tags($text, '<p><a>');
-        $excerpt_length = 55;
-        $words = explode(' ', $text, $excerpt_length + 1);
-        if (count($words)> $excerpt_length) {
-            array_pop($words);
-            array_push($words, '&hellip;');
-            $text = implode(' ', $words);
-        }
-    }
-    return $text;
+	$raw_excerpt = $text;
+    if( '' == $text ) {
+		$text = get_the_content('');
+		$text = strip_shortcodes( $text );
+		$text = apply_filters('the_content', $text);
+		$text = str_replace(']]>', ']]&gt;', $text);
+		$text = strip_tags($text, '<p><a>');
+		$excerpt_length = apply_filters('excerpt_length', 55);
+		$excerpt_more = apply_filters(
+            'excerpt_more',
+            '&nbsp;&hellip;&nbsp;<a href="'.get_permalink().'" rel="bookmark" title="Continue reading &ldquo;'.the_title_attribute(array('echo'=>0)).'&rdquo;">Read more</a>'
+        );
+		$words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
+		if ( count($words) > $excerpt_length ) {
+			array_pop($words);
+			$text = implode(' ', $words);
+			$text = $text . $excerpt_more;
+		} else {
+			$text = implode(' ', $words);
+		}
+	}
+	return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
 }
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'custom_trim_excerpt');
