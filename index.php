@@ -13,32 +13,14 @@ $XML_DATE = 'Y-m-d\TH:i:s\Z';
 <section id="content">
 
 <section id="blog">
-    <?php $first = $page == 1 ? 'first-post': ''; ?>
-    <?php query_posts('cat=-32,-33&paged=' . $page); ?>
-    <?php while (have_posts()) : the_post(); ?>
-
-        <article <?php post_class($first) ?> id="post-<?php the_ID(); ?>">
-            <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to &#8220;<?php the_title_attribute(); ?>&#8221;"><?php the_title(); ?></a></h1>
-            <p class="date"><time pubdate datetime="<?php the_time($XML_DATE); ?>"><?php the_time('M j, Y'); ?></date></p>
-
-            <?php
-            if($first) {
-                the_content('Read the rest of this entry &#xbb;');
-            }
-            else {
-                the_excerpt();
-                ?>
-                <footer>
-                    <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Continue reading &ldquo;<?php the_title_attribute(); ?>&rdquo;">Read more</a></p>
-                </footer>
-            <?php
-            }
-            ?>
-        </article>
-
-        <?php $first = ''; ?>
-
-    <?php endwhile; ?>
+    <?php
+        $first = $page == 1 ? 'first-post': '';
+        query_posts('cat=-32,-33&paged=' . $page);
+        while (have_posts()) : the_post();
+            include('blog_post.php');
+            $first = '';
+        endwhile;
+    ?>
 
     <nav>
         <span class="next"><?php next_posts_link('&laquo; Older Entries') ?></span>
