@@ -33,7 +33,6 @@ get_header();
 
     <?php
         $first = '';
-        query_posts('cat=-32&paged=' . $page);
         while (have_posts()) : the_post();
             include('blog_post.php');
         endwhile;
