@@ -34,7 +34,7 @@ get_header();
     <?php
         $first = '';
         while (have_posts()) : the_post();
-            include('blog_post.php');
+            include('index_post.php');
         endwhile;
     ?>
 

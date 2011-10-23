@@ -17,7 +17,7 @@ $XML_DATE = 'Y-m-d\TH:i:s\Z';
         $first = $page == 1 ? 'first-post': '';
         query_posts('cat=-32,-33&paged=' . $page);
         while (have_posts()) : the_post();
-            include('blog_post.php');
+            include('index_post.php');
             $first = '';
         endwhile;
     ?>
@@ -35,8 +35,8 @@ $XML_DATE = 'Y-m-d\TH:i:s\Z';
     <?php
         $first = $page == 1 ? 'first-post': '';
         query_posts('cat=32,33&showposts=10');
-        while (have_posts()) : the_post();
-            include('blog_post.php');
+        while (have_posts()) : the_post(); 
+            include('index_post.php');
             $first = '';
         endwhile;
     ?>
