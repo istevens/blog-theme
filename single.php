@@ -31,7 +31,7 @@ get_header();
                 You'll need to download this plugin, and follow the instructions:
                 http://binarybonsai.com/archives/2004/08/17/time-since-plugin/ */
                 /* $entry_datetime = abs(strtotime($post->post_date) - (60*120)); echo time_since($entry_datetime); echo ' ago'; */ ?>
-            on <date pubdate datetime="<?php the_time('Y-m-d\TH:i:s\Z'); ?>"><?php the_time('l, F jS, Y') ?> at <?php the_time() ?></date>
+            on <date pubdate datetime="<?php the_time(XML_DATE); ?>"><?php the_time('l, F jS, Y') ?> at <?php the_time() ?></date>
             and is filed under <?php the_category(', ') ?>.
             You can follow any responses to this entry through the <?php post_comments_feed_link('RSS 2.0'); ?> feed.
 
@@ -54,8 +54,11 @@ get_header();
             <?php } edit_post_link('Edit this entry','','.'); ?>
         </footer>
 
-        <?php comments_template(); ?>
     </article>
+
+    <section id="comments">
+        <?php comments_template(); ?>
+    </section>
 
 <?php endwhile; else: ?>
 
@@ -64,8 +67,10 @@ get_header();
 <?php endif; ?>
 
 <nav>
-    <?php previous_post_link('&laquo; %link', '%title', FALSE, '32') ?>
-    <?php next_post_link('%link &raquo;', '%title', FALSE, '32') ?>
+    <?php
+        previous_post_link('&laquo; %link', '%title', FALSE, '32');
+        next_post_link('%link &raquo;', '%title', FALSE, '32');
+    ?>
 </nav>
 
 <?php get_footer(); ?>

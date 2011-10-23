@@ -4,6 +4,8 @@
  * @subpackage Default_Theme
  */
 
+define('XML_DATE', 'Y-m-d\TH:i:s\Z');
+
 function custom_trim_excerpt($text) { // Fakes an excerpt if needed
 	$raw_excerpt = $text;
     if( '' == $text ) {
@@ -30,6 +32,31 @@ function custom_trim_excerpt($text) { // Fakes an excerpt if needed
 }
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'custom_trim_excerpt');
+
+function html5_comment($comment, $args, $depth) {
+    $GLOBALS['comment'] = $comment;
+?>
+    <li><article <?php comment_class(); ?> id="comment-<?php comment_ID() ?>">
+
+        <header>
+            <?php echo get_avatar( $comment->comment_author_email, 48 ); ?>
+            <?php printf(__('<cite class="fn">%s</cite> says:'), get_comment_author_link()) ?>
+
+            <?php if ($comment->comment_approved == '0') { ?>
+                <p><?php _e('Your comment is awaiting moderation.') ?></p>
+            <?php } ?>
+
+            <p class="date">
+            <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('<date pubdate datetime="'.get_comment_date(XML_DATE).'">%1$s at %2$s</date>'), get_comment_date(),  get_comment_time()) ?></a>
+            <?php edit_comment_link(__('(Edit)'),'  ','') ?>
+            </p>
+        </header>
+
+        <?php comment_text() ?>
+
+    </article></li>
+<?php
+}
 
 if ( function_exists('register_sidebar') )
     register_sidebar(array(

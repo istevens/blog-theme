@@ -7,7 +7,6 @@
 get_header();
 $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $home = is_home() and !get_query_var('paged');
-$XML_DATE = 'Y-m-d\TH:i:s\Z';
 ?>
 
 <section id="content">
