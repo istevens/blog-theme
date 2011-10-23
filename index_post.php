@@ -19,7 +19,7 @@
             $verb = "Linked";
         } ?>
         <h1><?php echo $title; ?></h1>
-        <?php if ($content != "") {
+        <?php if ($content != "") { 
             echo $content;
         } ?>
         <footer>
