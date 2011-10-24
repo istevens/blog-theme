@@ -1,5 +1,118 @@
 @import url("reset.css");
 
+/* Generic styles */
+
+body {
+    background: white;
+    color: #333;
+    font: 1.1em Helvetica, sans-serif;
+}
+
+p, pre {
+    margin-bottom: 0.8em;
+}
+
+pre code {
+    display: block;
+    background: black;
+    color: #ccc;
+    padding: 0.5em;
+    margin: 0 0.5em;
+}
+
+pre {
+    overflow: scroll;
+}
+
+h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 a:hover {
+    color: #999;
+}
+
+body>header, body>section, body>article, body>footer {
+    padding: 0 0.5em;
+}
+
+
+/* header and footer */
+
+body>header, body>footer {
+    border: 1px solid #333;
+    background: yellow;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+body>header {
+    border-width: 0 0 1px 0;
+    margin-bottom: 2.1em;
+}
+
+body>footer {
+    border-width: 1px 0 0 0;
+    margin-top: 2.1em;
+}
+
+body>header h1 {
+    text-align: center;
+    font-size: 2.1em;
+}
+
+body.index>header h1 {
+    font-size: 3.4em;
+}
+
+body>header h2 {
+    display: none;
+}
+
+
+/* Article display. */
+
+article h1 {
+    margin-bottom: 0.8em;
+}
+
+article {
+    margin-bottom: 2.1em;
+}
+
+body>article h1 {
+    font-size: 2.1em;
+}
+
+body.index article h1 {
+    font-size: 1.3em;
+}
+
+article footer p {
+    margin: 0 2.1em;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+
+/* Article end mark */
+
+#blog>article:first-child:after, body>article footer:before {
+    display: block;
+    content: '\273c';
+    text-align: center;
+    padding: 0.5em inherit;
+    color: #999;
+}
+
+#blog>article:first-child:after {
+    font-size: 2.1em;
+}
+
+
+/* Comments */
+
 
 @media all and (min-width: 30em) {
 }

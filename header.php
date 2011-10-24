@@ -23,7 +23,7 @@
 
     <?php wp_head(); ?>
     </head>
-<body <?php if (is_singular()) { ?> class="single" <?php } ?>>
+<body <?php if (is_front_page()) { ?> class="index" <?php } ?>>
 
 <header>
     <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>

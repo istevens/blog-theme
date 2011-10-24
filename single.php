@@ -19,14 +19,13 @@ get_header();
                 <h1><?php wp_title(''); ?></h1>
             <?php } ?>
 
-            <?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
+            <?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
 
             <?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-            <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
         <?php } ?>
 
         <footer>
-            This entry was posted
+            <p>This entry was posted
             <?php /* This is commented, because it requires a little adjusting sometimes.
                 You'll need to download this plugin, and follow the instructions:
                 http://binarybonsai.com/archives/2004/08/17/time-since-plugin/ */
@@ -52,6 +51,8 @@ get_header();
                 Both comments and pings are currently closed.
 
             <?php } edit_post_link('Edit this entry','','.'); ?>
+            </p>
+            <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
         </footer>
 
     </article>
