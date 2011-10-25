@@ -6,6 +6,7 @@ body {
     background: white;
     color: #333;
     font: 100% Helvetica, sans-serif;
+    line-height: 130%;
 }
 
 p, pre {
@@ -14,14 +15,14 @@ p, pre {
 
 pre code {
     display: block;
-    background: black;
-    color: #ccc;
+    background: #333;
+    color: #fff;
     padding: 0.5em;
     margin: 0 0.5em;
 }
 
 pre {
-    overflow: scroll;
+    overflow: auto;
 }
 
 h1 a {
@@ -86,8 +87,21 @@ article {
     margin-bottom: 2.1em;
 }
 
+article.category-links h1:after, article.category-tweets h1:after {
+    content: '\00a0\21aa';
+    color: #999;
+}
+
+body>article, #comments article {
+    max-width: 50em;
+}
+
 body>article h1 {
     font-size: 1.3em;
+}
+
+body>article p, body>article pre {
+    margin-bottom: 1.8em;
 }
 
 body.index article h1 {
@@ -163,15 +177,21 @@ body>nav a[rel="next"]:after {
 #comments {
     border-top: 1px dashed #333;
     margin-top: 2.1em;
-    font-size: 0.8em;
 }
 
 #comments>h1 {
     margin: 0.5em 0 1.2em 0;
 }
 
+#comments article {
+   font-size: 0.8em;
+   line-height: 100%;
+   overflow: auto;
+}
+
 #comments form {
     margin-top: 2.1em;
+    font-size: 1em;
 }
 
 #comments label {
