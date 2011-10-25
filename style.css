@@ -38,10 +38,6 @@ h1 a, h2 a {
     color: inherit;
 }
 
-h1 a:hover {
-    color: #999;
-}
-
 body>header, body>section#content, body>article, body>footer, #comments>ol, #comments form {
     padding: 0 0.5em;
 }
@@ -105,15 +101,34 @@ body>header, body>footer {
 body>header {
     border-bottom: 1px solid #333;
     background: yellow;
-    margin-bottom: 2.1em;
+    margin-bottom: 1.8em;
+}
+
+body>header h1, body>footer h1 {
+    line-height: 0.7em;
+    font-family: Impact, sans-serif;
+    color: white;
+    -webkit-text-stroke: 0.05em;
+    -webkit-text-stroke-color: black;
+    text-shadow: #000 0.02em 0.02em 0.05em, rgba(0,0,0,0.25) 0.125em 0.1em 0.075em;
+    letter-spacing: -0.1em;
 }
 
 body>header h1 {
     text-align: center;
+    margin: 0;
+    font-size: 2.1em;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+}
+
+body>header h1:hover {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
 }
 
 body.index>header h1 {
-    font-size: 2.1em;
+    font-size: 5.5em;
 }
 
 body>header h2 {
@@ -124,11 +139,15 @@ body>footer {
     color: #fff;
     background: #333;
     border-top: 1px solid #ccc;
-    padding-top: 2em;
+    padding-top: 1.8em;
 }
 
 body>footer h1 {
-    color: yellow;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    font-size: 2.1em;
+    margin-bottom: 0.8em;
+    max-width: 10em;
 }
 
 
@@ -157,9 +176,6 @@ article footer p {
     line-height: 100%;
     font-style: italic;
 }
-
-
-/* Article nav */
 
 
 /* Article end mark */
