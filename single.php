@@ -57,17 +57,16 @@ get_header();
 
     </article>
 
+    <section id="comments">
+        <?php comments_template(); ?>
+    </section>
+
     <nav>
         <?php
             previous_post_link('%link', '%title', FALSE, '32');
             next_post_link('%link', '%title', FALSE, '32');
         ?>
     </nav>
-
-
-    <section id="comments">
-        <?php comments_template(); ?>
-    </section>
 
 <?php endwhile; else: ?>
 

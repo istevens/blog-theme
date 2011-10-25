@@ -41,20 +41,21 @@ body>header, body>section, body>article, body>footer {
 /* header and footer */
 
 body>header, body>footer {
-    border: 1px solid #333;
-    background: yellow;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
 
 body>header {
-    border-width: 0 0 1px 0;
+    border-bottom: 1px solid #333;
+    background: yellow;
     margin-bottom: 2.1em;
 }
 
 body>footer {
-    border-width: 1px 0 0 0;
-    margin-top: 2.1em;
+    color: #fff;
+    background: #333;
+    border-top: 1px solid #ccc;
+    padding-top: 2em;
 }
 
 body>header h1 {
@@ -68,6 +69,10 @@ body.index>header h1 {
 
 body>header h2 {
     display: none;
+}
+
+body>footer h1 {
+    font-size: 1.3em;
 }
 
 
@@ -115,6 +120,10 @@ body>nav a {
     color: white;
     text-decoration: none;
     padding: 0.8em;
+}
+
+body>nav a:hover {
+    color: yellow;
 }
 
 body>nav a[rel="prev"] {
