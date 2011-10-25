@@ -57,6 +57,14 @@ get_header();
 
     </article>
 
+    <nav>
+        <?php
+            previous_post_link('%link', '%title', FALSE, '32');
+            next_post_link('%link', '%title', FALSE, '32');
+        ?>
+    </nav>
+
+
     <section id="comments">
         <?php comments_template(); ?>
     </section>
@@ -66,12 +74,5 @@ get_header();
     <p>Sorry, no posts matched your criteria.</p>
 
 <?php endif; ?>
-
-<nav>
-    <?php
-        previous_post_link('&laquo; %link', '%title', FALSE, '32');
-        next_post_link('%link &raquo;', '%title', FALSE, '32');
-    ?>
-</nav>
 
 <?php get_footer(); ?>

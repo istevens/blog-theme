@@ -92,7 +92,45 @@ body.index article h1 {
 article footer p {
     margin: 0 2.1em;
     font-size: 0.8em;
+    line-height: 100%;
     font-style: italic;
+}
+
+
+/* Article nav */
+
+body>nav {
+    background: #333;
+}
+
+body>nav:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+body>nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8em;
+}
+
+body>nav a[rel="prev"] {
+    float: left;
+}
+
+body>nav a[rel="next"] {
+    float: right;
+}
+
+body>nav a[rel="prev"]:before {
+    content: '\21d0\00a0'
+}
+
+body>nav a[rel="next"]:after {
+    content: '\00a0\21d2'
 }
 
 
