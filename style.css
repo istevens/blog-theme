@@ -120,8 +120,15 @@ body>header h2 {
     display: none;
 }
 
+body>footer {
+    color: #fff;
+    background: #333;
+    border-top: 1px solid #ccc;
+    padding-top: 2em;
+}
+
 body>footer h1 {
-    font-size: 1.3em;
+    color: yellow;
 }
 
 
@@ -172,13 +179,22 @@ article footer p {
 
 /* Comments */
 
-#comments {
-    border-top: 1px dashed #333;
-    margin-top: 2.1em;
+#comments h2 {
+    font-size: 1.3em;
 }
 
-#comments>h1 {
-    margin: 0.5em 0 1.2em 0;
+#recorded_comments {
+    margin-top: 1.3em;
+}
+
+#comments>nav>h1 a:before {
+    font-size: 1.3em;
+    content: '\2709\00a0';
+}
+
+#comments>nav>h2 a:before {
+    font-size: 1.3em;
+    content: '\270d\00a0';
 }
 
 #comments article {
@@ -188,7 +204,7 @@ article footer p {
 }
 
 #comments form {
-    margin-top: 2.1em;
+    margin: 2.1em 0;
     font-size: 1em;
 }
 

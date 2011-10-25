@@ -57,9 +57,7 @@ get_header();
 
     </article>
 
-    <section id="comments">
-        <?php comments_template(); ?>
-    </section>
+    <?php comments_template(); ?>
 
     <nav>
         <?php

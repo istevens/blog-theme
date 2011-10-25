@@ -1,3 +1,4 @@
+<section id="comments">
 <?php
 /**
  * @package WordPress
@@ -17,10 +18,16 @@
 
 <!-- You can start editing here. -->
 
-<?php if ( have_comments() ) : ?>
-    <h1><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h1>
+    <nav>
+        <?php if ( have_comments() ) { ?>
+            <h1><a href="#recorded_comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</a></h1>
+        <?php } if (('open' == $post-> comment_status)) { ?>
+            <h2><a href="#respond">Leave a response</a></h2>
+        <?php } ?>
+    </nav>
 
-    <ol>
+<?php if ( have_comments() ) : ?>
+    <ol id="recorded_comments">
         <?php
             wp_list_comments(array('callback' => 'html5_comment'));
         ?>
@@ -41,7 +48,7 @@
 
 <?php if ('open' == $post->comment_status) : ?>
 
-    <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
+    <form id="respond" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
 
     <h2><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h2>
 
@@ -86,3 +93,4 @@
 
 <?php endif; // If registration required and not logged in ?>
 <?php endif; // if you delete this the sky will fall on your head ?>
+</section>
