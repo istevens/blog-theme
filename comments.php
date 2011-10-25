@@ -57,23 +57,26 @@
     <?php else : ?>
 
         <p>
-            <input required type="text" name="author" id="author" value="<?php echo $comment_author; ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
             <label for="author">Name <?php if ($req) echo "(required)"; ?></label>
+            <input required type="text" name="author" id="author" value="<?php echo $comment_author; ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
         </p>
 
         <p>
-            <input required type="email" name="email" id="email" value="<?php echo $comment_author_email; ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
             <label for="email">Mail (will not be published) <?php if ($req) echo "(required)"; ?></label>
+            <input required type="email" name="email" id="email" value="<?php echo $comment_author_email; ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
         </p>
 
         <p>
-            <input type="url" name="url" id="url" value="<?php echo $comment_author_url; ?>" tabindex="3" />
             <label for="url">Website</label>
+            <input type="url" name="url" id="url" value="<?php echo $comment_author_url; ?>" tabindex="3" />
         </p>
 
     <?php endif; ?>
 
-    <p><textarea name="comment" id="comment" tabindex="4"></textarea></p>
+    <p>
+        <label for="comment">What do you want to say?</label>
+        <textarea name="comment" id="comment" tabindex="4"></textarea>
+    </p>
     <p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
 
     <?php comment_id_fields(); ?>
