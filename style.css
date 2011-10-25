@@ -113,6 +113,36 @@ article footer p {
 
 /* Comments */
 
+#comments {
+    border-top: 1px dashed #333;
+    margin-top: 2.1em;
+    font-size: 0.8em;
+}
+
+#comments>h1 {
+    margin: 0.5em 0 1.2em 0;
+}
+
+#comments form {
+    margin-top: 2.1em;
+}
+
+#comments label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#comments input, #comments textarea {
+    width: 100%;
+    max-width: 15em;
+    margin-bottom: 0.5em;
+}
+
+#comments textarea {
+    max-width: 25em;
+    height: 5em;
+}
+
 
 @media all and (min-width: 30em) {
 }
