@@ -5,7 +5,7 @@
 body {
     background: white;
     color: #333;
-    font: 1.1em Helvetica, sans-serif;
+    font: 100% Helvetica, sans-serif;
 }
 
 p, pre {
@@ -59,11 +59,11 @@ body>footer {
 
 body>header h1 {
     text-align: center;
-    font-size: 2.1em;
+    font-size: 1.3em;
 }
 
 body.index>header h1 {
-    font-size: 3.4em;
+    font-size: 2.1em;
 }
 
 body>header h2 {
@@ -82,7 +82,7 @@ article {
 }
 
 body>article h1 {
-    font-size: 2.1em;
+    font-size: 1.3em;
 }
 
 body.index article h1 {
