@@ -25,7 +25,15 @@ pre {
     overflow: auto;
 }
 
-h1 a {
+h1 {
+    font-size: 1.3em;
+}
+
+h1, h2 {
+    margin-bottom: 0.8em;
+}
+
+h1 a, h2 a {
     text-decoration: none;
     color: inherit;
 }
@@ -34,8 +42,56 @@ h1 a:hover {
     color: #999;
 }
 
-body>header, body>section, body>article, body>footer {
+body>header, body>section#content, body>article, body>footer, #comments>ol, #comments form {
     padding: 0 0.5em;
+}
+
+
+/* Full-width navs all same style */
+
+nav {
+    background: #333;
+    border-top: 1px solid #ccc;
+    padding: 0.5em;
+}
+
+nav:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+nav h1, nav h2 {
+    font-weight: normal;
+}
+
+nav a[rel="prev"] {
+    float: left;
+    margin: 0.5em 0;
+}
+
+nav a[rel="next"] {
+    float: right;
+    margin: 0.5em 0;
+}
+
+nav a[rel="prev"]:before {
+    content: '\21d0\00a0'
+}
+
+nav a[rel="next"]:after {
+    content: '\00a0\21d2'
 }
 
 
@@ -52,16 +108,8 @@ body>header {
     margin-bottom: 2.1em;
 }
 
-body>footer {
-    color: #fff;
-    background: #333;
-    border-top: 1px solid #ccc;
-    padding-top: 2em;
-}
-
 body>header h1 {
     text-align: center;
-    font-size: 1.3em;
 }
 
 body.index>header h1 {
@@ -79,10 +127,6 @@ body>footer h1 {
 
 /* Article display. */
 
-article h1 {
-    margin-bottom: 0.8em;
-}
-
 article {
     margin-bottom: 2.1em;
 }
@@ -96,16 +140,8 @@ body>article, #comments article {
     max-width: 50em;
 }
 
-body>article h1 {
-    font-size: 1.3em;
-}
-
 body>article p, body>article pre {
     margin-bottom: 1.8em;
-}
-
-body.index article h1 {
-    font-size: 1.3em;
 }
 
 article footer p {
@@ -117,44 +153,6 @@ article footer p {
 
 
 /* Article nav */
-
-body>nav {
-    background: #333;
-}
-
-body>nav:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-
-body>nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0.8em;
-}
-
-body>nav a:hover {
-    color: yellow;
-}
-
-body>nav a[rel="prev"] {
-    float: left;
-}
-
-body>nav a[rel="next"] {
-    float: right;
-}
-
-body>nav a[rel="prev"]:before {
-    content: '\21d0\00a0'
-}
-
-body>nav a[rel="next"]:after {
-    content: '\00a0\21d2'
-}
 
 
 /* Article end mark */
