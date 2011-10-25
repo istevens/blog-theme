@@ -98,7 +98,7 @@ article footer p {
 
 /* Article end mark */
 
-#blog>article:first-child:after, body>article footer:before {
+#blog>article:first-child:after, body>article footer:before, #comments li:last-child:after {
     display: block;
     content: '\273c';
     text-align: center;
