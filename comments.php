@@ -20,25 +20,11 @@
 <?php if ( have_comments() ) : ?>
     <h1><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h1>
 
-    <nav>
-        <?php
-            previous_comments_link();
-            next_comments_link();
-        ?>
-    </nav>
-
     <ol>
         <?php
             wp_list_comments(array('callback' => 'html5_comment'));
         ?>
     </ol>
-
-    <nav>
-        <?php
-            previous_comments_link();
-            next_comments_link();
-        ?>
-    </nav>
 
  <?php else : // this is displayed if there are no comments so far ?>
 
