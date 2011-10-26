@@ -54,7 +54,7 @@ function html5_comment($comment, $args, $depth) {
 
         <?php comment_text() ?>
 
-    </article></li>
+    </article>
 <?php
 }
 
