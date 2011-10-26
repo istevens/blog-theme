@@ -111,7 +111,8 @@ body>header {
 
 body>header h1, body>footer h1 {
     line-height: 0.7em;
-    font-family: Impact, sans-serif;
+    font-family: Slackey, Impact, Helvetica, sans-serif;
+    text-transform: uppercase;
     color: white;
     -webkit-text-stroke: 0.05em;
     -webkit-text-stroke-color: black;
@@ -134,7 +135,7 @@ body>header h1:hover {
 
 body.index>header h1 {
     max-width: 5em;
-    font-size: 5.5em;
+    font-size: 3.4em;
 }
 
 body>header h2 {
@@ -277,7 +278,7 @@ article footer p {
     body>header h1 {
         max-width: 5em;
         float: left;
-        margin-left: 20em;
+        margin-left: 19em;
     }
 
     body.index>header h1 {
