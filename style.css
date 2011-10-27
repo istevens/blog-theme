@@ -196,6 +196,10 @@ body.index article {
     overflow: auto;
 }
 
+body.index article h1 {
+    margin-bottom: 0.5em;
+}
+
 body.index #blog article h1 a:after {
     content: '\3009';
     margin-left: 0.5em;
