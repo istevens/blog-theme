@@ -58,6 +58,18 @@ function html5_comment($comment, $args, $depth) {
 <?php
 }
 
+function get_next_posts_link_attributes($attr){
+    $attr = 'rel="prev" title="Older posts"';
+    return $attr;
+}
+function get_previous_posts_link_attributes($attr){
+    $attr = 'rel="next" title="Newer posts"';
+    return $attr;
+}
+add_filter('next_posts_link_attributes', 'get_next_posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'get_previous_posts_link_attributes');
+
+
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'name' => 'left',

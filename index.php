@@ -21,12 +21,14 @@ $home = is_home() and !get_query_var('paged');
         endwhile;
     ?>
 
-    <nav>
-        <?php next_posts_link('&laquo; Older Entries') ?>
-        <?php previous_posts_link('Newer Entries &raquo;') ?>
-    </nav>
-
 </section>
+
+<nav>
+    <?php
+        next_posts_link('Older');
+        previous_posts_link('Newer');
+    ?>
+</nav>
 
 <?php if($home) { ?>
 <section id="online">
@@ -41,6 +43,13 @@ $home = is_home() and !get_query_var('paged');
     ?>
 </section>
 <?php } ?>
+
+<nav>
+    <?php
+        next_posts_link('Older');
+        previous_posts_link('Newer');
+    ?>
+</nav>
 
 </section>
 

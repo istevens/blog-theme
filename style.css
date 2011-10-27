@@ -38,7 +38,7 @@ h1 a, h2 a {
     color: inherit;
 }
 
-body>header, body>section#content, body>footer {
+body>header, #blog, #online, body>footer {
     padding: 0 0.5em;
 }
 
@@ -110,30 +110,6 @@ body>header {
     margin-bottom: 2.1em;
 }
 
-body>header h1, body>footer h1 {
-    line-height: 0.7em;
-    font-family: Slackey, Impact, Helvetica, sans-serif;
-    text-transform: uppercase;
-    color: white;
-    -webkit-text-stroke: 0.05em;
-    -webkit-text-stroke-color: black;
-    text-shadow: #000 0.02em 0.02em 0.05em, rgba(0,0,0,0.25) 0.125em 0.1em 0.075em;
-    letter-spacing: -0.1em;
-}
-
-body>header h1 {
-    text-align: center;
-    margin: 0;
-    font-size: 2.1em;
-    -webkit-transform: rotate(3deg);
-    -moz-transform: rotate(3deg);
-}
-
-body>header h1:hover {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-}
-
 body.index>header h1 {
     max-width: 6em;
     font-size: 3.4em;
@@ -156,6 +132,44 @@ body>footer h1 {
     font-size: 2.1em;
     margin-bottom: 0.8em;
     max-width: 10em;
+}
+
+#online {
+    padding-top: 2.1em;
+}
+
+
+/* Shadowed headings */
+
+body>header h1, body>footer h1, #online>h1 {
+    line-height: 0.8em;
+    font-family: Slackey, Impact, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: white;
+    -webkit-text-stroke: 0.05em;
+    -webkit-text-stroke-color: black;
+    text-shadow: #000 0.02em 0.02em 0.05em, rgba(0,0,0,0.25) 0.125em 0.1em 0.075em;
+    letter-spacing: -0.1em;
+}
+
+body>header h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 2.1em;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+}
+
+#online>h1 {
+    font-size: 2.1em;
+    margin-bottom: 1.3em;
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+}
+
+body>header h1:hover {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
 }
 
 
@@ -206,6 +220,10 @@ body.index #blog article h1 a:after {
     font-size: 0.8em;
     position: relative;
     bottom: 0.0625em;
+}
+
+#online article h1 {
+    font-weight: normal;
 }
 
 
