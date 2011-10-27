@@ -62,10 +62,11 @@ nav {
     background: #333;
     border-top: 1px solid #ccc;
     padding: 0.5em;
+    color: white;
 }
 
 nav a {
-    color: white;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -179,8 +180,7 @@ body>article p, body>article pre {
 
 article footer p {
     margin: 0 2.1em;
-    font-size: 0.8em;
-    line-height: 100%;
+    text-align: center;
     font-style: italic;
 }
 
@@ -210,13 +210,15 @@ article footer p {
     margin-top: 1.3em;
 }
 
-#comments>nav>h1 a:before {
+a.to_comments:before, .comment_state:before {
     font-size: 1.3em;
+}
+
+a.to_comments:before {
     content: '\2709\00a0';
 }
 
-#comments>nav>h2 a:before {
-    font-size: 1.3em;
+.comment_state:before {
     content: '\270d\00a0';
 }
 

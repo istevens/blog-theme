@@ -20,10 +20,15 @@
 
     <nav>
         <?php if ( have_comments() ) { ?>
-            <h1><a href="#recorded_comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</a></h1>
-        <?php } if (('open' == $post-> comment_status)) { ?>
-            <h2><a href="#respond">Leave a response</a></h2>
+            <h1><a class="to_comments" href="#recorded_comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</a></h1>
         <?php } ?>
+        <h2>
+        <?php if (('open' == $post-> comment_status)) { ?>
+            <a href="#respond" class="comment_state">Respond to this post</a>
+        <?php } else { ?>
+            <span class="comment_state">Comments are closed</span>
+        <?php } ?>
+        </h2>
     </nav>
 
 <?php if ( have_comments() ) : ?>
