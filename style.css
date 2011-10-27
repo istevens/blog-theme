@@ -229,7 +229,7 @@ body.index #blog article h1 a:after {
 
 /* Article end mark */
 
-#blog>article:first-child:after, body>article footer:before, #comments li:last-child:after {
+#blog>.first-post:after, body>article footer:before, #comments li:last-child:after {
     display: block;
     content: '\273c';
     text-align: center;
@@ -237,7 +237,7 @@ body.index #blog article h1 a:after {
     color: #999;
 }
 
-#blog>article:first-child:after {
+#blog>.first-post:after {
     font-size: 2.1em;
 }
 
