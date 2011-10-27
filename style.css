@@ -304,3 +304,31 @@ a.to_comments:before {
         padding-right: 3.4em;
     }
 }
+
+@media print {
+    body {
+        font-size: 10pt;
+    }
+
+    pre code {
+        background: inherit;
+        color: inherit;
+        padding: 0;
+    }
+
+    body>header, body>footer {
+        border: none;
+        color: inherit;
+    }
+
+    nav, #comments form {
+        display: none;
+    }
+
+    body>article {
+        max-width: none;
+        margin: 0 0.5in;
+    }
+}
+
+}
