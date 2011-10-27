@@ -135,7 +135,7 @@ body>header h1:hover {
 }
 
 body.index>header h1 {
-    max-width: 5em;
+    max-width: 6em;
     font-size: 3.4em;
 }
 
@@ -170,6 +170,20 @@ article.category-links h1:after, article.category-tweets h1:after {
     color: #999;
 }
 
+article h1 a:hover {
+    color: #999;
+}
+
+article footer p {
+    margin: 0 2.1em;
+    text-align: center;
+    font-style: italic;
+}
+
+article a.read_more {
+    display: none;
+}
+
 body>article, #comments article, body>footer>* {
     max-width: 50em;
 }
@@ -178,10 +192,16 @@ body>article p, body>article pre {
     margin-bottom: 2.1em;
 }
 
-article footer p {
-    margin: 0 2.1em;
-    text-align: center;
-    font-style: italic;
+body.index article {
+    overflow: auto;
+}
+
+body.index #blog article h1 a:after {
+    content: '\3009';
+    margin-left: 0.5em;
+    font-size: 0.8em;
+    position: relative;
+    bottom: 0.0625em;
 }
 
 
@@ -273,6 +293,10 @@ a.to_comments:before {
 
     body>footer {
         padding-bottom: 2.1em;
+    }
+
+    body.index #blog article h1 a:after {
+        color: #999;
     }
 }
 

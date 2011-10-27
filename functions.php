@@ -17,7 +17,7 @@ function custom_trim_excerpt($text) { // Fakes an excerpt if needed
 		$excerpt_length = apply_filters('excerpt_length', 55);
 		$excerpt_more = apply_filters(
             'excerpt_more',
-            '&nbsp;&hellip;&nbsp;<a href="'.get_permalink().'" rel="bookmark" title="Continue reading &ldquo;'.the_title_attribute(array('echo'=>0)).'&rdquo;">Read more</a>'
+            '&nbsp;&hellip;&nbsp;<a class="read_more" href="'.get_permalink().'" rel="bookmark" title="Continue reading &ldquo;'.the_title_attribute(array('echo'=>0)).'&rdquo;"><span>Read more</span></a>'
         );
 		$words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
 		if ( count($words) > $excerpt_length ) {

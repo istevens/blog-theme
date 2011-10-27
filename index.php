@@ -22,8 +22,8 @@ $home = is_home() and !get_query_var('paged');
     ?>
 
     <nav>
-        <span class="next"><?php next_posts_link('&laquo; Older Entries') ?></span>
-        <span class="previous"><?php previous_posts_link('Newer Entries &raquo;') ?></span>
+        <?php next_posts_link('&laquo; Older Entries') ?>
+        <?php previous_posts_link('Newer Entries &raquo;') ?>
     </nav>
 
 </section>
