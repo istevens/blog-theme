@@ -351,6 +351,7 @@ a.to_comments:before {
     #online {
         margin: 0;
         float: left;
+        overflow: auto;
     }
 
     #blog {
