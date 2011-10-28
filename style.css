@@ -237,6 +237,14 @@ body.index #blog article h1 a:after {
     font-weight: normal;
 }
 
+a.external>* {
+    display: none;
+}
+
+a.external date {
+    display: inline;
+}
+
 
 /* Article end mark */
 

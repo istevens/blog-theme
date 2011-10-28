@@ -8,8 +8,9 @@
             $link_text = " on Twitter";
             $verb = "Tweeted";
         } else if (in_category('33')) {
-            $link = get_post_meta($post->ID, 'link', 'true');
-            $title = "<a href=\"".$link."\">".$post->post_title."</a>";
+            $ext = get_post_meta($post->ID, 'link', 'true');
+            $link = get_permalink();
+            $title = "<a href=\"".$ext."\">".$post->post_title."</a>";
             $content = get_the_excerpt();
             $content = apply_filters('the_content', $content);
             $content = str_replace(']]>', ']]&gt;', $content);
@@ -23,8 +24,7 @@
             echo $content;
         } ?>
         <footer>
-            <a href="<?php echo $link ?>" title="<?php echo $link_verb; ?> '<?php the_title_attribute(); echo "'".$link_text."\">".$verb ?> on <date pubdate datetime="<?php the_time(XML_DATE); ?>"><?php the_time('M d \a\t G:i') ?></date></a>
-            <?php comments_popup_link('&#x270e;', '&#x270e; (1)', '&#x270e; (%)', 'comments'); ?>
+            <a class="external" href="<?php echo $link ?>" title="<?php echo $link_verb; ?> '<?php the_title_attribute(); echo "'".$link_text."\"><span class=\"verb\">".$verb ?> on</span> <date pubdate datetime="<?php the_time(XML_DATE); ?>"><?php the_time('M j \a\t G:i') ?></date></a>
         </footer>
 
     <?php } else { ?>
