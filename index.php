@@ -32,15 +32,29 @@ $home = is_home() and !get_query_var('paged');
 
 <?php if($home) { ?>
 <section id="online">
-    <h1>Latest Online Activity</h1>
-    <?php
-        $first = $page == 1 ? 'first-post': '';
-        query_posts('cat=32,33&showposts=10');
-        while (have_posts()) : the_post(); 
-            include('index_post.php');
-            $first = '';
-        endwhile;
-    ?>
+    <section id="mind">
+        <h1>On My Mind</h1>
+        <?php
+            $first = $page == 1 ? 'first-post': '';
+            query_posts('cat=32&showposts=5');
+            while (have_posts()) : the_post(); 
+                include('index_post.php');
+                $first = '';
+            endwhile;
+        ?>
+    </section>
+
+    <section id="reading">
+        <h1>Recently Read</h1>
+        <?php
+            $first = $page == 1 ? 'first-post': '';
+            query_posts('cat=33&showposts=5');
+            while (have_posts()) : the_post(); 
+                include('index_post.php');
+                $first = '';
+            endwhile;
+        ?>
+    </section>
 </section>
 <?php } ?>
 

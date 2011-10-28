@@ -38,8 +38,12 @@ h1 a, h2 a {
     color: inherit;
 }
 
-body>header, #blog, #online, body>footer {
+body>header, #blog, #online>section, body>footer {
     padding: 0 0.5em;
+}
+
+#online>section {
+    padding-top: 2.1em;
 }
 
 body>article, #comments>ol, #comments form {
@@ -133,8 +137,12 @@ body>footer h1 {
     max-width: 10em;
 }
 
-#online {
-    padding-top: 2.1em;
+#online>section {
+    border-top: 1px dashed #999;
+}
+
+#online>section:first-child {
+    border: 0;
 }
 
 #blog, body>article {
@@ -144,7 +152,7 @@ body>footer h1 {
 
 /* Shadowed headings */
 
-body>header h1, body>footer h1, #online>h1 {
+body>header h1, body>footer h1, #online>section>h1 {
     line-height: 0.8em;
     font-family: Slackey, Impact, Helvetica, sans-serif;
     text-transform: uppercase;
@@ -163,7 +171,7 @@ body>header h1 {
     -moz-transform: rotate(3deg);
 }
 
-#online>h1 {
+#online>section>h1 {
     font-size: 2.1em;
     margin-bottom: 1.3em;
     -webkit-transform: rotate(-1deg);
@@ -302,12 +310,12 @@ a.to_comments:before {
         float: right;
     }
 
-    body>article, #online, #blog, #comments ol, #comments form {
+    body>article, #blog, #comments ol, #comments form {
         margin-left: 1.3em;
-        margin-righT: 1.3em;
+        margin-right: 1.3em;
     }
 
-    nav, body>footer {
+    nav, body>footer, #online>section {
         padding-left: 1.3em;
         padding-right: 1.3em;
     }
@@ -333,10 +341,15 @@ a.to_comments:before {
         float: right;
     }
 
-    #blog, #online {
+    #blog, #online>section {
         margin: 0;
         padding-left: 1.3em;
         padding-right: 1.3em;
+        float: left;
+    }
+
+    #online {
+        margin: 0;
         float: left;
     }
 
@@ -351,7 +364,7 @@ a.to_comments:before {
 
     #online {
         border-left: 1px dashed #999;
-        width: 30%;
+        width: 33%;
     }
 
     #blog article {
@@ -376,7 +389,7 @@ a.to_comments:before {
 }
 
 @media all and (min-width: 70em) {
-    #blog, #online{
+    #blog, #online>section{
         padding-left: 2.1em;
         padding-right: 2.1em;
     }
