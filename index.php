@@ -23,7 +23,7 @@ $home = is_home() and !get_query_var('paged');
 
 </section>
 
-<nav>
+<nav class="between">
     <?php
         next_posts_link('Older');
         previous_posts_link('Newer');
@@ -44,13 +44,13 @@ $home = is_home() and !get_query_var('paged');
 </section>
 <?php } ?>
 
+</section>
+
 <nav>
     <?php
         next_posts_link('Older');
         previous_posts_link('Newer');
     ?>
 </nav>
-
-</section>
 
 <?php get_footer(); ?>

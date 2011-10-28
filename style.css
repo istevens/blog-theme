@@ -47,7 +47,7 @@ body>article, #comments>ol, #comments form {
     margin-right: 0.5em;
 }
 
-nav:after, body>header:after {
+#content:after, nav:after, body>header:after {
     content: ".";
     display: block;
     height: 0;
@@ -107,7 +107,6 @@ body>header, body>footer {
 body>header {
     border-bottom: 1px solid #333;
     background: yellow;
-    margin-bottom: 2.1em;
 }
 
 body.index>header h1 {
@@ -135,6 +134,10 @@ body>footer h1 {
 }
 
 #online {
+    padding-top: 2.1em;
+}
+
+#blog, body>article {
     padding-top: 2.1em;
 }
 
@@ -294,16 +297,12 @@ a.to_comments:before {
 
 
 @media all and (min-width: 30em) {
-    body>header {
-        margin-bottom: 2.1em;
-    }
-
     body>header h1 {
         max-width: 5em;
         float: right;
     }
 
-    body>article, body>#content, #comments ol, #comments form {
+    body>article, #online, #blog, #comments ol, #comments form {
         margin-left: 1.3em;
         margin-righT: 1.3em;
     }
@@ -334,13 +333,38 @@ a.to_comments:before {
         float: right;
     }
 
+    #blog, #online {
+        margin: 0;
+        padding-left: 1.3em;
+        padding-right: 1.3em;
+        float: left;
+    }
+
+    #blog {
+        width: 60%;
+        max-width: 50em;
+    }
+
+    nav.between {
+        display: none;
+    }
+
+    #online {
+        border-left: 1px dashed #999;
+        width: 30%;
+    }
+
+    #blog article {
+
+    }
+
     body>article h1 {
         font-size: 2.1em;
         line-height: 100%;
         margin-bottom: 1.3em;
     }
 
-    body>article, body>#content, #comments ol, #comments form {
+    body>article, #comments ol, #comments form {
         margin-left: 3.4em;
         margin-right: 3.4em;
     }
@@ -348,6 +372,13 @@ a.to_comments:before {
     nav, body>footer {
         padding-left: 3.4em;
         padding-right: 3.4em;
+    }
+}
+
+@media all and (min-width: 70em) {
+    #blog, #online{
+        padding-left: 2.1em;
+        padding-right: 2.1em;
     }
 }
 
