@@ -351,9 +351,14 @@ a.to_comments:before {
 
     #blog, #online>section {
         margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+        float: left;
+    }
+
+    #blog>article, #online>section, body.index nav, body.index>footer {
         padding-left: 1.3em;
         padding-right: 1.3em;
-        float: left;
     }
 
     #online {
@@ -363,7 +368,7 @@ a.to_comments:before {
     }
 
     #blog {
-        width: 60%;
+        width: 50%;
         max-width: 50em;
     }
 
@@ -373,11 +378,7 @@ a.to_comments:before {
 
     #online {
         border-left: 1px dashed #999;
-        width: 33%;
-    }
-
-    #blog article {
-
+        width: 49%;
     }
 
     body>article h1 {
@@ -395,10 +396,11 @@ a.to_comments:before {
         padding-left: 3.4em;
         padding-right: 3.4em;
     }
+
 }
 
 @media all and (min-width: 70em) {
-    #blog, #online>section{
+    #blog>article, #online>section{
         padding-left: 2.1em;
         padding-right: 2.1em;
     }
