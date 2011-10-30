@@ -365,20 +365,20 @@ a.to_comments:before {
         margin: 0;
         float: left;
         overflow-x: auto;
+        border-left: 1px dashed #999;
+        width: 49.5%;
+    }
+
+    #online>section {
+        max-width: 30em;
     }
 
     #blog {
         width: 50%;
-        max-width: 50em;
     }
 
     nav.between {
         display: none;
-    }
-
-    #online {
-        border-left: 1px dashed #999;
-        width: 49%;
     }
 
     body>article h1 {
