@@ -26,11 +26,6 @@ get_header();
         <h2 class="pagetitle">Blog Archives</h2>
     <?php } ?>
 
-    <nav>
-        <?php next_posts_link('&laquo; Older Entries') ?>
-        <?php previous_posts_link('Newer Entries &raquo;') ?>
-    </nav>
-
     <?php
         $first = '';
         while (have_posts()) : the_post();
@@ -39,8 +34,8 @@ get_header();
     ?>
 
     <nav>
-        <span class="next"><?php next_posts_link('&laquo; Older Entries') ?></span>
-        <span class="previous"><?php previous_posts_link('Newer Entries &raquo;') ?></span>
+        <?php next_posts_link('Older') ?>
+        <?php previous_posts_link('Newer') ?>
     </nav>
 
  <?php else :

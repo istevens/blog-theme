@@ -22,7 +22,7 @@ pre code {
 }
 
 pre {
-    overflow: auto;
+    overflow-x: auto;
 }
 
 h1 {
@@ -218,7 +218,7 @@ body>article p, body>article pre {
 }
 
 body.index article {
-    overflow: auto;
+    overflow-x: auto;
 }
 
 body.index article h1 {
@@ -286,7 +286,7 @@ a.to_comments:before {
 #comments article {
    font-size: 0.8em;
    line-height: 100%;
-   overflow: auto;
+   overflow-x: auto;
 }
 
 #comments form {
@@ -359,7 +359,7 @@ a.to_comments:before {
     #online {
         margin: 0;
         float: left;
-        overflow: auto;
+        overflow-x: auto;
     }
 
     #blog {
