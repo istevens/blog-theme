@@ -32,7 +32,7 @@ $home = is_home() and !get_query_var('paged');
 
 <?php if($home) { ?>
 <section id="online">
-    <section id="mind">
+    <section id="mentioned">
         <h1>On My Mind</h1>
         <?php
             $first = $page == 1 ? 'first-post': '';
@@ -44,7 +44,7 @@ $home = is_home() and !get_query_var('paged');
         ?>
     </section>
 
-    <section id="reading">
+    <section id="read">
         <h1>Recently Read</h1>
         <?php
             $first = $page == 1 ? 'first-post': '';

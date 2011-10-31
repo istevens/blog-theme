@@ -45,6 +45,8 @@ body>header, #blog, #online>section, body>footer {
 
 #online>section {
     padding-top: 2.1em;
+    max-width: 30em;
+    border-top: 1px dashed #999;
 }
 
 body>article, #comments>ol, #comments form {
@@ -138,16 +140,16 @@ body>footer h1 {
     max-width: 10em;
 }
 
-#online>section {
-    border-top: 1px dashed #999;
-}
-
 #online>section:first-child {
     border: 0;
 }
 
 #blog, body>article {
     padding-top: 2.1em;
+}
+
+#blog {
+    max-width: 50em;
 }
 
 
@@ -370,10 +372,6 @@ a.to_comments:before {
         width: 49.5%;
     }
 
-    #online>section {
-        max-width: 30em;
-    }
-
     #blog {
         width: 50%;
     }
@@ -403,6 +401,20 @@ a.to_comments:before {
     #blog>article, #online>section{
         padding-left: 2.1em;
         padding-right: 2.1em;
+    }
+}
+
+
+/* Really wide. Side-by-side-by-side columns. */
+@media all and (min-width: 118.4em) {
+    /* Lose width to allow sections to float up. */
+    #online {
+        width: inherit;
+    }
+
+    section#read {
+        border-top: 0px;
+        border-left: 1px dashed #999;
     }
 }
 
