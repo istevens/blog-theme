@@ -251,15 +251,18 @@ a.external time {
 
 /* Article end mark */
 
+#blog>.first-post {
+    margin-bottom: 0;
+    padding-bottom: 2.1em;
+}
+
 #blog>.first-post:after, body>article footer:before, #comments li:last-child:after {
     display: block;
     content: '\273c';
     text-align: center;
-    padding: 0.5em inherit;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     color: #999;
-}
-
-#blog>.first-post:after {
     font-size: 2.1em;
 }
 
