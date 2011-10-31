@@ -43,8 +43,7 @@ $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
     </section>
 
     <nav>
-        <?php next_posts_link('Older') ?>
-        <?php previous_posts_link('Newer') ?>
+        <?php posts_nav_link(' ', 'Newer', 'Older') ?>
     </nav>
 
  <?php else :
