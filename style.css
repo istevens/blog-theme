@@ -380,7 +380,7 @@ a.to_comments:before {
         display: none;
     }
 
-    body>article h1 {
+    body>article h1, body.archive #blog>h1 {
         font-size: 2.1em;
         margin-bottom: 1.3em;
     }

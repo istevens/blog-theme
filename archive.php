@@ -32,7 +32,7 @@ $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
     <?php
         $wp_query->query_vars["cat"] = -32;
         $wp_query->get_posts();
-        $first = $page == 1 ? 'first-post': '';
+        $first = $page == 1 && (is_category() || is_tag() || is_author()) ? 'first-post': '';
         while (have_posts()) : the_post();
             include('index_post.php');
             $first = '';
