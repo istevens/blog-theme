@@ -14,7 +14,7 @@ $home = is_home() and !get_query_var('paged');
 <section id="blog">
     <?php
         $first = $page == 1 ? 'first-post': '';
-        query_posts('cat=-32,-33&paged=' . $page);
+        query_posts('cat=-32,-33&showposts=5&paged=' . $page);
         while (have_posts()) : the_post();
             include('index_post.php');
             $first = '';

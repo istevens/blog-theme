@@ -22,9 +22,17 @@
 
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
-    <?php wp_head(); ?>
+    <?php
+        $body_class = '';
+        if(is_front_page()) {
+            $body_class = 'class="index"';
+        } else if(is_archive()) {
+            $body_class = 'class="archive"';
+        }
+        wp_head();
+    ?>
     </head>
-<body <?php if (is_front_page()) { ?> class="index" <?php } ?>>
+<body <?php echo $body_class; ?>>
 
 <header>
     <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
