@@ -20,6 +20,8 @@
     <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/detect.js"></script>
+
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
     <?php
@@ -34,7 +36,7 @@
     </head>
 <body <?php echo $body_class; ?>>
 
-<header>
+<header class="fancy">
     <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
     <h2 class="description"><?php bloginfo('description'); ?></h2>
 </header>

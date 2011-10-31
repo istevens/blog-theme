@@ -155,15 +155,23 @@ body>footer h1 {
 
 /* Shadowed headings */
 
-body>header h1, body>footer h1, #online>section>h1 {
+.fancy>h1 {
     line-height: 0.8em;
-    font-family: Slackey, Impact, Helvetica, sans-serif;
+    font-family: Slackey, Helvetica, sans-serif;
     text-transform: uppercase;
+    text-shadow: #000 0.02em 0.02em 0.05em, rgba(0,0,0,0.25) 0.125em 0.1em 0.075em;
+    letter-spacing: -0.1em;
+    color: #333;
+}
+
+.textstroke .fancy>h1 {
     color: white;
     -webkit-text-stroke: 0.05em;
     -webkit-text-stroke-color: black;
-    text-shadow: #000 0.02em 0.02em 0.05em, rgba(0,0,0,0.25) 0.125em 0.1em 0.075em;
-    letter-spacing: -0.1em;
+}
+
+footer .fancy>h1, .textshadow>.fancy>h1 {
+    color: white;
 }
 
 body>header h1 {

@@ -7,14 +7,14 @@
 
 <footer>
     <?php if ( function_exists('dynamic_sidebar') ) {?>
-    <section>
+    <section class="fancy">
         <?php dynamic_sidebar('left') ?>
     </section>
     <?php if(!is_singular()) { ?>
-        <section>
+        <section class="fancy">
             <?php dynamic_sidebar('middle') ?>
         </section>
-        <section>
+        <section class="fancy">
             <?php dynamic_sidebar('right') ?>
         </section>
     <?php } ?>
