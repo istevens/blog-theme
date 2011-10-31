@@ -27,6 +27,7 @@ pre {
 
 h1 {
     font-size: 1.3em;
+    line-height: 1.3em;
 }
 
 h1, h2 {
@@ -383,7 +384,6 @@ a.to_comments:before {
 
     body>article h1 {
         font-size: 2.1em;
-        line-height: 100%;
         margin-bottom: 1.3em;
     }
 
