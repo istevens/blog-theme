@@ -30,6 +30,8 @@ $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
     <?php } ?>
 
     <?php
+        $wp_query->query_vars["cat"] = -32;
+        $wp_query->get_posts();
         $first = $page == 1 ? 'first-post': '';
         while (have_posts()) : the_post();
             include('index_post.php');
