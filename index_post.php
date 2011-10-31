@@ -24,7 +24,7 @@
             echo $content;
         } ?>
         <footer>
-            <a class="external" href="<?php echo $link ?>" title="<?php echo $link_verb; ?> '<?php the_title_attribute(); echo "'".$link_text."\"><span class=\"verb\">".$verb ?> on</span> <date pubdate datetime="<?php the_time(XML_DATE); ?>"><?php the_time('M j \a\t G:i') ?></date></a>
+            <a class="external" href="<?php echo $link ?>" title="<?php echo $link_verb; ?> '<?php the_title_attribute(); echo "'".$link_text."\"><span class=\"verb\">".$verb ?> on</span> <time pubdate datetime="<?php the_time(XML_DATE); ?>"><?php the_time('M j \a\t G:i') ?></time></a>
         </footer>
 
     <?php } else { ?>
