@@ -415,20 +415,6 @@ a.to_comments:before {
     }
 }
 
-
-/* Really wide. Side-by-side-by-side columns. */
-@media all and (min-width: 118.4em) {
-    /* Lose width to allow sections to float up. */
-    #online {
-        width: inherit;
-    }
-
-    section#read {
-        border-top: 0px;
-        border-left: 1px dashed #999;
-    }
-}
-
 @media print {
     body {
         font-size: 10pt;
@@ -453,6 +439,4 @@ a.to_comments:before {
         max-width: none;
         margin: 0 0.5in;
     }
-}
-
 }

@@ -21,6 +21,7 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/detect.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/respond.min.js"></script>
 
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
