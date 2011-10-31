@@ -321,12 +321,12 @@ a.to_comments:before {
         float: right;
     }
 
-    body>article, #blog, #comments ol, #comments form {
+    body>article, #comments ol, #comments form {
         margin-left: 1.3em;
         margin-right: 1.3em;
     }
 
-    nav, body>footer, #online>section {
+    nav, #blog, body>footer, #online>section {
         padding-left: 1.3em;
         padding-right: 1.3em;
     }
@@ -359,7 +359,7 @@ a.to_comments:before {
         float: left;
     }
 
-    #blog>article, #online>section, body.index nav, body.index>footer {
+    #blog>article, #online>section, body.index>footer, body.index>nav {
         padding-left: 1.3em;
         padding-right: 1.3em;
     }
@@ -398,7 +398,7 @@ a.to_comments:before {
 }
 
 @media all and (min-width: 70em) {
-    #blog>article, #online>section{
+    #blog>article, #online>section, body.index>footer, body.index>nav {
         padding-left: 2.1em;
         padding-right: 2.1em;
     }
