@@ -47,6 +47,10 @@ body>footer>section, #online>section {
     padding-top: 2.1em;
 }
 
+body>footer {
+    padding-bottom: 1.3em;
+}
+
 #online>section {
     border-top: 1px dashed #999;
 }
