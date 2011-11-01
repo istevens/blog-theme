@@ -43,8 +43,11 @@ body>header, #blog, #online>section, body>footer {
     padding: 0 0.5em;
 }
 
-#online>section {
+body>footer>section, #online>section {
     padding-top: 2.1em;
+}
+
+#online>section {
     max-width: 30em;
     border-top: 1px dashed #999;
 }
@@ -54,7 +57,7 @@ body>article, #comments>ol, #comments form {
     margin-right: 0.5em;
 }
 
-#content:after, nav:after, body>header:after {
+#content:after, nav:after, body>header:after, body.index>footer:after {
     content: ".";
     display: block;
     height: 0;
@@ -106,12 +109,9 @@ nav a[rel="next"]:after {
 
 /* header and footer */
 
-body>header, body>footer {
+body>header {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-}
-
-body>header {
     border-bottom: 1px solid #333;
     background: yellow;
 }
@@ -129,7 +129,6 @@ body>footer {
     color: #fff;
     background: #333;
     border-top: 1px solid #ccc;
-    padding-top: 2.1em;
 }
 
 body>footer h1 {
@@ -224,7 +223,7 @@ article a.read_more {
     display: none;
 }
 
-body.archive>article, body>article, #comments article, body>footer>* {
+body.archive>article, body>article, #comments article, body>footer>section {
     max-width: 50em;
 }
 
@@ -374,7 +373,7 @@ a.to_comments:before {
         float: left;
     }
 
-    body.archive #blog, body.index #blog>article, #online>section, body.index>footer, body.index>nav {
+    body.archive #blog, body.index #blog>article, #online>section, body.index>nav, body.index>footer>section>* {
         padding-left: 1.3em;
         padding-right: 1.3em;
     }
@@ -389,6 +388,21 @@ a.to_comments:before {
 
     body.index #blog {
         width: 50%;
+    }
+
+    body.index>footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    body.index>footer>section {
+        width: 33%;
+        float: left;
+    }
+
+    body.index>footer>section>h1 {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
 
     nav.between {
@@ -413,9 +427,14 @@ a.to_comments:before {
 }
 
 @media all and (min-width: 70em) {
-    body.index #blog>article, #online>section, body.index>footer, body.index>nav {
+    body.index #blog>article, #online>section, body.index>nav, body.index>footer>section>* {
         padding-left: 2.1em;
         padding-right: 2.1em;
+    }
+
+    body.index>footer>section>h1 {
+        padding-left: 0.8em;
+        padding-right: 0.8em;
     }
 }
 
