@@ -77,7 +77,7 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
+nav a:hover, body>footer a:hover {
     color: yellow;
 }
 
@@ -138,6 +138,10 @@ body>footer h1 {
     font-size: 2.1em;
     margin-bottom: 0.8em;
     max-width: 10em;
+}
+
+body>footer a {
+    color: inherit;
 }
 
 #online>section:first-child {
