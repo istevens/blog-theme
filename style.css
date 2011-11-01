@@ -48,7 +48,6 @@ body>footer>section, #online>section {
 }
 
 #online>section {
-    max-width: 30em;
     border-top: 1px dashed #999;
 }
 
@@ -384,6 +383,10 @@ a.to_comments:before {
         overflow-x: auto;
         border-left: 1px dashed #999;
         width: 49.5%;
+    }
+
+    #online>section {
+        max-width: 30em;
     }
 
     body.index #blog {
