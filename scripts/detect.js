@@ -40,6 +40,8 @@ var Detect = (function() {
             }
             body.className += ' ' + lc;
         }
+
+        body.className += ' ' + navigator.platform.toLowerCase();
     }
 
     listen('load', window, append_classes);

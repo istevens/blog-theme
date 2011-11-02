@@ -281,12 +281,16 @@ body.index article h1 {
     margin-bottom: 0.5em;
 }
 
-body.index #blog article h1 a:after {
+#blog article h1 a:after {
     content: '\3009';
     margin-left: 0.5em;
     font-size: 0.8em;
     position: relative;
     bottom: 0.0625em;
+}
+
+.win32 #blog article h1 a:after {
+    content: '\276f';
 }
 
 #online article h1 {
