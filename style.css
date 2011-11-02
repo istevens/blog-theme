@@ -207,7 +207,7 @@ body>header h1:hover {
 /* Article display. */
 
 article {
-    margin-bottom: 2.1em;
+    margin-bottom: 1.3em;
 }
 
 article.category-links h1:after, article.category-tweets h1:after {
@@ -219,7 +219,7 @@ article h1 a:hover {
     color: #999;
 }
 
-article footer p {
+body>article footer p {
     margin: 0 2.1em;
     text-align: center;
     font-style: italic;
