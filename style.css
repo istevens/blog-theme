@@ -92,7 +92,7 @@ nav h1, nav h2 {
 }
 
 nav a[rel="prev"], nav a[rel="next"], nav h1, nav h2 {
-    padding: 0.5em 0 0.8em 0;
+    padding: 0.3em 0 0.5em 0;
     line-height: 1.3em;
     font-size: 1.3em;
     margin: 0;
@@ -236,7 +236,7 @@ body.archive>article, body>article, #comments article, body>footer>section {
 }
 
 body>article p, body>article pre {
-    margin-bottom: 2.1em;
+    margin-bottom: 1.3em;
 }
 
 body.index article {
