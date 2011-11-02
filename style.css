@@ -73,7 +73,8 @@ body>article,
 body>header:after,
 #content:after,
 nav:after,
-body.index>footer:after {
+body.index>footer:after,
+body.archive>footer:after {
     content: ".";
     display: block;
     height: 0;
@@ -447,7 +448,8 @@ a.to_comments:before {
     body.index #blog>article,
     #online>section,
     body.index>nav,
-    body.index>footer>section>* {
+    body.index>footer>section>*,
+    body.archive>footer>section>* {
         padding-left: 1.3em;
         padding-right: 1.3em;
     }
@@ -468,17 +470,20 @@ a.to_comments:before {
         width: 50%;
     }
 
-    body.index>footer {
+    body.index>footer,
+    body.archive>footer {
         padding-left: 0;
         padding-right: 0;
     }
 
-    body.index>footer>section {
+    body.index>footer>section,
+    body.archive>footer>section {
         width: 33%;
         float: left;
     }
 
-    body.index>footer>section>h1 {
+    body.index>footer>section>h1,
+    body.archive>footer>section>h1 {
         padding-left: 0.5em;
         padding-right: 0.5em;
     }
