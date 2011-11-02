@@ -273,11 +273,13 @@ body>article pre {
     margin-bottom: 1.3em;
 }
 
-body.index article {
+body.index article,
+body.archive article {
     overflow-x: auto;
 }
 
-body.index article h1 {
+body.index article h1,
+body.archive article h1 {
     margin-bottom: 0.5em;
 }
 
@@ -416,7 +418,7 @@ a.to_comments:before {
         padding-bottom: 2.1em;
     }
 
-    body.index #blog article h1 a:after {
+    #blog article h1 a:after {
         color: #999;
     }
 }
