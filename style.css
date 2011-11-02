@@ -9,7 +9,8 @@ body {
     line-height: 130%;
 }
 
-p, pre {
+p,
+pre {
     margin-bottom: 0.8em;
 }
 
@@ -30,20 +31,27 @@ h1 {
     line-height: 1.3em;
 }
 
-h1, h2 {
+h1,
+h2 {
     margin-bottom: 0.8em;
 }
 
-h1 a, h2 a {
+h1 a,
+h2 a {
     text-decoration: none;
     color: inherit;
 }
 
-body>header, #blog, #online>section, body>footer {
+body>header,
+#blog,
+#online>section,
+body>footer {
     padding: 0 0.5em;
 }
 
-body>footer>section, #online>section, #recorded_comments {
+#online>section,
+#recorded_comments,
+body>footer>section {
     padding-top: 2.1em;
 }
 
@@ -55,12 +63,17 @@ body>footer {
     border-top: 1px dashed #999;
 }
 
-body>article, #comments>ol, #comments form {
+body>article,
+#comments>ol,
+#comments form {
     margin-left: 0.5em;
     margin-right: 0.5em;
 }
 
-#content:after, nav:after, body>header:after, body.index>footer:after {
+body>header:after,
+#content:after,
+nav:after,
+body.index>footer:after {
     content: ".";
     display: block;
     height: 0;
@@ -88,7 +101,8 @@ nav a {
     margin: 0;
 }
 
-nav a:hover, body>footer a:hover {
+nav a:hover,
+body>footer a:hover {
     color: yellow;
 }
 
@@ -168,7 +182,8 @@ body>footer a {
     border: 0;
 }
 
-#blog, body>article {
+#blog,
+body>article {
     padding-top: 2.1em;
 }
 
@@ -194,7 +209,8 @@ body>footer a {
     -webkit-text-stroke-color: black;
 }
 
-footer .fancy>h1, .textshadow>.fancy>h1 {
+footer .fancy>h1,
+.textshadow>.fancy>h1 {
     color: white;
 }
 
@@ -225,7 +241,8 @@ article {
     margin-bottom: 1.3em;
 }
 
-article.category-links h1:after, article.category-tweets h1:after {
+article.category-links h1:after,
+article.category-tweets h1:after {
     content: '\00a0\21aa';
     color: #999;
 }
@@ -244,11 +261,15 @@ article a.read_more {
     display: none;
 }
 
-body.archive>article, body>article, #comments article, body>footer>section {
+body.archive>article,
+body>article,
+#comments article,
+body>footer>section {
     max-width: 50em;
 }
 
-body>article p, body>article pre {
+body>article p,
+body>article pre {
     margin-bottom: 1.3em;
 }
 
@@ -288,7 +309,9 @@ a.external time {
     padding-bottom: 2.1em;
 }
 
-#blog>.first-post:after, body>article footer:before, #comments li:last-child:after {
+#blog>.first-post:after,
+body>article footer:before,
+#comments li:last-child:after {
     display: block;
     content: '\273c';
     text-align: center;
@@ -351,7 +374,8 @@ a.to_comments:before {
     margin-bottom: 0.5em;
 }
 
-#comments input, #comments textarea {
+#comments input,
+#comments textarea {
     width: 100%;
     max-width: 15em;
     margin-bottom: 0.5em;
@@ -369,12 +393,17 @@ a.to_comments:before {
         float: right;
     }
 
-    body>article, #comments ol, #comments form {
+    body>article,
+    #comments ol,
+    #comments form {
         margin-left: 1.3em;
         margin-right: 1.3em;
     }
 
-    nav, #blog, body>footer, #online>section {
+    nav,
+    #blog,
+    body>footer,
+    #online>section {
         padding-left: 1.3em;
         padding-right: 1.3em;
     }
@@ -400,14 +429,19 @@ a.to_comments:before {
         float: right;
     }
 
-    body.index #blog, #online>section {
+    body.index #blog,
+    #online>section {
         margin: 0;
         padding-left: 0;
         padding-right: 0;
         float: left;
     }
 
-    body.archive #blog, body.index #blog>article, #online>section, body.index>nav, body.index>footer>section>* {
+    body.archive #blog,
+    body.index #blog>article,
+    #online>section,
+    body.index>nav,
+    body.index>footer>section>* {
         padding-left: 1.3em;
         padding-right: 1.3em;
     }
@@ -447,17 +481,22 @@ a.to_comments:before {
         display: none;
     }
 
-    body>article h1, body.archive #blog>h1 {
+    body>article h1,
+    body.archive #blog>h1 {
         font-size: 2.1em;
         margin-bottom: 1.3em;
     }
 
-    body>article, #comments ol, #comments form {
+    body>article,
+    #comments ol,
+    #comments form {
         margin-left: 3.4em;
         margin-right: 3.4em;
     }
 
-    body.archive #blog, nav, body>footer {
+    body.archive #blog,
+    nav,
+    body>footer {
         padding-left: 3.4em;
         padding-right: 3.4em;
     }
@@ -465,7 +504,10 @@ a.to_comments:before {
 }
 
 @media all and (min-width: 70em) {
-    body.index #blog>article, #online>section, body.index>nav, body.index>footer>section>* {
+    body.index #blog>article,
+    #online>section,
+    body.index>nav,
+    body.index>footer>section>* {
         padding-left: 2.1em;
         padding-right: 2.1em;
     }
@@ -487,12 +529,14 @@ a.to_comments:before {
         padding: 0;
     }
 
-    body>header, body>footer {
+    body>header,
+    body>footer {
         border: none;
         color: inherit;
     }
 
-    nav, #comments form {
+    nav,
+    #comments form {
         display: none;
     }
 
