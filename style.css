@@ -24,6 +24,7 @@ pre code {
 
 pre {
     overflow-x: auto;
+    white-space: pre;
 }
 
 h1 {
