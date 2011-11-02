@@ -206,12 +206,11 @@ body>article {
     -webkit-text-stroke-color: black;
 }
 
-.notextstroke .fancy>h1 {
+.notextstroke #online .fancy>h1 {
     color: #333;
 }
 
-footer .fancy>h1,
-.notextstroke footer .fancy>h1 {
+footer .fancy>h1 {
     color: white;
 }
 
