@@ -288,16 +288,14 @@ a.external time {
 
 /* Comments */
 
-#comments h2 {
+#comments h2,
+a.to_comments:before,
+.comment_state:before {
     font-size: 1.3em;
 }
 
 #recorded_comments {
     margin-top: 1.3em;
-}
-
-a.to_comments:before, .comment_state:before {
-    font-size: 1.3em;
 }
 
 a.to_comments:before {
@@ -309,9 +307,28 @@ a.to_comments:before {
 }
 
 #comments article {
-   font-size: 0.8em;
-   line-height: 100%;
-   overflow-x: auto;
+    margin-bottom: 1.3em;
+    overflow-x: auto;
+}
+
+#comments article header {
+    padding-bottom: 0.8em;
+}
+
+#comments article header cite {
+    font-style: normal;
+    font-weight: bold;
+    padding-right: 0.8em;
+}
+
+#comments article header .date {
+    font-size: 0.8em;
+    display: inline;
+}
+
+#comments article header img {
+    float: right;
+    padding: 0 0 0.5em 0.5em;
 }
 
 #comments form {

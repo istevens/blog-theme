@@ -40,7 +40,7 @@ function html5_comment($comment, $args, $depth) {
 
         <header>
             <?php echo get_avatar( $comment->comment_author_email, 48 ); ?>
-            <?php printf(__('<cite class="fn">%s</cite> says:'), get_comment_author_link()) ?>
+            <?php printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()) ?>
 
             <?php if ($comment->comment_approved == '0') { ?>
                 <p><?php _e('Your comment is awaiting moderation.') ?></p>
