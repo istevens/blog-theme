@@ -5,6 +5,7 @@
  */
 
 define('XML_DATE', 'Y-m-d\TH:i:s\Z');
+wp_deregister_script('l10n');
 
 function custom_trim_excerpt($text) { // Fakes an excerpt if needed
 	$raw_excerpt = $text;
