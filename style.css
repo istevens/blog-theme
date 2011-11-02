@@ -81,21 +81,15 @@ nav {
 nav a {
     color: inherit;
     text-decoration: none;
-}
-
-nav a:hover, body>footer a:hover {
-    color: yellow;
-}
-
-nav h1, nav h2 {
     font-weight: normal;
-}
-
-nav a[rel="prev"], nav a[rel="next"], nav h1, nav h2 {
     padding: 0.3em 0 0.5em 0;
     line-height: 1.3em;
     font-size: 1.3em;
     margin: 0;
+}
+
+nav a:hover, body>footer a:hover {
+    color: yellow;
 }
 
 nav a[rel="prev"] {
@@ -112,6 +106,10 @@ nav a[rel="prev"]:before {
 
 nav a[rel="next"]:after {
     content: '\00a0\21d2'
+}
+
+#comments nav a {
+    display: block;
 }
 
 
