@@ -43,7 +43,7 @@ body>header, #blog, #online>section, body>footer {
     padding: 0 0.5em;
 }
 
-body>footer>section, #online>section {
+body>footer>section, #online>section, #recorded_comments {
     padding-top: 2.1em;
 }
 
@@ -290,10 +290,6 @@ a.external time {
 a.to_comments:before,
 .comment_state:before {
     font-size: 1.3em;
-}
-
-#recorded_comments {
-    margin-top: 1.3em;
 }
 
 a.to_comments:before {
