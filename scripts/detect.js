@@ -8,10 +8,10 @@ var Detect = (function() {
     var props = ['textStroke', 'textShadow'];
 
     function listen(evnt, elem, func) {
-        if (elem.addEventListener) { // W3C DOM
+        if(elem.addEventListener) { // W3C DOM
             elem.addEventListener(evnt,func,false);
         }
-        else if (elem.attachEvent) { // IE DOM
+        else if(elem.attachEvent) { // IE DOM
             var r = elem.attachEvent("on"+evnt, func);
             return r;
         }
@@ -21,8 +21,8 @@ var Detect = (function() {
     }
 
     function test_prefixes(prop) {
-        title = prop.charAt(0).toUpperCase() + prop.substr(1);
-        tests = (prop + ' ' + css_prefixes.join(title + ' ') + title).split(' ');
+        var title = prop.charAt(0).toUpperCase() + prop.substr(1);
+        var tests = (prop + ' ' + css_prefixes.join(title + ' ') + title).split(' ');
         for(var n=0; n<tests.length; n++) {
             if(d.style[tests[n]] === "") return true; 
         }
@@ -32,11 +32,13 @@ var Detect = (function() {
     function append_classes() {
         var body = document.getElementsByTagName('body')[0];
 
-        for(p in props) {
-            prop = props[p];
-            if(test_prefixes(prop)) {
-                body.className += ' ' + prop.toLowerCase();
+        for(var p in props) {
+            var prop = props[p];
+            var lc = prop.toLowerCase();
+            if(!test_prefixes(prop)) {
+                lc = 'no' + lc;
             }
+            body.className += ' ' + lc;
         }
     }
 
