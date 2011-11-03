@@ -63,8 +63,8 @@ footer.banner {
     border-top: 1px dashed #999;
 }
 
-body>article,
-#comments>ol,
+body.single article.post,
+#recorded_comments,
 #comments form {
     margin-left: 0.5em;
     margin-right: 0.5em;
@@ -185,7 +185,7 @@ footer.banner a {
 }
 
 #blog,
-body>article {
+body.single article.post {
     padding-top: 2.1em;
 }
 
@@ -255,7 +255,7 @@ article h1 a:hover {
     color: #999;
 }
 
-body>article footer p {
+body.single article.post footer p {
     margin: 0 2.1em;
     text-align: center;
     font-style: italic;
@@ -266,15 +266,15 @@ article a.read_more {
 }
 
 #blog,
-body.archive>article,
-body>article,
+body.archive article,
+body.single article.post,
 #comments article,
 footer.banner section {
     max-width: 50em;
 }
 
-body>article p,
-body>article pre {
+body.single article.post p,
+body.single article.post pre {
     margin-bottom: 1.3em;
 }
 
@@ -315,13 +315,13 @@ a.external time {
 
 /* Article end mark */
 
-#blog>.first-post {
+#blog .first-post {
     margin-bottom: 0;
     padding-bottom: 2.1em;
 }
 
-#blog>.first-post:after,
-body>article footer:before,
+#blog .first-post:after,
+body.single article.post footer:before,
 #comments li:last-child:after {
     display: block;
     content: '\273c';
@@ -399,7 +399,7 @@ a.to_comments:before {
 
 
 @media all and (min-width: 30em) {
-    body>article,
+    body.single article.post,
     #comments ol,
     #comments form {
         margin-left: 1.3em;
@@ -438,7 +438,7 @@ a.to_comments:before {
     }
 
     body.archive #blog,
-    body.index #blog>article,
+    body.index #blog article,
     #online section,
     body.index>nav,
     body.index footer.banner section>*,
@@ -485,13 +485,13 @@ a.to_comments:before {
         display: none;
     }
 
-    body>article h1,
+    body.single article.post h1,
     body.archive #blog>h1 {
         font-size: 2.1em;
         margin-bottom: 1.3em;
     }
 
-    body>article,
+    body.single article.post,
     #comments ol,
     #comments form {
         margin-left: 3.4em;
@@ -510,7 +510,7 @@ a.to_comments:before {
 }
 
 @media all and (min-width: 70em) {
-    body.index #blog>article,
+    body.index #blog article,
     #online section,
     body.index>nav,
     body.index footer.banner section>* {
@@ -550,7 +550,7 @@ a.to_comments:before {
         display: none;
     }
 
-    body>article {
+    body.single article.post {
         max-width: none;
         margin: 0 0.5in;
     }
