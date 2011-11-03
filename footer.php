@@ -5,7 +5,7 @@
  */
 ?>
 
-<footer>
+<footer class="banner">
     <?php if ( function_exists('dynamic_sidebar') ) {?>
     <section class="fancy">
         <?php dynamic_sidebar('left') ?>

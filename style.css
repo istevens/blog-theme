@@ -43,24 +43,23 @@ h2 a {
     color: inherit;
 }
 
-body>header,
+.banner,
 #blog,
-#online>section,
-body>footer {
+#online section {
     padding: 0 0.5em;
 }
 
-#online>section,
+#online section,
 #recorded_comments,
-body>footer>section {
+footer section.fancy {
     padding-top: 2.1em;
 }
 
-body>footer {
+footer.banner {
     padding-bottom: 1.3em;
 }
 
-#online>section {
+#online section {
     border-top: 1px dashed #999;
 }
 
@@ -73,8 +72,7 @@ body>article,
 
 #content:after,
 nav:after,
-body.index>footer:after,
-body.archive>footer:after {
+footer.banner:after {
     content: ".";
     display: block;
     height: 0;
@@ -103,7 +101,7 @@ nav a {
 }
 
 nav a:hover,
-body>footer a:hover {
+footer.banner a:hover {
     color: yellow;
 }
 
@@ -130,7 +128,7 @@ nav a[rel="next"]:after {
 
 /* header and footer */
 
-body>header {
+header.banner {
     padding-top: 0.5em;
     border-bottom: 1px solid #333;
 
@@ -151,38 +149,38 @@ body>header {
     );
 }
 
-body>header h1 {
+header.banner h1 {
     max-width: 4.5em;
     margin: 0 auto;
     font-size: 2.1em;
     text-align: center;
 }
 
-body.index>header h1 {
+body.index header.banner h1 {
     font-size: 3.4em;
 }
 
-body>header h2 {
+header.banner h2 {
     display: none;
 }
 
-body>footer {
+footer.banner {
     color: #fff;
     background: #333;
     border-top: 1px solid #ccc;
 }
 
-body>footer h1 {
+footer.banner h1 {
     font-size: 2.1em;
     margin-bottom: 0.8em;
     max-width: 10em;
 }
 
-body>footer a {
+footer.banner a {
     color: inherit;
 }
 
-#online>section:first-child {
+#online section:first-child {
     border: 0;
 }
 
@@ -271,7 +269,7 @@ article a.read_more {
 body.archive>article,
 body>article,
 #comments article,
-body>footer>section {
+footer.banner section {
     max-width: 50em;
 }
 
@@ -410,18 +408,17 @@ a.to_comments:before {
 
     nav,
     #blog,
-    body>header,
-    body>footer,
-    #online>section {
+    .banner,
+    #online section {
         padding-left: 1.3em;
         padding-right: 1.3em;
     }
 
-    body>footer {
+    footer.banner {
         padding-bottom: 2.1em;
     }
 
-    body>header h1 {
+    header.banner h1 {
         width: auto;
         display: inline-block;
     }
@@ -433,7 +430,7 @@ a.to_comments:before {
 
 @media all and (min-width: 50em) {
     body.index #blog,
-    #online>section {
+    #online section {
         margin: 0;
         padding-left: 0;
         padding-right: 0;
@@ -442,10 +439,10 @@ a.to_comments:before {
 
     body.archive #blog,
     body.index #blog>article,
-    #online>section,
+    #online section,
     body.index>nav,
-    body.index>footer>section>*,
-    body.archive>footer>section>* {
+    body.index footer.banner section>*,
+    body.archive footer.banner section>* {
         padding-left: 1.3em;
         padding-right: 1.3em;
     }
@@ -458,7 +455,7 @@ a.to_comments:before {
         width: 49.5%;
     }
 
-    #online>section {
+    #online section {
         max-width: 30em;
     }
 
@@ -466,20 +463,20 @@ a.to_comments:before {
         width: 50%;
     }
 
-    body.index>footer,
-    body.archive>footer {
+    body.index footer.banner,
+    body.archive footer.banner {
         padding-left: 0;
         padding-right: 0;
     }
 
-    body.index>footer>section,
-    body.archive>footer>section {
+    body.index footer.banner section,
+    body.archive footer.banner section {
         width: 33%;
         float: left;
     }
 
-    body.index>footer>section>h1,
-    body.archive>footer>section>h1 {
+    body.index footer.banner section>h1,
+    body.archive footer.banner section>h1 {
         padding-left: 0.5em;
         padding-right: 0.5em;
     }
@@ -501,11 +498,11 @@ a.to_comments:before {
         margin-right: 3.4em;
     }
 
-    body.archive>header,
-    body.single>header,
+    body.archive header.banner,
+    body.single header.banner,
     body.archive #blog,
     nav,
-    body>footer {
+    footer.banner {
         padding-left: 3.4em;
         padding-right: 3.4em;
     }
@@ -514,18 +511,18 @@ a.to_comments:before {
 
 @media all and (min-width: 70em) {
     body.index #blog>article,
-    #online>section,
+    #online section,
     body.index>nav,
-    body.index>footer>section>* {
+    body.index footer.banner section>* {
         padding-left: 2.1em;
         padding-right: 2.1em;
     }
 
-    body.index>header h1 {
+    body.index header.banner h1 {
         padding-left: 0.3em;
     }
 
-    body.index>footer>section>h1 {
+    body.index footer.banner section>h1 {
         padding-left: 0.8em;
         padding-right: 0.8em;
     }
@@ -542,8 +539,8 @@ a.to_comments:before {
         padding: 0;
     }
 
-    body>header,
-    body>footer {
+    header.banner,
+    footer.banner {
         border: none;
         color: inherit;
     }
