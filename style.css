@@ -70,6 +70,9 @@ body.single article.post,
     margin-right: 0.5em;
 }
 
+
+/* Clearfix */
+
 #content:after,
 nav:after,
 footer.banner:after {
@@ -78,6 +81,12 @@ footer.banner:after {
     height: 0;
     clear: both;
     visibility: hidden;
+}
+
+.old_ie #content,
+.old_ie nav,
+.old_ie footer.banner {
+    zoom: 1;
 }
 
 

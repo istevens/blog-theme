@@ -5,7 +5,10 @@
  */
 ?>
 <!DOCTYPE html> 
-<html <?php language_attributes(); ?>>
+<!--[if lt IE 7]> <html class="old_ie ie6" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 7]> <html class="old_ie ie7" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8]> <html class="old_ie ie8" <?php language_attributes(); ?>> <![endif]-->
+<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
