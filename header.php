@@ -43,7 +43,7 @@
     </head>
 <body <?php echo $body_class; ?>>
 
-<header class="fancy">
-    <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+<header class="banner">
+    <h1 class="fancy"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
     <h2 class="description"><?php bloginfo('description'); ?></h2>
 </header>

@@ -30,8 +30,8 @@ $home = is_home() and !get_query_var('paged');
 
 <?php if($home) { ?>
 <section id="online">
-    <section class="fancy" id="mentioned">
-        <h1>On My Mind</h1>
+    <section id="mentioned">
+        <h1 class="fancy">On My Mind</h1>
         <?php
             $first = $page == 1 ? 'first-post': '';
             query_posts('cat=32&showposts=3&paged=' . $paged);
@@ -42,8 +42,8 @@ $home = is_home() and !get_query_var('paged');
         ?>
     </section>
 
-    <section class="fancy" id="read">
-        <h1>Recently Read</h1>
+    <section id="read">
+        <h1 class="fancy">Recently Read</h1>
         <?php
             $first = $page == 1 ? 'first-post': '';
             query_posts('cat=33&showposts=3&paged='. $paged);

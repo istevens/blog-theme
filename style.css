@@ -173,8 +173,6 @@ body>footer {
 }
 
 body>footer h1 {
-    -webkit-transform: rotate(-2deg);
-    -moz-transform: rotate(-2deg);
     font-size: 2.1em;
     margin-bottom: 0.8em;
     max-width: 10em;
@@ -196,7 +194,7 @@ body>article {
 
 /* Shadowed headings */
 
-.fancy>h1 {
+h1.fancy, footer .fancy h1 {
     line-height: 0.8em;
     font-family: Slackey, Helvetica, sans-serif;
     text-transform: uppercase;
@@ -208,7 +206,8 @@ body>article {
 }
 
 /* Fake text stroke where none supported. */
-.notextstroke .fancy>h1 {
+.notextstroke h1.fancy,
+.notextstroke footer .fancy h1 {
     text-shadow: 
         #000 -0.05em -0.05em 0em,
         #000 -0.05em 0.05em 0em,
@@ -218,23 +217,25 @@ body>article {
         rgba(0,0,0,0.25) 0.1875em 0.15em 0.075em;
 }
 
-footer .fancy>h1 {
+footer .fancy h1 {
     color: white;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
 }
 
-body>header h1 {
+header h1.fancy {
     -webkit-transform: rotate(3deg);
     -moz-transform: rotate(3deg);
 }
 
-#online>section>h1 {
+#online h1.fancy {
     font-size: 2.1em;
     margin-bottom: 1.3em;
     -webkit-transform: rotate(-1deg);
     -moz-transform: rotate(-1deg);
 }
 
-body>header h1:hover {
+header h1.fancy:hover {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
 }
