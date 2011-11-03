@@ -1,252 +1,80 @@
-/*
-Theme Name: New Monkey
-Version: 0.1
-Author: Ian Stevens
-Author URI: http://crazedmonkey.com/
-*/
+@import url("reset.css");
+
+/* Generic styles */
 
 body {
-    font-family: Helvetica, Sans-serif;
-    margin: 0;
+    background: white;
+    color: #333;
+    font: 100% Helvetica, sans-serif;
+    line-height: 130%;
 }
 
-header {
-    height: 200px;
-    background-color: #fc3;
-    background-image: url(images/monkey-white-crop.png), url(images/yellow-gradient.png);
-    background-repeat: no-repeat, repeat-x;
-    background-position: 45em top, bottom left;
+p,
+pre {
+    margin-bottom: 0.8em;
 }
 
-header h1 {
-    font-size: 800%;
-    font-weight: 900;
-    letter-spacing: -0.1em;
-    text-transform: capitalize;
-    -webkit-transform: rotate(-2deg); 
-    -moz-transform: rotate(-2deg); 
-    color: #963;
-    margin-top: -0.1875em;
-    margin-bottom: 0;
+pre code {
+    display: block;
+    background: #333;
+    color: #fff;
+    padding: 0.5em;
+    margin: 0 0.5em;
 }
 
-header h1 a {
+pre {
+    overflow-x: auto;
+    white-space: pre;
+}
+
+h1 {
+    font-size: 1.3em;
+    line-height: 1.3em;
+}
+
+h1,
+h2 {
+    margin-bottom: 0.8em;
+}
+
+h1 a,
+h2 a {
     text-decoration: none;
     color: inherit;
 }
 
-header h2 {
-    font-size: 200%;
-    font-weight: 100;
-    color: #69F;
-    margin-left: 15em;
-    margin-top: -1em;
-    position: relative;
+body>header,
+#blog,
+#online>section,
+body>footer {
+    padding: 0 0.5em;
 }
 
-.single header {
-    height: 100px;
+#online>section,
+#recorded_comments,
+body>footer>section {
+    padding-top: 2.1em;
 }
-
-.single header h1 {
-    font-size: 400%;
-}
-
-.single header h2 {
-    font-size: 100%;
-}
-
 
 body>footer {
-    width: 100%;
-    margin-top: 0;
-    padding-top: 0;
+    padding-bottom: 1.3em;
 }
 
-#content, body>nav{
-    padding: 2em 2em 85px 2em;
-    margin-bottom: 0;
-    background: repeat-x bottom left url('images/monkeys-ft.png');
+#online>section {
+    border-top: 1px dashed #999;
 }
 
-#online, #blog {
-    padding-top: 0;
-}
-
-#online {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    border-right: 1px dotted #963;
-    width: 33%;
-    float: left;
-}
-
-#blog {
-    padding: 0 0 3em 1em;
-    margin-top: 0;
-    margin-left: 33%;
-}
-
-#content h1 {
-    margin-bottom: 0.5em;
-}
-
-#content h1 a {
-    text-decoration: none;
-}
-
-#content h1 a:hover {
-    text-decoration: underline;
-}
-
-article p {
-    line-height: 1.33em;
-}
-
-article.clicked {
-    background-color: #fc3;
-}
-
-body>article {
-    margin: 0 5em;
-}
-
-body>article.category-tweets h1 {
-    font-size: 300%;
-    line-height: 1.5em;
-}
-
-#content article {
-    padding: 1em;
-}
-
-#online article {
-    margin: 0;
-    margin-right: 2em;
-    padding: 1em 1em 5px 1em;
-    border-bottom: 1px dotted #963;
-}
-
-#online article:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-article footer {
-    font-size: 90%;
-    position: relative;
-    color: #6cf;
-}
-
-article footer a {
-    text-decoration: none;
-}
-
-#online footer {
-    margin-top: 1.75em;
-}
-
-#online footer a, #online>h1 {
-    color: #963;
-}
-
-#blog footer {
-    text-align: right;
-}
-
-#blog footer a {
-    color: black;
-    font-size: 100%;
-    font-weight: bold;
-    background: url(images/arrow.svg) right 50% no-repeat;
-    background-size: 25%;
-    background-origin: border-box;
-    padding: 2em;
-    padding-right: 3em;
-}
-
-#blog footer .comments {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-#blog article {
-    background: white bottom center url("images/monkey-flourish.png") / 10% auto no-repeat;
-}
-
-#blog article p, footer p {
-    margin-bottom: 1em;
-}
-
-#blog h1 .date {
-    color: #6cf;
-    display: none;
-}
-
-#blog h1 a, #blog .navigation a {
-    text-decoration: none;
-    color: black;
-}
-
-#blog .post {
-    margin: 0 1em 3em 1em;
-}
-
-#blog .first-post {
-    margin-top: 0em;
-    padding-bottom: 3em;
-    background-size: 15%;
-}
-
-#online>h1, #blog article>h1, #blog footer a {
-    font-weight: 600;
-    letter-spacing: -0.05em;
-}
-
-#online>h1, #blog article>h1 {
-    font-size: 175%;
-    margin: 0 0 1em 0;
-    line-height: 1.33em;
-}
-
-#online>h1 {
+body>article,
+#comments>ol,
+#comments form {
     margin-left: 0.5em;
-    margin-bottom: 0;
+    margin-right: 0.5em;
 }
 
-#blog p, #online article h1 {
-    font-weight: normal;
-    font-size: 133%;
-    line-height: 1.33em;
-}
-
-#blog article footer {
-    margin-top: 1em;
-}
-
-#blog h1 a:hover, footer a:hover, #blog nav#pages a:hover {
-    text-decoration: underline;
-}
-
-#blog nav#pages{
-    font-size: 125%;
-    position: relative;
-}
-
-#blog nav#pages .previous {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-body>footer {
-    padding: 0 0 3em 0;
-    background-color: #fc3;
-}
-
-body>footer:after, body>#content:after {
+#content:after,
+nav:after,
+body.index>footer:after,
+body.archive>footer:after {
     content: ".";
     display: block;
     height: 0;
@@ -254,33 +82,471 @@ body>footer:after, body>#content:after {
     visibility: hidden;
 }
 
-footer>section {
-    width: 33%;
+
+/* Full-width navs all same style */
+
+nav {
+    background: #333;
+    border-top: 1px solid #ccc;
+    padding: 0 0.5em;
+    color: white;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: normal;
+    padding: 0.3em 0 0.5em 0;
+    line-height: 1.3em;
+    font-size: 1.3em;
+    margin: 0;
+}
+
+nav a:hover,
+body>footer a:hover {
+    color: yellow;
+}
+
+nav a[rel="prev"] {
     float: left;
-    margin-left: 1em
 }
 
-footer h1 {
-    font-size: 250%;
-    font-weight: bolder;
-    color: #963;
+nav a[rel="next"] {
+    float: right;
 }
 
-footer section:nth-child(1) h1 {
+nav a[rel="prev"]:before {
+    content: '\21d0\00a0'
+}
+
+nav a[rel="next"]:after {
+    content: '\00a0\21d2'
+}
+
+#comments nav a {
+    display: block;
+}
+
+
+/* header and footer */
+
+body>header {
+    padding-top: 0.5em;
+    border-bottom: 1px solid #333;
+
+    background-color: #ff0;
+    background-image: linear-gradient(left top, #ff9 0%, #ff6 25%, #ff3 50%, #ff0 100%);
+    background-image: -o-linear-gradient(left top, #ff9 0%, #ff6 25%, #ff3 50%, #ff0 100%);
+    background-image: -moz-linear-gradient(left top, #ff9 0%, #ff6 25%, #ff3 50%, #ff0 100%);
+    background-image: -webkit-linear-gradient(left top, #ff9 0%, #ff6 25%, #ff3 50%, #ff0 100%);
+    background-image: -ms-linear-gradient(left top, #ff9 0%, #ff6 25%, #ff3 50%, #ff0 100%);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        color-stop(0, #ff9),
+        color-stop(0.25, #ff6),
+        color-stop(0.5, #ff3),
+        color-stop(1, #ff0)
+    );
+}
+
+body>header h1 {
+    max-width: 4.5em;
+    margin: 0 auto;
+    font-size: 2.1em;
+    text-align: center;
+}
+
+body.index>header h1 {
+    font-size: 3.4em;
+}
+
+body>header h2 {
+    display: none;
+}
+
+body>footer {
+    color: #fff;
+    background: #333;
+    border-top: 1px solid #ccc;
+}
+
+body>footer h1 {
     -webkit-transform: rotate(-2deg);
     -moz-transform: rotate(-2deg);
+    font-size: 2.1em;
+    margin-bottom: 0.8em;
+    max-width: 10em;
 }
 
-footer section:nth-child(2) h1 {
-    -webkit-transform: rotate(1deg);
-    -moz-transform: rotate(1deg);
+body>footer a {
+    color: inherit;
 }
 
-footer section:nth-child(3) h1 {
+#online>section:first-child {
+    border: 0;
+}
+
+#blog,
+body>article {
+    padding-top: 2.1em;
+}
+
+
+/* Shadowed headings */
+
+.fancy>h1 {
+    line-height: 0.8em;
+    font-family: Slackey, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-shadow: #000 0.02em 0.02em 0.05em, rgba(0,0,0,0.25) 0.125em 0.1em 0.075em;
+    letter-spacing: -0.1em;
+    color: white;
+    -webkit-text-stroke: 0.05em;
+    -webkit-text-stroke-color: black;
+}
+
+.notextstroke #online .fancy>h1 {
+    color: #333;
+}
+
+footer .fancy>h1 {
+    color: white;
+}
+
+body>header h1 {
     -webkit-transform: rotate(3deg);
     -moz-transform: rotate(3deg);
 }
 
-footer .recentcomments {
-    padding-bottom: 1em;
+#online>section>h1 {
+    font-size: 2.1em;
+    margin-bottom: 1.3em;
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+}
+
+body>header h1:hover {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+}
+
+
+/* Article display. */
+
+article {
+    margin-bottom: 1.3em;
+}
+
+article.category-links h1:after,
+article.category-tweets h1:after {
+    content: '\00a0\21aa';
+    color: #999;
+}
+
+article h1 a:hover {
+    color: #999;
+}
+
+body>article footer p {
+    margin: 0 2.1em;
+    text-align: center;
+    font-style: italic;
+}
+
+article a.read_more {
+    display: none;
+}
+
+#blog,
+body.archive>article,
+body>article,
+#comments article,
+body>footer>section {
+    max-width: 50em;
+}
+
+body>article p,
+body>article pre {
+    margin-bottom: 1.3em;
+}
+
+body.index article,
+body.archive article {
+    overflow-x: auto;
+}
+
+body.index article h1,
+body.archive article h1 {
+    margin-bottom: 0.5em;
+}
+
+#blog article h1 a:after {
+    content: '\3009';
+    margin-left: 0.5em;
+    font-size: 0.8em;
+    position: relative;
+    bottom: 0.0625em;
+}
+
+.win32 #blog article h1 a:after {
+    content: '\276f';
+}
+
+#online article h1 {
+    font-weight: normal;
+}
+
+a.external>* {
+    display: none;
+}
+
+a.external time {
+    display: inline;
+}
+
+
+/* Article end mark */
+
+#blog>.first-post {
+    margin-bottom: 0;
+    padding-bottom: 2.1em;
+}
+
+#blog>.first-post:after,
+body>article footer:before,
+#comments li:last-child:after {
+    display: block;
+    content: '\273c';
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    color: #999;
+    font-size: 2.1em;
+}
+
+
+/* Comments */
+
+#comments h2,
+a.to_comments:before,
+.comment_state:before {
+    font-size: 1.3em;
+}
+
+a.to_comments:before {
+    content: '\2709\00a0';
+}
+
+.comment_state:before {
+    content: '\270d\00a0';
+}
+
+#comments article {
+    margin-bottom: 1.3em;
+    overflow-x: auto;
+}
+
+#comments article header {
+    padding-bottom: 0.8em;
+}
+
+#comments article header cite {
+    font-style: normal;
+    font-weight: bold;
+    padding-right: 0.8em;
+}
+
+#comments article header .date {
+    font-size: 0.8em;
+    display: inline;
+}
+
+#comments article header img {
+    float: right;
+    padding: 0 0 0.5em 0.5em;
+}
+
+#comments form {
+    margin-top: 2.1em;
+    margin-bottom: 2.1em;
+    font-size: 1em;
+}
+
+#comments label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#comments input,
+#comments textarea {
+    width: 100%;
+    max-width: 15em;
+    margin-bottom: 0.5em;
+}
+
+#comments textarea {
+    max-width: 25em;
+    height: 5em;
+}
+
+
+@media all and (min-width: 30em) {
+    body>article,
+    #comments ol,
+    #comments form {
+        margin-left: 1.3em;
+        margin-right: 1.3em;
+    }
+
+    nav,
+    #blog,
+    body>header,
+    body>footer,
+    #online>section {
+        padding-left: 1.3em;
+        padding-right: 1.3em;
+    }
+
+    body>footer {
+        padding-bottom: 2.1em;
+    }
+
+    body>header h1 {
+        width: auto;
+        display: inline-block;
+    }
+
+    #blog article h1 a:after {
+        color: #999;
+    }
+}
+
+@media all and (min-width: 50em) {
+    body.index #blog,
+    #online>section {
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+        float: left;
+    }
+
+    body.archive #blog,
+    body.index #blog>article,
+    #online>section,
+    body.index>nav,
+    body.index>footer>section>*,
+    body.archive>footer>section>* {
+        padding-left: 1.3em;
+        padding-right: 1.3em;
+    }
+
+    #online {
+        margin: 0;
+        float: left;
+        overflow-x: auto;
+        border-left: 1px dashed #999;
+        width: 49.5%;
+    }
+
+    #online>section {
+        max-width: 30em;
+    }
+
+    body.index #blog {
+        width: 50%;
+    }
+
+    body.index>footer,
+    body.archive>footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    body.index>footer>section,
+    body.archive>footer>section {
+        width: 33%;
+        float: left;
+    }
+
+    body.index>footer>section>h1,
+    body.archive>footer>section>h1 {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    nav.between {
+        display: none;
+    }
+
+    body>article h1,
+    body.archive #blog>h1 {
+        font-size: 2.1em;
+        margin-bottom: 1.3em;
+    }
+
+    body>article,
+    #comments ol,
+    #comments form {
+        margin-left: 3.4em;
+        margin-right: 3.4em;
+    }
+
+    body.archive>header,
+    body.single>header,
+    body.archive #blog,
+    nav,
+    body>footer {
+        padding-left: 3.4em;
+        padding-right: 3.4em;
+    }
+
+}
+
+@media all and (min-width: 70em) {
+    body.index #blog>article,
+    #online>section,
+    body.index>nav,
+    body.index>footer>section>* {
+        padding-left: 2.1em;
+        padding-right: 2.1em;
+    }
+
+    body.index>header h1 {
+        padding-left: 0.3em;
+    }
+
+    body.index>footer>section>h1 {
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+    }
+}
+
+@media print {
+    body {
+        font-size: 10pt;
+    }
+
+    pre code {
+        background: inherit;
+        color: inherit;
+        padding: 0;
+    }
+
+    body>header,
+    body>footer {
+        border: none;
+        color: inherit;
+    }
+
+    nav,
+    #comments form {
+        display: none;
+    }
+
+    body>article {
+        max-width: none;
+        margin: 0 0.5in;
+    }
 }

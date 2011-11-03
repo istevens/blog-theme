@@ -7,15 +7,17 @@
 
 <footer>
     <?php if ( function_exists('dynamic_sidebar') ) {?>
-    <section>
+    <section class="fancy">
         <?php dynamic_sidebar('left') ?>
     </section>
-    <section>
-        <?php dynamic_sidebar('middle') ?>
-    </section>
-    <section>
-        <?php dynamic_sidebar('right') ?>
-    </section>
+    <?php if(!is_singular()) { ?>
+        <section class="fancy">
+            <?php dynamic_sidebar('middle') ?>
+        </section>
+        <section class="fancy">
+            <?php dynamic_sidebar('right') ?>
+        </section>
+    <?php } ?>
     <?php } ?>
 </footer>
 

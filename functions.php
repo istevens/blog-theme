@@ -4,25 +4,72 @@
  * @subpackage Default_Theme
  */
 
+define('XML_DATE', 'Y-m-d\TH:i:s\Z');
+wp_deregister_script('l10n');
+
 function custom_trim_excerpt($text) { // Fakes an excerpt if needed
-    global $post;
-    if ( '' == $text ) {
-        $text = get_the_content('');
-        $text = apply_filters('the_content', $text);
-        $text = str_replace(']]>', ']]&gt;', $text);
-        $text = strip_tags($text, '<p><a>');
-        $excerpt_length = 55;
-        $words = explode(' ', $text, $excerpt_length + 1);
-        if (count($words)> $excerpt_length) {
-            array_pop($words);
-            array_push($words, '&hellip;');
-            $text = implode(' ', $words);
-        }
-    }
-    return $text;
+	$raw_excerpt = $text;
+    if( '' == $text ) {
+		$text = get_the_content('');
+		$text = strip_shortcodes( $text );
+		$text = apply_filters('the_content', $text);
+		$text = str_replace(']]>', ']]&gt;', $text);
+		$text = strip_tags($text, '<p><a>');
+		$excerpt_length = apply_filters('excerpt_length', 55);
+		$excerpt_more = apply_filters(
+            'excerpt_more',
+            '&nbsp;&hellip;&nbsp;<a class="read_more" href="'.get_permalink().'" rel="bookmark" title="Continue reading &ldquo;'.the_title_attribute(array('echo'=>0)).'&rdquo;"><span>Read more</span></a>'
+        );
+		$words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
+		if ( count($words) > $excerpt_length ) {
+			array_pop($words);
+			$text = implode(' ', $words);
+			$text = $text . $excerpt_more;
+		} else {
+			$text = implode(' ', $words);
+		}
+	}
+	return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
 }
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'custom_trim_excerpt');
+
+function html5_comment($comment, $args, $depth) {
+    $GLOBALS['comment'] = $comment;
+?>
+    <li><article <?php comment_class(); ?> id="comment-<?php comment_ID() ?>">
+
+        <header>
+            <?php echo get_avatar( $comment->comment_author_email, 48 ); ?>
+            <?php printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()) ?>
+
+            <?php if ($comment->comment_approved == '0') { ?>
+                <p><?php _e('Your comment is awaiting moderation.') ?></p>
+            <?php } ?>
+
+            <p class="date">
+            <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('<time pubdate datetime="'.get_comment_date(XML_DATE).'">%1$s at %2$s</time>'), get_comment_date(),  get_comment_time()) ?></a>
+            <?php edit_comment_link(__('(Edit)'),'  ','') ?>
+            </p>
+        </header>
+
+        <?php comment_text() ?>
+
+    </article>
+<?php
+}
+
+function get_next_posts_link_attributes($attr){
+    $attr = 'rel="prev" title="Older posts"';
+    return $attr;
+}
+function get_previous_posts_link_attributes($attr){
+    $attr = 'rel="next" title="Newer posts"';
+    return $attr;
+}
+add_filter('next_posts_link_attributes', 'get_next_posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'get_previous_posts_link_attributes');
+
 
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
