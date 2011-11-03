@@ -71,7 +71,6 @@ body>article,
     margin-right: 0.5em;
 }
 
-body>header:after,
 #content:after,
 nav:after,
 body.index>footer:after,
@@ -133,7 +132,6 @@ nav a[rel="next"]:after {
 
 body>header {
     padding-top: 0.5em;
-    padding-bottom: 0.5em;
     border-bottom: 1px solid #333;
 
     background-color: #ff0;
@@ -153,8 +151,14 @@ body>header {
     );
 }
 
+body>header h1 {
+    max-width: 4.5em;
+    margin: 0 auto;
+    font-size: 2.1em;
+    text-align: center;
+}
+
 body.index>header h1 {
-    max-width: 6em;
     font-size: 3.4em;
 }
 
@@ -189,10 +193,6 @@ body>article {
     padding-top: 2.1em;
 }
 
-#blog {
-    max-width: 50em;
-}
-
 
 /* Shadowed headings */
 
@@ -216,9 +216,6 @@ footer .fancy>h1 {
 }
 
 body>header h1 {
-    text-align: center;
-    margin: 0;
-    font-size: 2.1em;
     -webkit-transform: rotate(3deg);
     -moz-transform: rotate(3deg);
 }
@@ -262,6 +259,7 @@ article a.read_more {
     display: none;
 }
 
+#blog,
 body.archive>article,
 body>article,
 #comments article,
@@ -395,11 +393,6 @@ a.to_comments:before {
 
 
 @media all and (min-width: 30em) {
-    body>header h1 {
-        max-width: 5em;
-        float: right;
-    }
-
     body>article,
     #comments ol,
     #comments form {
@@ -409,6 +402,7 @@ a.to_comments:before {
 
     nav,
     #blog,
+    body>header,
     body>footer,
     #online>section {
         padding-left: 1.3em;
@@ -419,23 +413,17 @@ a.to_comments:before {
         padding-bottom: 2.1em;
     }
 
+    body>header h1 {
+        width: auto;
+        display: inline-block;
+    }
+
     #blog article h1 a:after {
         color: #999;
     }
 }
 
 @media all and (min-width: 50em) {
-    body>header h1 {
-        max-width: 5em;
-        float: left;
-        margin-left: 19em;
-    }
-
-    body.index>header h1 {
-        margin-left: 0;
-        float: right;
-    }
-
     body.index #blog,
     #online>section {
         margin: 0;
@@ -505,6 +493,8 @@ a.to_comments:before {
         margin-right: 3.4em;
     }
 
+    body.archive>header,
+    body.single>header,
     body.archive #blog,
     nav,
     body>footer {
@@ -521,6 +511,10 @@ a.to_comments:before {
     body.index>footer>section>* {
         padding-left: 2.1em;
         padding-right: 2.1em;
+    }
+
+    body.index>header h1 {
+        padding-left: 0.3em;
     }
 
     body.index>footer>section>h1 {

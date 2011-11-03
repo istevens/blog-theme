@@ -31,6 +31,8 @@
             $body_class = 'class="index"';
         } else if(is_archive()) {
             $body_class = 'class="archive"';
+        } else {
+            $body_class = 'class="single"';
         }
         wp_head();
     ?>
