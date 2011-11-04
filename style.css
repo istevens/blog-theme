@@ -81,7 +81,8 @@ body.single .content,
 
 #content:after,
 nav.banner:after,
-footer.banner:after {
+footer.banner:after,
+#archives:after {
     content: ".";
     display: block;
     height: 0;
@@ -91,7 +92,8 @@ footer.banner:after {
 
 .old_ie #content,
 .old_ie nav.banner,
-.old_ie footer.banner {
+.old_ie footer.banner,
+.old_ie #archives {
     zoom: 1;
 }
 
@@ -204,6 +206,10 @@ body.single .content {
     padding-top: 2.1em;
 }
 
+#archives, #archives nav {
+    display: block;
+}
+
 
 /* Shadowed headings */
 
@@ -260,7 +266,7 @@ header h1.fancy:hover {
 
 /* Article display. */
 
-article {
+article, #archives nav {
     margin-bottom: 1.3em;
 }
 
@@ -445,6 +451,20 @@ a.to_comments:before {
     #blog article h1 a:after {
         color: #999;
     }
+
+    #archives {
+        margin: 0;
+        max-width: none;
+    }
+
+    #archives nav {
+        float: left;
+        width: 40%;
+        max-width: 20em;
+        padding-left: 1.3em;
+        padding-right: 0.8em;
+    }
+
 }
 
 @media all and (min-width: 50em) {
@@ -526,6 +546,11 @@ a.to_comments:before {
     body.archive .footer_section_content {
         padding-left: 1.3em;
         padding-right: 1.3em;
+    }
+
+    #archives nav {
+        padding-left: 3.4em;
+        padding-right: 2.1em;
     }
 
 

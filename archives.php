@@ -10,20 +10,22 @@ Template Name: Archives
 
 <?php get_header(); ?>
 
-<div id="content" class="widecolumn">
+<nav class="content" id="archives">
 
-<?php get_search_form(); ?>
-
-<h2>Archives by Month:</h2>
+<nav id="month_archives">
+    <h1>Archives by Year</h1>
 	<ul>
 		<?php wp_get_archives('type=monthly'); ?>
 	</ul>
+</nav>
 
-<h2>Archives by Subject:</h2>
-	<ul>
-		 <?php wp_list_categories(); ?>
-	</ul>
+<nav id="category_archives">
+    <h1>Archives by Subject</h1>
+    <ul>
+         <?php wp_list_categories(); ?>
+    </ul>
+</nav>
 
-</div>
+</nav>
 
 <?php get_footer(); ?>
