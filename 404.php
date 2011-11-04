@@ -9,7 +9,8 @@ get_header();
 
 <div class="content">
 <h1>Someone f&#x273c;cked up.</h1>
-<p>Whatever you want isn't here. If it used to be, I f&#x273c;cked up. Please let me know.</p>
+<p>Whatever you want isn't here. If it used to be, I f&#x273c;cked up. Sorry.</p>
+<p>In the meantime, try checking for what interests you on <a href="/">the front page</a> or the blog archives.</p>
 </div>
 
 <?php get_footer(); ?>
