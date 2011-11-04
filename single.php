@@ -9,7 +9,7 @@ get_header();
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+    <article <?php post_class('content'); ?> id="post-<?php the_ID(); ?>">
         <?php if (in_category('32')) { ?>
             <h1><a href="http://twitter.com/istevens/status/<?php echo get_post_meta($post->ID, 'aktt_twitter_id', 'true') ?>" rel="alternate"><?php $t = get_the_content(''); echo $t; ?></a></h1>
         <?php } else { ?>

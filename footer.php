@@ -10,7 +10,7 @@
     <section class="fancy">
         <div class="footer_section_content"><?php dynamic_sidebar('left') ?></div>
     </section>
-    <?php if(!is_singular()) { ?>
+    <?php if(is_archive()) { ?>
         <section class="fancy">
             <div class="footer_section_content"><?php dynamic_sidebar('middle') ?></div>
         </section>

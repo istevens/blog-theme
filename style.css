@@ -69,7 +69,7 @@ footer.banner {
     border-top: 1px dashed #999;
 }
 
-body.single article.post,
+body.single .content,
 #recorded_comments,
 #comments form {
     margin-left: 0.5em;
@@ -200,7 +200,7 @@ footer.banner a {
 }
 
 #blog,
-body.single article.post {
+body.single .content {
     padding-top: 2.1em;
 }
 
@@ -286,14 +286,14 @@ article a.read_more {
 
 #blog,
 body.archive article,
-body.single article.post,
+body.single .content,
 #comments article,
 footer.banner section {
     max-width: 50em;
 }
 
-body.single article.post p,
-body.single article.post pre {
+body.single .content p,
+body.single .content pre {
     margin-bottom: 1.3em;
 }
 
@@ -418,7 +418,7 @@ a.to_comments:before {
 
 
 @media all and (min-width: 30em) {
-    body.single article.post,
+    body.single .content,
     #comments ol,
     #comments form {
         margin-left: 1.3em;
@@ -497,13 +497,13 @@ a.to_comments:before {
         display: none;
     }
 
-    body.single article.post h1,
+    body.single .content h1,
     body.archive #blog>h1 {
         font-size: 2.1em;
         margin-bottom: 1.3em;
     }
 
-    body.single article.post,
+    body.single .content,
     #comments ol,
     #comments form {
         margin-left: 3.4em;
