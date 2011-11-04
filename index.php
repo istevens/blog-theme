@@ -33,7 +33,6 @@ $home = is_home() and !get_query_var('paged');
     <section id="mentioned">
         <h1 class="fancy">On My Mind</h1>
         <?php
-            $first = $page == 1 ? 'first-post': '';
             query_posts('cat=32&showposts=3&paged=' . $paged);
             while (have_posts()) : the_post(); 
                 include('index_post.php');
@@ -45,7 +44,6 @@ $home = is_home() and !get_query_var('paged');
     <section id="read">
         <h1 class="fancy">Recently Read</h1>
         <?php
-            $first = $page == 1 ? 'first-post': '';
             query_posts('cat=33&showposts=3&paged='. $paged);
             while (have_posts()) : the_post(); 
                 include('index_post.php');

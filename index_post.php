@@ -11,7 +11,7 @@
             $ext = get_post_meta($post->ID, 'link', 'true');
             $link = get_permalink();
             $title = "<a href=\"".$ext."\">".$post->post_title."</a>";
-            $content = get_the_excerpt();
+            $content = $first ? get_the_content() : get_the_excerpt();
             $content = apply_filters('the_content', $content);
             $content = str_replace(']]>', ']]&gt;', $content);
             $content = str_replace(' &hellip;', '&#160;&#8230;&#160;<a href="'.get_permalink($post->ID).'">Read more.</a>', $content);
