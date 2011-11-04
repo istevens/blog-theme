@@ -270,12 +270,6 @@ article, #archives nav {
     margin-bottom: 1.3em;
 }
 
-article.category-links h1:after,
-article.category-tweets h1:after {
-    content: '\00a0\21aa';
-    color: #999;
-}
-
 article h1 a:hover {
     color: #999;
 }
@@ -313,16 +307,28 @@ body.archive article h1 {
     margin-bottom: 0.5em;
 }
 
+#blog article h1 a:after,
+article h1 a:after {
+    position: relative;
+    margin: 0 0.5em;
+    bottom: 0.0625em;
+    font-size: 0.8em;
+}
+
 #blog article h1 a:after {
     content: '\3009';
-    margin-left: 0.5em;
-    font-size: 0.8em;
-    position: relative;
-    bottom: 0.0625em;
 }
 
 .win32 #blog article h1 a:after {
     content: '\276f';
+}
+
+article.category-links h1 a:after,
+#blog article.category-links h1 a:after,
+body.single article.category-tweets h1 a[rel="alternate"]:after {
+    content: '\2197';
+    color: #999;
+    font-weight: bold;
 }
 
 #online article h1 {
