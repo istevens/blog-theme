@@ -18,7 +18,7 @@
 
 <!-- You can start editing here. -->
 
-    <nav>
+    <nav class="banner">
         <?php if (('open' == $post-> comment_status)) { ?>
             <a href="#respond" class="comment_state">Respond to this post</a>
         <?php } else { ?>

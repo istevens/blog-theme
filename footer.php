@@ -8,14 +8,14 @@
 <footer class="banner">
     <?php if ( function_exists('dynamic_sidebar') ) {?>
     <section class="fancy">
-        <?php dynamic_sidebar('left') ?>
+        <div class="footer_section_content"><?php dynamic_sidebar('left') ?></div>
     </section>
     <?php if(!is_singular()) { ?>
         <section class="fancy">
-            <?php dynamic_sidebar('middle') ?>
+            <div class="footer_section_content"><?php dynamic_sidebar('middle') ?></div>
         </section>
         <section class="fancy">
-            <?php dynamic_sidebar('right') ?>
+            <div class="footer_section_content"><?php dynamic_sidebar('right') ?></div>
         </section>
     <?php } ?>
     <?php } ?>

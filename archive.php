@@ -42,7 +42,7 @@ $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
     </section>
     </section>
 
-    <nav>
+    <nav class="banner">
         <?php posts_nav_link(' ', 'Newer', 'Older') ?>
     </nav>
 

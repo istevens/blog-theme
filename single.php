@@ -41,7 +41,7 @@ get_header();
 
     <?php comments_template(); ?>
 
-    <nav>
+    <nav class="banner">
         <?php
             previous_post_link('%link', '%title', FALSE, '32');
             next_post_link('%link', '%title', FALSE, '32');

@@ -3,7 +3,7 @@
 /* Generic styles */
 
 body {
-    background: white;
+    background: #fff;
     color: #333;
     font: 100% Helvetica, sans-serif;
     line-height: 130%;
@@ -43,6 +43,12 @@ h2 a {
     color: inherit;
 }
 
+/* IE doesn't inherit colors. */
+.old_ie h1 a,
+.old_ie h2 a {
+    color: #000;
+}
+
 .banner,
 #blog,
 #online section {
@@ -74,7 +80,7 @@ body.single article.post,
 /* Clearfix */
 
 #content:after,
-nav:after,
+nav.banner:after,
 footer.banner:after {
     content: ".";
     display: block;
@@ -84,7 +90,7 @@ footer.banner:after {
 }
 
 .old_ie #content,
-.old_ie nav,
+.old_ie nav.banner,
 .old_ie footer.banner {
     zoom: 1;
 }
@@ -92,15 +98,15 @@ footer.banner:after {
 
 /* Full-width navs all same style */
 
-nav {
+nav.banner {
     background: #333;
     border-top: 1px solid #ccc;
     padding: 0 0.5em;
-    color: white;
+    color: #fff;
 }
 
-nav a {
-    color: inherit;
+nav.banner a {
+    color: #fff;
     text-decoration: none;
     font-weight: normal;
     padding: 0.3em 0 0.5em 0;
@@ -109,24 +115,24 @@ nav a {
     margin: 0;
 }
 
-nav a:hover,
+nav.banner a:hover,
 footer.banner a:hover {
     color: yellow;
 }
 
-nav a[rel="prev"] {
+nav.banner a[rel="prev"] {
     float: left;
 }
 
-nav a[rel="next"] {
+nav.banner a[rel="next"] {
     float: right;
 }
 
-nav a[rel="prev"]:before {
+nav.banner a[rel="prev"]:before {
     content: '\21d0\00a0'
 }
 
-nav a[rel="next"]:after {
+nav.banner a[rel="next"]:after {
     content: '\00a0\21d2'
 }
 
@@ -186,7 +192,7 @@ footer.banner h1 {
 }
 
 footer.banner a {
-    color: inherit;
+    color: #fff;
 }
 
 #online section:first-child {
@@ -207,9 +213,9 @@ h1.fancy, footer .fancy h1 {
     text-transform: uppercase;
     text-shadow: #000 0.02em 0.02em 0.05em, rgba(0,0,0,0.25) 0.125em 0.1em 0.075em;
     letter-spacing: -0.1em;
-    color: white;
+    color: #fff;
     -webkit-text-stroke: 0.05em;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: #000;
 }
 
 /* Fake text stroke where none supported. */
@@ -229,7 +235,7 @@ h1.fancy, footer .fancy h1 {
 }
 
 footer .fancy h1 {
-    color: white;
+    color: #fff;
     -webkit-transform: rotate(-2deg);
     -moz-transform: rotate(-2deg);
 }
@@ -419,9 +425,9 @@ a.to_comments:before {
         margin-right: 1.3em;
     }
 
-    nav,
     #blog,
     .banner,
+    nav.banner,
     #online section {
         padding-left: 1.3em;
         padding-right: 1.3em;
@@ -453,9 +459,8 @@ a.to_comments:before {
     body.archive #blog,
     body.index #blog article,
     #online section,
-    body.index>nav,
-    body.index footer.banner section>*,
-    body.archive footer.banner section>* {
+    body.index nav.banner,
+    body.index .footer_section_content {
         padding-left: 1.3em;
         padding-right: 1.3em;
     }
@@ -488,12 +493,6 @@ a.to_comments:before {
         float: left;
     }
 
-    body.index footer.banner section>h1,
-    body.archive footer.banner section>h1 {
-        padding-left: 0.5em;
-        padding-right: 0.5em;
-    }
-
     nav.between {
         display: none;
     }
@@ -512,21 +511,31 @@ a.to_comments:before {
     }
 
     body.archive header.banner,
-    body.single header.banner,
-    body.archive #blog,
-    nav,
-    footer.banner {
+    body.archive nav.banner,
+    body.single .banner,
+    body.archive #blog {
         padding-left: 3.4em;
         padding-right: 3.4em;
     }
+
+    body.archive footer.banner {
+        padding-left: 2.1em;
+        padding-right: 2.1em;
+    }
+
+    body.archive .footer_section_content {
+        padding-left: 1.3em;
+        padding-right: 1.3em;
+    }
+
 
 }
 
 @media all and (min-width: 70em) {
     body.index #blog article,
     #online section,
-    body.index>nav,
-    body.index footer.banner section>* {
+    body.index nav.banner,
+    body.index .footer_section_content {
         padding-left: 2.1em;
         padding-right: 2.1em;
     }
@@ -535,10 +544,6 @@ a.to_comments:before {
         padding-left: 0.3em;
     }
 
-    body.index footer.banner section>h1 {
-        padding-left: 0.8em;
-        padding-right: 0.8em;
-    }
 }
 
 @media print {

@@ -24,7 +24,7 @@ $home = is_home() and !get_query_var('paged');
 
 </section>
 
-<nav class="between">
+<nav class="between banner">
     <?php posts_nav_link(' ', 'Newer', 'Older') ?>
 </nav>
 
@@ -58,7 +58,7 @@ $home = is_home() and !get_query_var('paged');
 
 </section>
 
-<nav>
+<nav class="banner">
     <?php posts_nav_link(' ', 'Newer', 'Older') ?>
 </nav>
 
