@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+    <title><?php if(is_home()): bloginfo('name'); ?> - <?php bloginfo('description'); elseif(is_category()) : bloginfo('name');?> weblog entries about <?php single_cat_title(); elseif(is_single()) : single_post_title(); ?> - <?php bloginfo('title'); else : bloginfo('name'); ?> weblog entries for <?php wp_title(''); ?><?php endif; ?></title>
 
     <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
