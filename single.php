@@ -30,7 +30,7 @@ get_header();
                 You'll need to download this plugin, and follow the instructions:
                 http://binarybonsai.com/archives/2004/08/17/time-since-plugin/ */
                 /* $entry_datetime = abs(strtotime($post->post_date) - (60*120)); echo time_since($entry_datetime); echo ' ago'; */ ?>
-            on <time pubdate datetime="<?php the_time(XML_DATE); ?>"><?php the_time('l, F jS, Y') ?> at <?php the_time() ?></time>
+            on <span class="time"><?php the_time('l, F jS, Y') ?> at <?php the_time() ?></span>
             and is filed under <?php the_category(', ') ?>.
             <?php edit_post_link('Edit this entry','','.'); ?>
             </p>

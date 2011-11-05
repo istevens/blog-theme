@@ -24,12 +24,12 @@
             echo $content;
         } ?>
         <footer>
-            <p><a class="external" href="<?php echo $link ?>" title="<?php echo $link_verb; ?> '<?php the_title_attribute(); echo "'".$link_text."\"><span class=\"verb\">".$verb ?> on</span> <time pubdate datetime="<?php the_time(XML_DATE); ?>"><?php the_time('M j \a\t G:i') ?></time></a></p>
+            <p><a class="external" href="<?php echo $link ?>" title="<?php echo $link_verb; ?> '<?php the_title_attribute(); echo "'".$link_text."\"><span class=\"verb\">".$verb ?> on</span> <span class="time"><?php the_time('M j \a\t G:i') ?></span></a></p>
         </footer>
 
     <?php } else { ?>
         <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to &#8220;<?php the_title_attribute(); ?>&#8221;"><?php the_title(); ?></a></h1>
-        <p class="date"><time pubdate datetime="<?php the_time(XML_DATE); ?>"><?php the_time('M j, Y'); ?></time></p>
+        <p class="date"><span class="time"><?php the_time('M j, Y'); ?></span></p>
 
         <?php
         if($first) {

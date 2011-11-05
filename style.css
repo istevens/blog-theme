@@ -447,7 +447,7 @@ a.external>* {
     display: none;
 }
 
-a.external time {
+a.external span.time {
     display: inline;
 }
 

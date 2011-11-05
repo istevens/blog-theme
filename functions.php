@@ -48,7 +48,7 @@ function html5_comment($comment, $args, $depth) {
             <?php } ?>
 
             <p class="date">
-            <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('<time pubdate datetime="'.get_comment_date(XML_DATE).'">%1$s at %2$s</time>'), get_comment_date(),  get_comment_time()) ?></a>
+            <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('<span class="time">%1$s at %2$s</span>'), get_comment_date(),  get_comment_time()) ?></a>
             <?php edit_comment_link(__('(Edit)'),'  ','') ?>
             </p>
         </header>
