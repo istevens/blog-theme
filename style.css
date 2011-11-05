@@ -623,7 +623,7 @@ a.to_comments:before {
 
     body.index footer.banner section,
     body.archive footer.banner section {
-        width: 33%;
+        width: 50%;
         float: left;
     }
 

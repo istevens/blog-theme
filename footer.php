@@ -12,9 +12,6 @@
     </section>
     <?php if(is_archive()) { ?>
         <section class="fancy">
-            <div class="footer_section_content"><?php dynamic_sidebar('middle') ?></div>
-        </section>
-        <section class="fancy">
             <div class="footer_section_content"><?php dynamic_sidebar('right') ?></div>
         </section>
     <?php } ?>
