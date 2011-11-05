@@ -318,6 +318,10 @@ body.single .content {
     display: block;
 }
 
+body.index footer.banner section:last-child {
+    display: none;
+}
+
 
 /* Shadowed headings */
 
