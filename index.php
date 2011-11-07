@@ -46,7 +46,7 @@ foreach($feature_posts as $i => $c) {
 </nav>
 
 <?php
-    $online_query = array('showposts' => 3, 'paged' => $paged);
+    $online_query = array('showposts' => 5, 'paged' => $paged);
     if($home) { ?>
 <section id="online">
     <section id="mentioned">
