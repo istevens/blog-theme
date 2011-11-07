@@ -19,17 +19,19 @@
             $link_text = "";
             $verb = "Linked";
         } ?>
-        <h1><?php echo $title; ?></h1>
+        <header>
+            <h1><?php echo $title; ?></h1>
+            <p class="date"><a href="<?php echo $link ?>" title="<?php echo $link_verb; ?> '<?php the_title_attribute(); echo "'".$link_text."\"><span class=\"verb\">".$verb ?> on</span> <span class="time"><?php the_time('M j \a\t G:i') ?></span></a></p>
+        </header>
         <?php if ($content != "") { 
             echo $content;
         } ?>
-        <footer>
-            <p><a class="external" href="<?php echo $link ?>" title="<?php echo $link_verb; ?> '<?php the_title_attribute(); echo "'".$link_text."\"><span class=\"verb\">".$verb ?> on</span> <span class="time"><?php the_time('M j \a\t G:i') ?></span></a></p>
-        </footer>
 
     <?php } else { ?>
-        <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to &#8220;<?php the_title_attribute(); ?>&#8221;"><?php the_title(); ?></a></h1>
-        <p class="date"><span class="time"><?php the_time('M j, Y'); ?></span></p>
+        <header>
+            <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to &#8220;<?php the_title_attribute(); ?>&#8221;"><?php the_title(); ?></a></h1>
+            <p class="date"><span class="time"><?php the_time('M j, Y'); ?></span></p>
+        </header>
 
         <?php
         if($first) {

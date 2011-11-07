@@ -146,14 +146,16 @@ h2 {
 }
 
 h1 a,
-h2 a {
+h2 a,
+.date a {
     text-decoration: none;
     color: inherit;
 }
 
 /* IE doesn't inherit colors. */
 .old_ie h1 a,
-.old_ie h2 a {
+.old_ie h2 a,
+.old_ie .date a {
     color: #000;
 }
 
@@ -382,7 +384,8 @@ article, #archives nav {
     margin-bottom: 1.3em;
 }
 
-article h1 a:hover {
+article h1 a:hover,
+article .date a:hover {
     color: #999;
 }
 
@@ -420,21 +423,25 @@ body.archive article h1 {
 }
 
 #blog article h1 a:after,
-article h1 a:after {
+article h1 a:after,
+.date a:after {
     position: relative;
     margin: 0 0.5em;
     bottom: 0.0625em;
     font-size: 0.8em;
 }
 
-#blog article h1 a:after {
+#blog article h1 a:after,
+.date a:after {
     content: '\3009';
 }
 
-.win32 #blog article h1 a:after {
+.win32 #blog article h1 a:after,
+.win32 .date a:after {
     content: '\276f';
 }
 
+article.category-tweets .date a:after,
 article.category-links h1 a:after,
 #blog article.category-links h1 a:after,
 body.single article.category-tweets h1 a[rel="alternate"]:after {
@@ -447,11 +454,15 @@ body.single article.category-tweets h1 a[rel="alternate"]:after {
     font-weight: normal;
 }
 
-a.external>* {
+p.date a>* {
     display: none;
 }
 
-a.external span.time {
+.category-links p.date a>* {
+    display: inline;
+}
+
+p.date a span.time {
     display: inline;
 }
 
@@ -638,7 +649,11 @@ a.to_comments:before {
     body.single .content h1,
     body.archive #blog>h1 {
         font-size: 2.1em;
-        margin-bottom: 1.3em;
+        margin-bottom: 0.3em;
+    }
+
+    body.single header {
+        margin-bottom: 2.1em;
     }
 
     body.single .content,

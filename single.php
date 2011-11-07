@@ -13,11 +13,14 @@ get_header();
         <?php if (in_category('32')) { ?>
             <h1><a href="http://twitter.com/istevens/status/<?php echo get_post_meta($post->ID, 'aktt_twitter_id', 'true') ?>" rel="alternate"><?php $t = get_the_content(''); echo $t; ?></a></h1>
         <?php } else { ?>
-            <?php if (in_category('33')) { ?>
-                <h1><a href="<?php echo get_post_meta($post->ID, 'link', 'true') ?>" rel="alternate"><?php wp_title(''); ?></a></h1>
-            <?php } else { ?>
-                <h1><?php wp_title(''); ?></h1>
-            <?php } ?>
+            <header>
+                <?php if (in_category('33')) { ?>
+                    <h1><a href="<?php echo get_post_meta($post->ID, 'link', 'true') ?>" rel="alternate"><?php wp_title(''); ?></a></h1>
+                    <p class="date"><span class=\"verb\">Linked on</span> <span class="time"><?php the_time('M j \a\t G:i') ?></span></p>
+                <?php } else { ?>
+                    <h1><?php wp_title(''); ?></h1>
+                <?php } ?>
+            </header>
 
             <?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
 
