@@ -7,6 +7,7 @@
             $link_verb = "See";
             $link_text = " on Twitter";
             $verb = "Tweeted";
+            $rel = "alternate";
         } else if (in_category('33')) {
             $ext = get_post_meta($post->ID, 'link', 'true');
             $link = get_permalink();
@@ -18,10 +19,11 @@
             $link_verb = "Go to";
             $link_text = "";
             $verb = "Linked";
+            $rel = "bookmark";
         } ?>
         <header>
             <h1><?php echo $title; ?></h1>
-            <p class="date"><a href="<?php echo $link ?>" title="<?php echo $link_verb; ?> '<?php the_title_attribute(); echo "'".$link_text."\"><span class=\"verb\">".$verb ?> on</span> <span class="time"><?php the_time('M j \a\t G:i') ?></span></a></p>
+            <p class="date"><a rel="<?php echo $rel ?>" href="<?php echo $link ?>" title="<?php echo $link_verb; ?> '<?php the_title_attribute(); echo "'".$link_text."\"><span class=\"verb\">".$verb ?> on</span> <span class="time"><?php the_time('M j \a\t G:i') ?></span></a></p>
         </header>
         <?php if ($content != "") { 
             echo $content;
