@@ -118,7 +118,9 @@ body {
 }
 
 p,
-pre {
+pre,
+article ul,
+article ol {
     margin-bottom: 0.8em;
 }
 
@@ -408,7 +410,9 @@ footer.banner section {
 }
 
 body.single .content p,
-body.single .content pre {
+body.single .content pre,
+body.single .content ul,
+body.single .content ol {
     margin-bottom: 1.3em;
 }
 
@@ -464,6 +468,11 @@ p.date a>* {
 
 p.date a span.time {
     display: inline;
+}
+
+article ul {
+    list-style: disc outside;
+    margin-left: 2.1em;
 }
 
 
