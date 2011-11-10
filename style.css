@@ -404,7 +404,8 @@ article a.read_more {
 #blog,
 body.archive article,
 body.single .content,
-#comments article,
+#comments ol,
+#comments form,
 footer.banner section {
     max-width: 50em;
 }
