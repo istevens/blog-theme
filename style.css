@@ -191,7 +191,6 @@ body.single .content,
 
 /* Clearfix */
 
-#content:after,
 nav.banner:after,
 footer.banner:after,
 #archives:after {
@@ -609,12 +608,31 @@ a.to_comments:before {
 }
 
 @media all and (min-width: 50em) {
+
+    /* Table styling for index columns, but floats for IE.
+     * From: http://www.gunlaug.no/contents/wd_additions_22.html
+     */ 
+
+    #content {
+        display: table-row;
+    }
+
     body.index #blog,
-    #online section {
+    #online {
         margin: 0;
         padding-left: 0;
         padding-right: 0;
+        display: table-cell;
+    }
+
+    .old_ie body.index #blog,
+    .old_ie #online {
         float: left;
+    }
+
+    .old_ie #online {
+        float: left;
+        width: 49.5%;
     }
 
     body.archive #blog,
@@ -628,13 +646,11 @@ a.to_comments:before {
 
     #online {
         margin: 0;
-        float: left;
         overflow-x: auto;
         border-left: 1px dashed #999;
-        width: 49.5%;
     }
 
-    #online section {
+    #online section article {
         max-width: 30em;
     }
 
