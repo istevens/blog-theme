@@ -124,14 +124,6 @@ article ol {
     margin-bottom: 0.8em;
 }
 
-article ul, article ol {
-    list-style-position: inside;
-    margin-left: 0.8em;
-    margin-right: 0.8em;
-    padding-left: 1.3em;
-    text-indent: -1em;
-}
-
 pre code {
     display: block;
     background: #333;
@@ -480,9 +472,16 @@ p.date a span.time {
     display: inline;
 }
 
+article ul, article ol {
+    list-style-position: inside;
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+    padding-left: 1.3em;
+    text-indent: -1em;
+}
+
 article ul {
-    list-style: disc outside;
-    margin-left: 2.1em;
+    list-style-type: disc;
 }
 
 
