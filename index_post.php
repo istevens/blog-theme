@@ -37,9 +37,12 @@
 
         <?php
         if($first) {
-            the_content('Read the rest of this entry &#xbb;');
-        }
-        else {
+            if($post->post_excerpt) {
+                the_excerpt();
+            } else {
+                the_content('Read the rest of this entry &#xbb;');
+            }
+        } else {
             the_excerpt();
         }
         ?>
